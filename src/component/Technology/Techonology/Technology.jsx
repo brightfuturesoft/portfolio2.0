@@ -1,5 +1,5 @@
 import React from 'react';
-import { HiOutlineWrenchScrewdriver, HiPhone } from 'react-icons/hi2';
+import { HiOutlineCodeBracket, HiOutlineCurrencyBangladeshi, HiOutlineWrenchScrewdriver, HiPhone } from 'react-icons/hi2';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import tailwind from '../../../Assctes/icon/Group 27.png'
@@ -149,17 +149,18 @@ const Technology = () => {
     return (
         <div>
            <div className="tech-bg px-2 text-capitalize">
-            <h3 className="text-center text-xl font-semibold text">our technology</h3>
+             <h1 className="text-xl  font-bold relative after:absolute after:left-0 after:right-0 after:bottom-[-18px] after:w-[60px] after:rounded-full after:h-[6px] after:bg-[#0095ff] after:mx-auto text-center text-white">Our Technology <span className="shadow-tx">and Tools</span></h1>
+             <br /><br />
             <VerticalTimeline>
                         <VerticalTimelineElement
                             className="vertical-timeline-element--work"
                             contentArrowStyle={{ borderRight: '7px solid  #ff000000', }}
 
                             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                            icon={<HiOutlineWrenchScrewdriver />}
+                            icon={<HiOutlineCodeBracket />}
                         >
-                        <div className="sp-box relative p-3">
-                            <div className="absolute top-[-30px] bg-[#111a30] sp pl-2 pr-14  py-1 left-0">
+                        <div className="sp-box border border-[#2a4892]  relative p-3">
+                            <div className="absolute top-[-32px] bg-[#2a4892] sp pl-2 pr-14  py-1 left-[-2px]">
                                 <h1>Front end development</h1>
                             </div>
                              <figure className='grid mt-4 grid-cols-6 gap-4'>
@@ -173,10 +174,10 @@ const Technology = () => {
                         <VerticalTimelineElement
                             className="vertical-timeline-element--work bg-"
                             iconStyle={{ background: 'rgb(0, 0, 0)', color: '#fff' }}
-                            icon={<HiPhone />}
+                            icon={<HiOutlineCodeBracket />}
                         >
-                              <div className="sp-box relative p-3">
-                            <div className="absolute top-[-30px] bg-[#111a30] sp2 pl-14 pr-2  py-1 right-0">
+                              <div className="sp-box relative p-3 border border-[#2a4892]">
+                            <div className="absolute top-[-32px] bg-[#2a4892] sp2 pl-14 pr-2  py-1 right-[-2px]">
                                 <h1>Back end development</h1>
                             </div>
                              <figure className='grid mt-4 grid-cols-6 gap-4'>
@@ -192,13 +193,13 @@ const Technology = () => {
                             contentArrowStyle={{ borderRight: '7px solid  #ff000000', }}
 
                             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                            icon={<HiPhone />}
+                            icon={<HiOutlineWrenchScrewdriver />}
                         >
-                        <div className="sp-box relative p-3">
-                            <div className="absolute top-[-30px] bg-[#111a30] sp pl-2 pr-14  py-1 left-0">
+                        <div className="sp-box relative p-3 border border-[#2a4892]">
+                            <div className="absolute top-[-32px] bg-[#2a4892] sp pl-2 pr-14  py-1 left-[-2px]">
                                 <h1>Tools</h1>
                             </div>
-                             <figure className='grid mt-4 grid-cols-6 gap-4'>
+                             <figure className='grid  mt-4 grid-cols-6 gap-4'>
                                   {
                                     tecData[0].tools.map(tData => <img key={tData.id} className="" src={tData.img} />)
                                   }
@@ -209,10 +210,10 @@ const Technology = () => {
                         <VerticalTimelineElement
                             className="vertical-timeline-element--work bg-"
                             iconStyle={{ background: 'rgb(0, 0, 0)', color: '#fff' }}
-                            icon={<HiPhone />}
+                            icon={<HiOutlineCodeBracket />}
                         >
-                              <div className="sp-box relative p-3">
-                            <div className="absolute top-[-30px] bg-[#111a30] sp2 pl-14 pr-2  py-1 right-0">
+                              <div className="sp-box relative p-3 border border-[#2a4892]">
+                            <div className="absolute top-[-32px] bg-[#2a4892] sp2 pl-14 pr-2  py-1 right-[-2px]">
                                 <h1>App Development</h1>
                             </div>
                              <figure className='grid mt-4 grid-cols-6 gap-4'>
@@ -226,10 +227,10 @@ const Technology = () => {
                         <VerticalTimelineElement
                             className="vertical-timeline-element--work bg-"
                             iconStyle={{ background: 'rgb(0, 0, 0)', color: '#fff' }}
-                            icon={<HiPhone />}
+                            icon={<HiOutlineCurrencyBangladeshi />}
                         >
-                              <div className="sp-box relative p-3">
-                            <div className="absolute top-[-30px] bg-[#111a30] sp pr-14 pl-2  py-1 left-0">
+                              <div className="sp-box relative p-3 border border-[#2a4892]">
+                            <div className="absolute top-[-32px] bg-[#2a4892] sp pr-14 pl-2  py-1 left-[-2px]">
                                 <h1>Payment Method Technology</h1>
                             </div>
                              <figure className='grid mt-4 grid-cols-6 gap-4'>

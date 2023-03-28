@@ -112,7 +112,7 @@
 
 .sp{
 clip-path: polygon(0 0, 89% 0, 100% 100%, 100% 100%, 0 100%, 0 100%);
-
+border-bottom: none;
 }
 .sp2{
 clip-path: polygon(9% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 100%);
@@ -125,4 +125,22 @@ clip-path: polygon(9% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 100%);
 }
 .vertical-timeline-element-content-arrow{
   border: none!important;
+}
+
+.glass,
+  .glass:hover,
+  .glass.btn-active {
+    border: none;
+    backdrop-filter: blur(var(--glass-blur, 40px));
+    background-color: transparent;
+    background-image: linear-gradient(
+        135deg,
+        rgb(255 255 255 / var(--glass-opacity, 20%)) 0%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      linear-gradient(
+         30deg, #020A1C,80%, #020a1c00
+      );
+    box-shadow: none!important;
+    text-shadow: 0 1px rgb(0 0 0 / var(--glass-text-shadow-opacity, 5%));
 }

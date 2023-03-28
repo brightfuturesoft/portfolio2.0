@@ -29,11 +29,14 @@ const Service = () => {
     ];
     return (
         <div className='service-bg py-16'>
-            <h1 className="text-xl  font-bold relative after:absolute after:left-0 after:right-0 after:bottom-[-18px] after:w-[60px] after:rounded-full after:h-[6px] after:bg-[#0095ff] after:mx-auto text-center">Services We  <span className="shadow-tx">Provide</span></h1>
-            <div className="grid md:grid-cols-4 gap-8 mt-16 md:w-[85%] w-[98%] p-3 mx-auto">
-                {
-                    serviceInfo.map(data => <ServiceCart key={data.id} data={data}/>)
-                }
+            <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+
+                <h1 className="text-xl  font-bold relative after:absolute after:left-0 after:right-0 after:bottom-[-18px] after:w-[60px] after:rounded-full after:h-[6px] after:bg-[#0095ff] after:mx-auto text-center">Services We  <span className="shadow-tx">Provide</span></h1>
+                <div className="grid md:grid-cols-3 gap-8 mt-16 md:w-[85%] w-[98%] p-3 mx-auto">
+                    {
+                        serviceInfo.map(data => <ServiceCart key={data.id} data={data}/>)
+                    }
+                </div>
             </div>
         </div>
     );

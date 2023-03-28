@@ -30,8 +30,8 @@ const Offer = () => {
     ]
     return (
         <div className="w-full bg-[#020A1C]">
-            <div className="work-bg">
-                       <div className='md:w-[85%] w-[98%] px-3 mx-auto pt-8 pb-12'>
+            <div className="work-bg ">
+            <div className='md:w-[85%] w-[98%] pt-8 pb-12 px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
               <h1 className="text-xl  font-bold relative after:absolute after:left-0 after:right-0 after:bottom-[-18px] after:w-[60px] after:rounded-full after:h-[6px] after:bg-[#0095ff] after:mx-auto text-center text-white">How We Develop <span className="shadow-tx">Software</span></h1>
               <p className="text-center mt-8 text-blue-500">
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium <br />

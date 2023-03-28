@@ -7,8 +7,8 @@ import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const HeadSection = () => {
     return (
-        <div className="header-bg w-full pt-[100px]  md:pb-[0px] pb-[90px]  capitalize">
-           <div className="md:grid grid-cols-2 md:w-[85%] w-[98%] mx-auto">
+        <div className=" header-bg w-full pt-[100px]  md:pb-[0px] pb-[90px]  capitalize">
+           <div className="px-4 py-5 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 md:grid grid-cols-2 md:w-[85%] w-[98%] mx-auto">
                 <div className="md:flex items-center ">
                           <h4 className="text-lg md:text-left text-center md:hidden block">We Are Professional</h4>
                         <h1 className='md:text-left text-center md:text-5xl text-3xl md:hidden block md:font-bold font-[900]'>Design & <span className="text-[orange]">Development</span></h1>
