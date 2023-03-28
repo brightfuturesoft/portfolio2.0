@@ -18,11 +18,20 @@ import sql from '../../../Assctes/icon/sql.png'
 import flutter from '../../../Assctes/icon/flutter.png'
 import ssl from '../../../Assctes/icon/ssl.png'
 import strip from '../../../Assctes/icon/stripe.png'
+import firebase from '../../../Assctes/icon/firebase.png'
+import figma from '../../../Assctes/icon/figma.png'
+import xd from '../../../Assctes/icon/xd.png'
+import ps from '../../../Assctes/icon/ps.png'
+import illstator from '../../../Assctes/icon/illastator.png'
+import id from '../../../Assctes/icon/id.png'
+import aftereffect from '../../../Assctes/icon/aftereffect.png'
+import flut from '../../../Assctes/icon/flutter.png'
+import native from '../../../Assctes/icon/reactNative.png';
 
 const Technology = () => {
     const tecData =[
        {
-         tool : [
+         front : [
             { 
                id : 0,
                img : tailwind
@@ -82,6 +91,58 @@ const Technology = () => {
                 img : js
             },
         ],
+          tools : [
+            { 
+               id : 0,
+               img : firebase
+            },
+            { 
+               id : 1,
+               img : figma
+            },
+            { 
+               id : 2,
+               img : xd
+            },
+            { 
+               id : 3,
+               img : ps
+            },
+            { 
+               id : 4,
+               img : illstator
+            },
+            { 
+               id : 5,
+               img : id
+            },
+            { 
+               id : 6,
+               img : aftereffect
+            },
+        ],
+          app : [
+            { 
+               id : 0,
+               img : native
+            },
+            { 
+               id : 1,
+               img : flut
+            },
+           
+        ],
+          payment : [
+            { 
+               id : 0,
+               img : ssl
+            },
+            { 
+               id : 1,
+               img : strip
+            },
+       
+        ],
        }
     ]
 
@@ -103,7 +164,7 @@ const Technology = () => {
                             </div>
                              <figure className='grid mt-4 grid-cols-6 gap-4'>
                                   {
-                                    tecData[0].tool.map(tData => <img key={tData.id} className="" src={tData.img} />)
+                                    tecData[0].front.map(tData => <img key={tData.id} className="" src={tData.img} />)
                                   }
                              </figure>
                         </div>
@@ -125,6 +186,7 @@ const Technology = () => {
                              </figure>
                         </div>
                         </VerticalTimelineElement>
+                      
                         <VerticalTimelineElement
                             className="vertical-timeline-element--work"
                             contentArrowStyle={{ borderRight: '7px solid  #ff000000', }}
@@ -134,11 +196,11 @@ const Technology = () => {
                         >
                         <div className="sp-box relative p-3">
                             <div className="absolute top-[-30px] bg-[#111a30] sp pl-2 pr-14  py-1 left-0">
-                                <h1>Fron-end-development</h1>
+                                <h1>Tools</h1>
                             </div>
                              <figure className='grid mt-4 grid-cols-6 gap-4'>
                                   {
-                                    tecData[0].tool.map(tData => <img key={tData.id} className="" src={tData.img} />)
+                                    tecData[0].tools.map(tData => <img key={tData.id} className="" src={tData.img} />)
                                   }
                              </figure>
                         </div>
@@ -151,11 +213,28 @@ const Technology = () => {
                         >
                               <div className="sp-box relative p-3">
                             <div className="absolute top-[-30px] bg-[#111a30] sp2 pl-14 pr-2  py-1 right-0">
-                                <h1>Fron-end-development</h1>
+                                <h1>App Development</h1>
                             </div>
                              <figure className='grid mt-4 grid-cols-6 gap-4'>
                                   {
-                                    tecData[0].tool.map(tData => <img key={tData.id} className="" src={tData.img} />)
+                                    tecData[0].app.map(tData => <img key={tData.id} className="" src={tData.img} />)
+                                  }
+                             </figure>
+                        </div>
+                        </VerticalTimelineElement>
+                    
+                        <VerticalTimelineElement
+                            className="vertical-timeline-element--work bg-"
+                            iconStyle={{ background: 'rgb(0, 0, 0)', color: '#fff' }}
+                            icon={<HiPhone />}
+                        >
+                              <div className="sp-box relative p-3">
+                            <div className="absolute top-[-30px] bg-[#111a30] sp pr-14 pl-2  py-1 left-0">
+                                <h1>Payment Method Technology</h1>
+                            </div>
+                             <figure className='grid mt-4 grid-cols-6 gap-4'>
+                                  {
+                                    tecData[0].payment.map(tData => <img key={tData.id} className="" src={tData.img} />)
                                   }
                              </figure>
                         </div>
