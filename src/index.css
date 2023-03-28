@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  background-color: #020A1C!important;
+ /* font-family: 'Aref Ruqaa Ink', serif; */
+/* font-family: 'Noto Nastaliq Urdu', serif; */
+/* font-family: 'Nunito', sans-serif; */
+/* font-family: 'Poppins', sans-serif; */
+font-family: 'Ubuntu', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

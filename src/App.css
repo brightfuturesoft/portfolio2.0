@@ -1,0 +1,83 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* font-size: calc(10px + 2vmin); */
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.header-bg {
+  background-image: linear-gradient(190deg, rgba(22, 101, 125, 0.4) -121.64%, #020A1C 74.61%),url('../src/Assctes/backgrounds/header.png');
+  background-size: cover;
+}
+.shadow-btn{
+  transition: all 0.3s ease;
+}
+.shadow-btn:hover{
+  transition: all 0.3s ease;
+  background: rgb(1, 145, 207);
+  box-shadow: 0px 2px 15px rgba(64, 162, 247, 0.607);
+}
+.common-bg{
+  background: #020A1C;
+}
+.shadow-tx{
+  color: rgb(0, 208, 255);
+  filter: drop-shadow(0px 0px 16px rgb(0, 183, 255));
+}
+.requirement-box{
+  background-image: url('../src/Assctes/backgrounds/RqBg.png');
+  background-size: cover;
+}
+.service-bg{
+  background-image: radial-gradient(38.6% 47.29% at 50% 50.08%, rgba(2, 10, 28, 0.57) 0%, #020A1C 100%),url('../src/Assctes/backgrounds/5512626.jpg');
+  background-size: cover;
+  background-position:fixed!important;
+}
+.common-hover-shadow{
+  transition: all 0.2s ease;
+}
+.common-hover-shadow:hover {
+  background: rgb(31, 50, 59);
+  overflow: hidden;
+  transition: all 0.2s ease;
+  box-shadow: 0px 3px 25px -1px #05556e8d;
+}
+.vc-img{
+  transition: all 0.2s ease;
+}
+.common-hover-shadow:hover .vc-img{
+  transition: all 0.2s ease;
+  transform:scale(1.2)
+}
