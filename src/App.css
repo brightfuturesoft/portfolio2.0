@@ -65,9 +65,25 @@
   background-size: cover;
   background-position:fixed!important;
 }
+.work-bg{
+  background-image: url('../src/Assctes/backgrounds/workBg.png');
+  background-size: cover;
+  background-position:fixed!important;
+}
+.tech-bg{
+  background-image: radial-gradient(37.46% 51.63% at 50% 43.59%, rgba(2, 10, 28, 0.66) 0%, #020A1C 100%),url('../src/Assctes/backgrounds/techBg.png');
+  background-size: cover;
+}
 .common-hover-shadow{
   transition: all 0.2s ease;
 }
+.common-hover-shadow2{
+  transition: all 0.2s ease;
+  box-shadow: 6px 6px 12px #b8b9be,-6px -6px 12px #fff!important;
+ }
+ .offer-cart-s{
+      box-shadow: -2px -2px 17px 1px #1d2230, 4px 5px 6px 0px #16182bc6
+ }
 .common-hover-shadow:hover {
   background: rgb(31, 50, 59);
   overflow: hidden;
@@ -80,4 +96,33 @@
 .common-hover-shadow:hover .vc-img{
   transition: all 0.2s ease;
   transform:scale(1.2)
+}
+.m-shadow{
+  transition: all 0.2s ease;
+}
+.m-shadow:hover{
+  transition: all 0.2s ease;
+  box-shadow: 0px 0px 14px 0px rgba(0, 110, 255, 0.329);
+}
+.vertical-timeline-element-content{
+  background : rgba(12, 23, 71, 0)!important;
+  border : none!important;
+  box-shadow : none!important;
+}
+
+.sp{
+clip-path: polygon(0 0, 89% 0, 100% 100%, 100% 100%, 0 100%, 0 100%);
+
+}
+.sp2{
+clip-path: polygon(9% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 100%);
+
+}
+.sp-box{
+  transition: all 0.2s ease;
+  background-image: linear-gradient(30deg,#111a30, #111a30c6);
+  /* box-shadow: 0px 7px 20px 0px rgba(0, 119, 255, 0.148); */
+}
+.vertical-timeline-element-content-arrow{
+  border: none!important;
 }
