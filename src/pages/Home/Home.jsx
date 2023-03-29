@@ -17,12 +17,14 @@ const Home = () => {
             <HeadSection />
             <OurRequrement />
             <Service />
-            {/* <Project /> */}
+              <div className="mrg-bg">
+                   <Project />
+                   <OurMission />
+              </div>
             <Technology />
             <Offer />
-            <OurMission />
-            {/* <OurVission /> */}
-            {/* <Team></Team> */}
+            <OurVission />
+            <Team></Team>
             {/* <Technology /> */}
             {/* <Testimonial /> */}
             {/* <Contact /> */}

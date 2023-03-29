@@ -35,9 +35,9 @@ const OurMission = () => {
         },
     ]
     return (
-        <div className='md:w-[80%] w-[95%] mx-auto'>
-            <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-                    <h1 className="text-xl  font-bold relative after:absolute after:left-0 after:right-0 after:bottom-[-18px] after:w-[60px] after:rounded-full after:h-[6px] after:bg-[#0095ff] after:mx-auto text-center text-white">How We Develop <span className="shadow-tx">Software</span></h1>
+        <div className=' mx-auto mission-bg'>
+            <div className="px-4 py-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 md:w-[80%] w-[95%]">
+                    <h1 className="text-xl  font-bold relative after:absolute after:left-0 after:right-0 after:bottom-[-18px] after:w-[60px] after:rounded-full after:h-[6px] after:bg-[#0095ff] after:mx-auto text-center text-white">Our <span className="shadow-tx">Mission</span></h1>
         
                     <div className="grid md:grid-cols-2 grid-cols-1 mt-16">
                             <img src={vct} alt="" className=" w-[300px] md:hidden block mx-auto" />
@@ -50,7 +50,7 @@ const OurMission = () => {
                                         {
                                             missionData.map(mData => <li className="flex items-center  gap-2 duration-200 cursor-pointer hover:bg-[#22283db1] p-2 rounded" key={mData.id}>
                                                 <span className="border border-blue-600 rounded-md">
-                                                    <img src={mData.img} alt="" className="w-[35px]" />
+                                                    <img src={mData.img} alt="" className="w-[55px]" />
                                                 </span>
                                                 <p>{mData.title}</p>
                                             </li>)

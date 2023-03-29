@@ -74,6 +74,12 @@
   background-image: radial-gradient(37.46% 51.63% at 50% 43.59%, rgba(2, 10, 28, 0.66) 0%, #020A1C 100%),url('../src/Assctes/backgrounds/techBg.png');
   background-size: cover;
 }
+.vission-bg{
+  background-image: radial-gradient(39.53% 37.94% at 63.76% 51.76%, rgba(2, 10, 28, 0.45) 0%, rgba(2, 10, 28, 0.83) 42.36%, #020A1C 100%),url('../src/Assctes/backgrounds/missionBg.png');
+  background-size: cover;
+}
+
+
 .common-hover-shadow{
   transition: all 0.2s ease;
 }
@@ -143,4 +149,102 @@ clip-path: polygon(9% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 100%);
       );
     box-shadow: none!important;
     text-shadow: 0 1px rgb(0 0 0 / var(--glass-text-shadow-opacity, 5%));
+}
+
+
+.swiper {
+  width: 100%;
+  
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mrg-bg{
+  background-image:radial-gradient(50.35% 50.39% at 42.03% 53.31%, rgba(2, 10, 28, 0.58) 0%, #020A1C 100%),url('../src/Assctes/backgrounds/5430284.jpg');
+  background-size: cover;
+}
+.box{
+  transition: all 0.2s ease;
+  /* box-shadow: 0px 3px 14px 0px rgba(0, 0, 255, 0.451); */
+}
+.box:hover{
+  transition: all 0.2s ease;
+  box-shadow: 0px 3px 14px 0px rgba(0, 0, 255, 0.451);
+}
+.cart-project{
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.hvr-p{
+  transition: all 0.2s ease;
+  bottom: -100%;
+}
+.cart-project:hover .hvr-p{
+  transition: all 0.2s ease;
+  bottom: 0%;
+}
+.swiper-button-next, .swiper-button-prev{
+  color: rgb(0, 208, 255)!important;
+  width: 40px!important;
+  font-size: 10px!important;
+
+}
+
+.swiper, swiper-container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow-x: hidden!important;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    display: block;
+}
+.swiper-pagination-bullet-active{
+   width: 60px!important;
+   border-radius: 8px!important;
+
+}
+ .swiper-pagination-fraction {
+    position: relative;
+    bottom: 0px;
+    display: flex;
+    justify-content: end!important;
+    top: var(--swiper-pagination-top,auto);
+    left: 0;
+    right: 2px!important;
+    width: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #ffffff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-box{
+  transition: all 0.2s ease;
+  /* box-shadow: 0px 0px 14px 0px rgba(0, 47, 255, 0.533); */
+}
+.cart-box:hover{
+  transition: all 0.2s ease;
+  box-shadow: 0px 0px 14px 0px rgba(0, 47, 255, 0.533);
 }
