@@ -25,9 +25,8 @@ const Home = () => {
             <Offer />
             <OurVission />
             <Team></Team>
-            {/* <Technology /> */}
-            {/* <Testimonial /> */}
-            {/* <Contact /> */}
+            <Testimonial />
+            <Contact />
 
         </div>
     );

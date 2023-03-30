@@ -178,6 +178,21 @@ clip-path: polygon(9% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 100%);
   background-image:radial-gradient(50.35% 50.39% at 42.03% 53.31%, rgba(2, 10, 28, 0.58) 0%, #020A1C 100%),url('../src/Assctes/backgrounds/5430284.jpg');
   background-size: cover;
 }
+.team-bg{
+  background-image: radial-gradient(53.72% 53.72% at 40.82% 46.28%, rgba(2, 11, 29, 0.49) 0%, #020A1C 100%),url('../src/Assctes/backgrounds/Rectangle\ 50.png');
+  background-size: cover;
+}
+
+.testimonial-bg{
+  background-image: radial-gradient(50.28% 48.61% at 50.04% 54.71%, rgba(2, 11, 29, 0.78) 0%, #020A1C 100%),url('../src/Assctes/backgrounds/5528701.jpg');
+  background-size: cover;
+}
+
+.contact-bg{
+  background-image: radial-gradient(50.28% 48.61% at 50.04% 54.71%, rgba(2, 11, 29, 0.78) 0%, #020A1C 100%),url('../src/Assctes/backgrounds/contact.png');
+  background-size: cover;
+}
+
 .box{
   transition: all 0.2s ease;
   /* box-shadow: 0px 3px 14px 0px rgba(0, 0, 255, 0.451); */
@@ -247,4 +262,57 @@ clip-path: polygon(9% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 100%);
 .cart-box:hover{
   transition: all 0.2s ease;
   box-shadow: 0px 0px 14px 0px rgba(0, 47, 255, 0.533);
+}
+.cart-header{
+  transition: all 0.2s ease;
+}
+
+.cart-box:hover:hover .cart-header{
+  transition: all 0.2s ease;
+  transform: scale(1.1);
+}
+.ts-img{
+  width: 80px!important;
+  height: 80px!important;
+  border-radius: 100%;
+  margin: auto;
+  margin-top: 20px;
+  border: 3px solid rgb(0, 187, 255);
+}
+
+.r-shadow{
+  box-shadow: 0px 0px 15px 0px rgb(0, 166, 255);
+}
+
+.l-shadow{
+  box-shadow: 0px 0px 15px 0px rgb(0, 166, 255);
+}
+
+.contact-box{
+  background-image:linear-gradient(73.88deg, #14082E 42.13%, #070c32fa 65.05%);;
+}
+
+.testimonial-cart{
+  transition: all 0.2s ease;
+}
+.testimonial-cart:hover{
+  transition: all 0.2s ease;
+  box-shadow: 0px 0px 18px 0px rgba(0, 145, 255, 0.503);
+}
+
+[type='text']:focus, [type='email']:focus, [type='url']:focus, [type='password']:focus, [type='number']:focus, [type='date']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='week']:focus, [multiple]:focus, textarea:focus, select:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
+    --tw-ring-offset-width: 0px;
+    --tw-ring-offset-color: #fff;
+    --tw-ring-color: #1c64f200;
+    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) #1c64f200;
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    border-color: #1c64f200;
+}
+.form-bg{
+  background-image: radial-gradient(37.46% 51.63% at 50% 43.59%, rgba(2, 10, 28, 0.921) 0%, #020A1C 100%),url('../src/Assctes/backgrounds/missionBg.png');
+  background-size: cover;
 }
