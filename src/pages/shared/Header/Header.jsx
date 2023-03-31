@@ -7,7 +7,7 @@ const Header = () => {
  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
      <nav className="relative z-10 ">
-      <div className="py-2   mx-auto glass md:py-4 md:px-[4%] w-full px-[4%]">
+      <div className="py-2  mx-auto glass md:py-4 md:px-[4%] w-full px-[4%]">
         <div className="relative px-4  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 flex items-center justify-between">
           <Link to="/"><img src={logo} alt="" /></Link>
           <ul className=" items-center hidden space-x-8 lg:flex ">

@@ -107,6 +107,32 @@ const Team = () => {
                     delay: 2500,
                     disableOnInteraction: false,
                     }}
+                 breakpoints={{
+                    320: {
+                      slidesPerView: 1,
+                      spaceBetween: 20,
+                    },
+                    360: {
+                      slidesPerView: 1,
+                      spaceBetween: 20,
+                    },
+                    480: {
+                      slidesPerView: 1,
+                      spaceBetween: 20,
+                    },
+                    640: {
+                      slidesPerView: 1,
+                      spaceBetween: 20,
+                    },
+                    768: {
+                      slidesPerView: 2,
+                      spaceBetween: 40,
+                    },
+                    1024: {
+                      slidesPerView: 4,
+                      spaceBetween: 50,
+                    },
+                  }}
                 spaceBetween={50}
                 slidesPerView={4}
                 onSlideChange={() => console.log('slide change')}

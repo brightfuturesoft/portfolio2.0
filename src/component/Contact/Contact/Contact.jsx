@@ -1,15 +1,33 @@
 import React from 'react';
+import { MdFacebook, MdOutlineMail, MdPhone } from 'react-icons/md';
+import { BsLinkedin } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
     return (
         <div className="contact-bg">
-            <div className="px-4 py-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 md:w-[80%] w-[95%]">
+            <div className="px-1 py-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 md:w-[80%] w-[95%]">
                     <h1 className="text-xl  font-bold relative after:absolute after:left-0 after:right-0 after:bottom-[-18px] after:w-[60px] after:rounded-full after:h-[6px] after:bg-[#0095ff] after:mx-auto text-center text-white">Want to talk about <span className="shadow-tx"> your project?</span></h1>
 
-                    <div className="contact-box mt-12 p-2 rounded">
-                         <div className="grid grid-cols-2">
-                              <div className="">
-                                
+                    <div className="contact-box py-6 mt-12 p-2 rounded">
+                         <div className="grid md:grid-cols-2 grid-cols-1">
+                              <div className="py-[40px] px-[60px]">
+                                  <h1 className="font-bold text-3xl">Contact us</h1>
+
+                                  <ul className="mt-7">
+                                      <li className=''>
+                                         <Link to="" className="flex items-center gap-2 duration-200 hover:text-blue-400"><MdOutlineMail className='text-2xl text-[#00a2ff]'/> info@thebrightfuture.co</Link>
+                                      </li>
+                                      <li className='mt-6'>
+                                         <Link to="" className="flex items-center gap-2 duration-200 hover:text-blue-400"><MdPhone className='text-2xl text-[#00a2ff]'/>01792-205520</Link>
+                                      </li>
+                                      <li className='mt-6'>
+                                         <Link to="https://www.facebook.com/thebrightfuture.co" className="flex items-center gap-2 duration-200 hover:text-blue-400"><MdFacebook className='text-2xl text-[#00a2ff]'/>Facebook</Link>
+                                      </li>
+                                      <li className='mt-6'>
+                                         <Link to="https://www.linkedin.com/company/thebrightfuture-co/mycompany/verification/" className="flex items-center gap-2 duration-200 hover:text-blue-400"><BsLinkedin className='text-xl text-[#00a2ff]'/> Linked In</Link>
+                                      </li>
+                                  </ul>
                               </div>
                               <div className="">
                                   <form action="" className="text-[#0095ff] px-4 py-5 md:w-[80%] rounded-xl mx-auto form-bg">

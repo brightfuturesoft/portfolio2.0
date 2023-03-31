@@ -118,8 +118,33 @@ const teamMembers = [
                     delay: 2500,
                     disableOnInteraction: false,
                     }}
+                 breakpoints={{
+                    320: {
+                      slidesPerView: 1,
+                      spaceBetween: 20,
+                    },
+                    360: {
+                      slidesPerView: 1,
+                      spaceBetween: 20,
+                    },
+                    480: {
+                      slidesPerView: 1,
+                      spaceBetween: 20,
+                    },
+                    640: {
+                      slidesPerView: 1,
+                      spaceBetween: 20,
+                    },
+                    768: {
+                      slidesPerView: 1,
+                      spaceBetween: 40,
+                    },
+                    1024: {
+                      slidesPerView: 3,
+                      spaceBetween: 50,
+                    },
+                  }}
                 spaceBetween={50}
-                slidesPerView={3}
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiper) => console.log(swiper)}>
                 
@@ -128,20 +153,20 @@ const teamMembers = [
                     <SwiperSlide key={testimonialData.id} className="">
                         <div className=" py-[100px] px-2">
                             <div className="testimonial-cart p-4 bg-[#121e34] rounded-md relative overflow-hidden">
-                                <div className="bg-[#1795F0] w-[150px] rounded-full h-[150px] flex justify-end items-end p-8 text-white absolute left-[-70px] top-[-70px]">
+                                <div className="bg-[#1795F0] w-[150px] rounded-full h-[150px] flex justify-end items-end p-8 text-white absolute left-[-70px] top-[-70px] qut">
                                     <MdFormatQuote className="text-4xl"/>    
                                 </div>  
                                 <div className="d-l bg-[#80808048] w-[5px] h-[60px] p-0 absolute -z-0 right-0 top-[70px]">
                                      <div className="h-full relative">
                                         <span className="bg-white text-white absolute top-0 left-0 right-0">.</span>
-                                        <span className="bg-[#1795F0] r-shadow text-[#1795F0] absolute bottom-0 h-[40px] left-0 right-0">.</span>
+                                        <span className="bg-[#1795F0] r-shadow text-[#1795F0] absolute bottom-0 h-[40px] left-0 sp-ln-1 right-0">.</span>
                                      </div>
                                 </div>
                                
                                 <div className="d-l bg-[#80808048] w-[5px] h-[60px] p-0 absolute -z-0 left-0 bottom-[70px]">
                                      <div className="h-full relative">
                                         <span className="bg-white text-white absolute top-0 left-0 right-0">.</span>
-                                        <span className="bg-[#1795F0] l-shadow text-[#1795F0] absolute bottom-0 h-[40px] left-0 right-0">.</span>
+                                        <span className="bg-[#1795F0] l-shadow text-[#1795F0] absolute bottom-0 h-[40px] sp-ln-2 left-0 right-0">.</span>
                                      </div>
                                 </div>
 

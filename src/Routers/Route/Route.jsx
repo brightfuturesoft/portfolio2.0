@@ -12,6 +12,9 @@ import Service from '../../component/Service/Service/Service';
 import Technology from '../../component/Technology/Techonology/Technology';
 import Home from '../../pages/Home/Home';
 import Main from '../../pages/Main/Main';
+import Project from '../../component/Project/Project/Project';
+import Card from '../../component/Project/Cards/Cards';
+import AllProject from '../../component/Project/AllProject/AllProject';
 
 export const route = createBrowserRouter([
     {
@@ -41,6 +44,21 @@ export const route = createBrowserRouter([
             {
                path : "/joinUs",
                element : <JoinUs />
+            },
+            {
+               path : "/project",
+               element : <Project />
+            },
+            {
+               path : "/all_project",
+               element : <AllProject />,
+               loader : async ()=>{
+                  return fetch('allProject.json')
+               }
+            },
+            {
+               path : "/Cart",
+               element : <Card />
             },
             {
                path : "/projectDetails",

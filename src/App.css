@@ -74,10 +74,16 @@
   background-image: radial-gradient(37.46% 51.63% at 50% 43.59%, rgba(2, 10, 28, 0.66) 0%, #020A1C 100%),url('../src/Assctes/backgrounds/techBg.png');
   background-size: cover;
 }
+
+.all-project-bg{
+  background-image: radial-gradient(37.46% 51.63% at 50% 43.59%, rgb(2, 10, 28) 0%, #020A1C 100%);
+  background-size: cover;
+}
 .vission-bg{
   background-image: radial-gradient(39.53% 37.94% at 63.76% 51.76%, rgba(2, 10, 28, 0.45) 0%, rgba(2, 10, 28, 0.83) 42.36%, #020A1C 100%),url('../src/Assctes/backgrounds/missionBg.png');
   background-size: cover;
 }
+
 
 
 .common-hover-shadow{
@@ -133,24 +139,18 @@ clip-path: polygon(9% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 100%);
   border: none!important;
 }
 
+
 .glass,
   .glass:hover,
   .glass.btn-active {
     border: none;
     backdrop-filter: blur(var(--glass-blur, 40px));
     background-color: transparent;
-    background-image: linear-gradient(
-        135deg,
-        rgb(255 255 255 / var(--glass-opacity, 20%)) 0%,
-        rgba(0, 0, 0, 0) 100%
-      ),
-      linear-gradient(
-         30deg, #020A1C,80%, #020a1c00
-      );
-    box-shadow: none!important;
+    background-image: linear-gradient(50deg, #111a30, #111a30 ),
+      linear-gradient(rgba(255, 0, 0, 0), rgba(26, 26, 95, 0.486));
+    box-shadow:none!important;
     text-shadow: 0 1px rgb(0 0 0 / var(--glass-text-shadow-opacity, 5%));
 }
-
 
 .swiper {
   width: 100%;
@@ -315,4 +315,38 @@ clip-path: polygon(9% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 100%);
 .form-bg{
   background-image: radial-gradient(37.46% 51.63% at 50% 43.59%, rgba(2, 10, 28, 0.921) 0%, #020A1C 100%),url('../src/Assctes/backgrounds/missionBg.png');
   background-size: cover;
+}
+
+ 
+.sp-ln-1{
+  transition: all 0.2s ease;
+}
+.sp-ln-2{
+  transition: all 0.2s ease;
+}
+ 
+.testimonial-cart:hover .sp-ln-1{
+  transition: all 0.2s ease;
+  box-shadow: 0px 0px 18px 3px #1795F0!important;
+}
+
+.testimonial-cart:hover .sp-ln-2{
+  transition: all 0.2s ease;
+  box-shadow: 0px 0px 18px 3px #1795F0!important;
+}
+
+.footer-bg{
+  background: linear-gradient(145.68deg, #0B1227 -0.81%, rgba(30, 14, 44, 0.51) 88.25%);
+}
+
+.stc-cart{
+  transition:all 0.2s ease;
+}
+.stc-cart:hover{
+  transition:all 0.2s ease;
+  box-shadow: 0px 2px 16px -1px rgba(0, 183, 255, 0.489);
+}
+.p-banner{
+  background-image: url('../src/Assctes/backgrounds/banner1.png');
+  background-size: 100%;
 }
