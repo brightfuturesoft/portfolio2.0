@@ -6,7 +6,6 @@ import Contact from '../../component/Contact/Contact/Contact';
 import HeadSection from '../../component/HeadSection/HeadSection/HeadSection';
 import JoinUs from '../../component/JoinUs/JoinUs/JoinUs';
 import NotFound from '../../component/NotFound/NotFound';
-import ProjectDetails from '../../component/Project/ProjectDetails/ProjectDetails';
 import Review from '../../component/Review/Review/Review';
 import Service from '../../component/Service/Service/Service';
 import Technology from '../../component/Technology/Techonology/Technology';
@@ -61,9 +60,9 @@ export const route = createBrowserRouter([
                element : <Card />
             },
             {
-               path : "/projectDetails",
-               element : <ProjectDetails />
-            },
+               path : "/contact",
+               element : <Contact />
+            }
              
         ] 
     },

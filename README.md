@@ -1,3 +1,4 @@
+<img src="https://i.ibb.co/rk2RbzY/Blue-Yellow-Futuristic-Virtual-Technology-Blog-Banner.png"/>
 # portfolio2.0
  Date | Task |
 | -------- | ------- |
