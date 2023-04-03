@@ -9,7 +9,7 @@ const Header = () => {
      <nav className="relative z-10 ">
       <div className="py-2  mx-auto glass md:py-4 md:px-[4%] w-full px-[4%]">
         <div className="relative px-4  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 flex items-center justify-between">
-          <Link to="/"><img src={logo} alt="" /></Link>
+          <Link to="/"><img src={logo} alt="" className='w-[135px]' /></Link>
           <ul className=" items-center hidden space-x-8 lg:flex ">
             <li className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative">
                 <NavLink
@@ -33,7 +33,7 @@ const Header = () => {
             </li>
               <li className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative">
                 <NavLink
-                    to="/project"
+                    to="/all_project"
                     className={({ isActive, isPending }) =>
                         isPending ? "text-red-400" : isActive ? "text-[#00d5ff] after:absolute after:left-0 after:right-0 after:bottom-[-10px] after:h-[4px] after:w-[20px] after:mx-auto after:rounded-full  after:bg-[#00bfff]" : ""
                     }
@@ -115,7 +115,7 @@ const Header = () => {
                           </li>
                             <li className="font-medium mt-3 h-[40px] flex items-center rounded overflow-hidden px-2 tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative ">
                               <NavLink
-                                  to="/project"
+                                  to="/all_project"
                                   className={({ isActive, isPending }) =>
                                       isPending ? "text-red-400" : isActive ? "absolute top-0 left-0 bottom-0 flex items-center px-3 h-full w-full bg-[#1795F0]" : ""
                                   }

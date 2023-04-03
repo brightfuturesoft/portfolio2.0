@@ -148,10 +148,10 @@ const Technology = () => {
 
     return (
         <div>
-           <div className="tech-bg px-2 text-capitalize">
+           <div className="tech-bg px-2 py-4 text-capitalize">
              <h1 className="text-xl  font-bold relative after:absolute after:left-0 after:right-0 after:bottom-[-18px] after:w-[60px] after:rounded-full after:h-[6px] after:bg-[#0095ff] after:mx-auto text-center text-white">Our Technology <span className="shadow-tx">and Tools</span></h1>
              <br /><br />
-            <VerticalTimeline>
+            <VerticalTimeline className='text-white'>
                         <VerticalTimelineElement
                             className="vertical-timeline-element--work"
                             contentArrowStyle={{ borderRight: '7px solid  #ff000000', }}
@@ -231,7 +231,7 @@ const Technology = () => {
                         >
                               <div className="sp-box relative p-3 border border-[#2a4892]">
                             <div className="absolute top-[-32px] bg-[#2a4892] sp pr-14 pl-2  py-1 left-[-2px]">
-                                <h1>Payment Method Technology</h1>
+                                <h1>Payment Method</h1>
                             </div>
                              <figure className='grid mt-4 grid-cols-6 gap-4'>
                                   {

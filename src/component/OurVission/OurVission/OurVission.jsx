@@ -44,7 +44,7 @@ const OurVission = () => {
                             <img src={vct} alt="" className=" w-[300px] md:hidden block mx-auto" />
 
                             <div className="md:block hidden">
-                                <p>
+                                <p className='text-[white]'>
                                     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae. explicabo.
                                 </p>
                                 <ul className="grid md:grid-cols-2 grid-cols-1 mt-5 gap-3 ">
@@ -53,7 +53,7 @@ const OurVission = () => {
                                                 <span className="border border-blue-600 rounded-md">
                                                     <img src={mData.img} alt="" className="w-[50px]" />
                                                 </span>
-                                                <p>{mData.title}</p>
+                                                <p className='text-gray-500'>{mData.title}</p>
                                             </li>)
                                         }
                                 </ul>

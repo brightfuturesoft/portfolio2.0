@@ -109,7 +109,7 @@ const teamMembers = [
         <div className='testimonial-bg'>
            <div className="px-4 py-20 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 md:w-[80%] w-[95%]">
                        <h1 className="text-xl  font-bold relative after:absolute after:left-0 after:right-0 after:bottom-[-18px] after:w-[60px] after:rounded-full after:h-[6px] after:bg-[#0095ff] after:mx-auto text-center text-white">TESTI<span className="shadow-tx">MONIALS</span></h1>
-                       <p className="text-center mt-8">We do people love Bright Future?</p>
+                       <p className="text-center mt-8 text-[gray]">We do people love Bright Future?</p>
 
                             <Swiper className="cursor-grab"
                 modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
@@ -145,8 +145,8 @@ const teamMembers = [
                     },
                   }}
                 spaceBetween={50}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}>
+                onSlideChange={() => {}}
+                onSwiper={(swiper) => {}}>
                 
                  {
                     teamMembers.map(testimonialData =>  
@@ -171,7 +171,7 @@ const teamMembers = [
                                 </div>
 
                                 <h2 className="text-white text-xl mt-12">{testimonialData.companyName}</h2>
-                                <p className="text-sm text-center mt-2">
+                                <p className="text-sm text-center mt-2 text-gray-400">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil harum commodi impedit dolores voluptates. Natus id, impedit velit repudiandae fugiat eos facere nemo expedita dolorum voluptate, voluptatum, provident deserunt distinctio.
                                    
                                     <img src={testimonialData.img} alt="" className="ts-img" />

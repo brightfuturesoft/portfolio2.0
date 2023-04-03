@@ -2,8 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Card = ({ data, stickyTopSpace }) => {
-	const { description,name, pic, technology, liveLink } = data;
-	console.log(stickyTopSpace);
+	const { id,description,name, pic, technology, liveLink } = data;
 
 	return (
 		<div
@@ -23,10 +22,10 @@ const Card = ({ data, stickyTopSpace }) => {
 								}
 							</ul>
 						</span>
-						<p className="mt-5 text-sm pb-20">{description}</p>
+						<p className="mt-5 text-sm pb-20 text-[#b1b1b1]">{description}</p>
 					</div>
 
-					<Link to={liveLink} className="absolute bg-[#0066ff] right-[20px] bottom-[20px] text-white px-3 py-2 rounded-md duration-200 hover:bg-[#007bff]">Live view</Link>
+					<Link to={`/project/${id}`} className="absolute bg-[#0066ff] right-[20px] bottom-[20px] text-white px-3 py-2 rounded-md duration-200 hover:bg-[#007bff]">Details</Link>
 			 </div>
 		</div>
 	);

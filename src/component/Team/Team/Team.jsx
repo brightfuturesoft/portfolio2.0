@@ -135,15 +135,15 @@ const Team = () => {
                   }}
                 spaceBetween={50}
                 slidesPerView={4}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}>
+                onSlideChange={() => {}}
+                onSwiper={(swiper) => {}}>
                 
                  {
                     teamMembers.map(tData =>  
                     <SwiperSlide key={tData.id} className="cursor-grab">
                         <div className=" py-[100px] px-2">
                             <div className="cart-box  p-2 bg-[#1d1e37bc] border-2 border-[#0059ff] rounded-xl">
-                                    <div style={{backgroundImage : `url("${tData.img}")`, backgroundSize : "cover"}} className="cart-header rounded-[20px]   w-[150px] h-[150px] mx-auto mt-[-40px] i-box">
+                                    <div style={{backgroundImage : `url("${tData.img}")`, backgroundSize : "cover"}} className="cart-header rounded-[20px]   w-[200px] h-[200px] mx-auto mt-[-40px] i-box">
                                     </div>
                                     <div className="body pb-4">
                                         <h2 className="text-white font-semibold mt-2">{tData.name}</h2>

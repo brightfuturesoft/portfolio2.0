@@ -9,8 +9,8 @@ const OfferCart = ({offerData}) => {
                 <img src={pic} alt="" className="rounded-xl m-auto bg-[#151b2989]" />
             </div>
             <div className="cart-body mt-3">
-                <h2 className="font-semibold text-lg">{name}</h2>
-                <small className="mt-3">
+                <h2 className="font-semibold text-lg text-[white]">{name}</h2>
+                <small className="mt-3 text-[#8b8b8b]">
                     {
                         !readMore ? description.slice(0, 120) : description
                     }

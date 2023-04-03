@@ -83,7 +83,10 @@
   background-image: radial-gradient(39.53% 37.94% at 63.76% 51.76%, rgba(2, 10, 28, 0.45) 0%, rgba(2, 10, 28, 0.83) 42.36%, #020A1C 100%),url('../src/Assctes/backgrounds/missionBg.png');
   background-size: cover;
 }
-
+.join-bg{
+  background-image: radial-gradient(39.53% 37.94% at 63.76% 51.76%, rgba(2, 10, 28, 0.925) 0%, rgba(2, 10, 28, 0.896) 42.36%, #020A1C 100%),url("./Assctes/backgrounds/bg-side.jpg");
+  background-size: cover;
+}
 
 
 .common-hover-shadow{
@@ -375,8 +378,9 @@ clip-path: polygon(9% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 100%);
 }
 
 .alert, .alert-success{
-  position: absolute;
-  top: 30%;
+  position: fixed;
+  bottom: -50%;
+  left: 0;
   background-color: red!important;
-  z-index : 1000!important
+  z-index : 10000!important
 }

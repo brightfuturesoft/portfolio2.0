@@ -15,11 +15,8 @@ const AllProject = () => {
     );
     setSearchResults(filteredObjects);
     }, [searchValue, data]);
-
-
-    console.log(searchValue, searchResults);
     return (
-        <div className="md:py-14  all-project-bg">
+        <div className="md:py-14 all-project-bg">
               <div className="px-1 pt-1 pb-20 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 md:w-[80%] w-[95%]">
                     <div className="p-banner px-4 py-[110px]" align="center">
                         <h1 className='text-4xl font-bold'>Our Projects</h1>

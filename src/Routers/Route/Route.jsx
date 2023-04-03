@@ -14,6 +14,7 @@ import Main from '../../pages/Main/Main';
 import Project from '../../component/Project/Project/Project';
 import Card from '../../component/Project/Cards/Cards';
 import AllProject from '../../component/Project/AllProject/AllProject';
+import ProjectDetails from '../../component/Project/ProjectDetails/ProjectDetails';
 
 export const route = createBrowserRouter([
     {
@@ -49,11 +50,19 @@ export const route = createBrowserRouter([
                element : <Project />
             },
             {
+               path : "/project/:id",
+               element : <ProjectDetails />
+            },
+            {
                path : "/all_project",
                element : <AllProject />,
                loader : async ()=>{
-                  return fetch('allProject.json')
+                  return fetch('http://localhost:8000/allProject')
                }
+            },
+            {
+               path : "/all_project/:id",
+               element : <ProjectDetails />
             },
             {
                path : "/Cart",
