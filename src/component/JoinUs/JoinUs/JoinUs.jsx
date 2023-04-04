@@ -3,6 +3,30 @@ import { BsFacebook, BsLinkedin, BsTwitter, BsWhatsapp } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
 const JoinUs = () => {
+    const submitHandler =(e)=>{
+            e.preventDefault();
+            const form = e.target;
+            const fName = form.first_name.value;
+            const lName = form.last_name.value;
+            const email = form.email.value;
+            const phone = form.phone.value;
+            const address = form.address.value;
+            const linkedIn = form.linkedIn.value;
+            const file = form.file.value;
+            const message = form.message.value;
+
+            const user = {
+                fName : fName,
+                lName : lName,
+                email : email,
+                phone : phone,
+                address : address,
+                linkedIn : linkedIn,
+                file : file,
+                message : message
+            }
+            console.log(user);
+    }
     return (
         <div className="bg-[#121c25] md:p-8 p-2">
             <div className=" mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:w-[80%] w-[95%] md:grid grid-cols-2 bg-[#192330] ">
@@ -38,7 +62,7 @@ const JoinUs = () => {
                     </div>
                 </div>
                 <div className="text-white px-3 md:pt-8 md:pb-8 pt-3 pb-[80px]">
-                    <form action="">
+                    <form onSubmit={submitHandler} action="">
                             <div className="md:flex items-center gap-3">
                                     <div className="relative bg-[#0b0a2238] border border-[#1795F0] rounded-lg mt-8 w-full">
                                              <div className="text-[#ff000000] absolute bg-[#0e0b2cf8] w-[78px] h-[3px] left-[14px] top-[-2px]">.</div>
@@ -67,7 +91,7 @@ const JoinUs = () => {
                                     <div className="relative bg-[#0b0a2238] border border-[#1795F0] rounded-lg mt-8 w-full">
                                              <div className="text-[#ff000000] absolute bg-[#0e0b2cf8] w-[59px] h-[3px] left-[14px] top-[-2px]">.</div>
                                             <label htmlFor="" className="absolute text-sm top-[-14px] left-[15px]  px-1">address</label>
-                                            <input required type="text" name="email" className="w-full rounded-lg outline-none border-none bg-[#00000034]" placeholder="enter your address" />
+                                            <input required type="text" name="address" className="w-full rounded-lg outline-none border-none bg-[#00000034]" placeholder="enter your address" />
                                     </div>
                                     <div className="relative bg-[#0b0a2238] border w-full border-[#1795F0] rounded-lg mt-8">
                                              <div className="text-[#ff000000] absolute bg-[#0e0b2cf8] w-[62px] h-[3px] left-[14px] top-[-2px]">.</div>
@@ -78,12 +102,12 @@ const JoinUs = () => {
                               <div className="relative bg-[#0b0a2238] border w-full border-[#1795F0] rounded-lg mt-8">
                                              <div className="text-[#ff000000] absolute bg-[#0e0b2cf8] w-[92px] h-[3px] left-[14px] top-[-2px]">.</div>
                                             <label htmlFor="" className="absolute text-sm top-[-14px] left-[15px]  px-1">drop resume</label>
-                                            <input required type="file" name="linkedIn" className="w-full rounded-lg outline-none border-none bg-[#00000034]" placeholder="enter your linkedin profile" />
+                                            <input required type="file" name="file" className="w-full rounded-lg outline-none border-none bg-[#00000034]" placeholder="enter your linkedin profile" />
                                     </div>       
                                       <div className="relative bg-[#0b0a2238] border w-full border-[#1795F0] rounded-lg mt-8 p-0">
                                              <div className="text-[#ff000000] absolute bg-[#0e0b2cf8] w-[90px] h-[3px] left-[14px] top-[-2px]">.</div>
                                             <label htmlFor="" className="absolute text-sm top-[-14px] left-[15px]  px-1">Cover Letter</label>
-                                            <textarea required type="text" name="linkedIn" className="w-full rounded-lg outline-none md:h-[160px] h-[140px] border-none bg-[#00000034]" placeholder="Enter your Cover Letter" />
+                                            <textarea required type="text" name="message" className="w-full rounded-lg outline-none md:h-[160px] h-[140px] border-none bg-[#00000034]" placeholder="Enter your Cover Letter" />
                                     </div>          
 
                                     <input type="submit" className="bg-[#3e8ca9] px-8 py-3 mt-4 float-right rounded-lg" value="submit" />     

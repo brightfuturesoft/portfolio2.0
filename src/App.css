@@ -83,12 +83,17 @@
   background-image: radial-gradient(39.53% 37.94% at 63.76% 51.76%, rgba(2, 10, 28, 0.45) 0%, rgba(2, 10, 28, 0.83) 42.36%, #020A1C 100%),url('../src/Assctes/backgrounds/missionBg.png');
   background-size: cover;
 }
+.blog-bg{
+  background-image: linear-gradient(60deg, rgba(0, 0, 0, 0.979), rgba(3, 9, 20, 0.782)),url('/src/Assctes/backgrounds/blog-bg.jpg');
+  background-size: cover;
+  background-position: 50%;
+  
+
+}
 .join-bg{
   background-image: radial-gradient(39.53% 37.94% at 63.76% 51.76%, rgba(2, 10, 28, 0.925) 0%, rgba(2, 10, 28, 0.896) 42.36%, #020A1C 100%),url("./Assctes/backgrounds/bg-side.jpg");
   background-size: cover;
 }
-
-
 .common-hover-shadow{
   transition: all 0.2s ease;
 }

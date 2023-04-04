@@ -15,6 +15,8 @@ import Project from '../../component/Project/Project/Project';
 import Card from '../../component/Project/Cards/Cards';
 import AllProject from '../../component/Project/AllProject/AllProject';
 import ProjectDetails from '../../component/Project/ProjectDetails/ProjectDetails';
+import Blog from '../../component/Blog/Blog';
+import BlogDetails from '../../component/Blog/BlogDetails/BlogDetails';
 
 export const route = createBrowserRouter([
     {
@@ -52,6 +54,14 @@ export const route = createBrowserRouter([
             {
                path : "/project/:id",
                element : <ProjectDetails />
+            },
+            {
+               path : "/blog",
+               element : <Blog />
+            },
+            {
+               path : "/blog/:id",
+               element : <BlogDetails />
             },
             {
                path : "/all_project",
