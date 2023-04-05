@@ -17,6 +17,8 @@ import AllProject from '../../component/Project/AllProject/AllProject';
 import ProjectDetails from '../../component/Project/ProjectDetails/ProjectDetails';
 import Blog from '../../component/Blog/Blog';
 import BlogDetails from '../../component/Blog/BlogDetails/BlogDetails';
+import Testimonials from '../../component/Testimonials/Testimonials/Testimonials';
+import AdminBlog from '../../component/Blog/AdminBlog/AdminBlog';
 
 export const route = createBrowserRouter([
     {
@@ -41,7 +43,7 @@ export const route = createBrowserRouter([
             },
             {
                path : "/review",
-               element : <Review />
+               element : <Testimonials />
             },
             {
                path : "/joinUs",
@@ -57,11 +59,25 @@ export const route = createBrowserRouter([
             },
             {
                path : "/blog",
-               element : <Blog />
+               element : <Blog />,
+               loader : async ()=>{
+                  return fetch('http://localhost:8000/blog')
+               }
+            },
+            {
+               path : "/admin/blog",
+               element : <AdminBlog />,
+               loader : async ()=>{
+                  return fetch('http://localhost:8000/blog')
+               }
             },
             {
                path : "/blog/:id",
-               element : <BlogDetails />
+               element : <BlogDetails />,
+                loader : async ({params})=>{
+                  const bId = params.id
+                  return fetch(`http://localhost:8000/blog/${bId}`)
+               }
             },
             {
                path : "/all_project",
