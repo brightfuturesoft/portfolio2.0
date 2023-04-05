@@ -49,7 +49,7 @@ const AdminBlog = () => {
              </div>
              <div className="content px-1 py-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-20 lg:px-2 md:w-[100%] w-[95%]">
                 <h1 className="text-white flex justify-between font-semibold text-2xl border-b pb-2 border-[#80808093]">All Blogs 
-                   <button onClick={()=> setShow(!show)} className="text-sm font-[400] bg-[#5a5af19c] duration-200 hover:bg-[#5a5af1ce] px-8 py-2 rounded">{show ? "Cancle" : "Add +"}</button>
+                   <button onClick={()=> setShow(!show)} className="text-sm font-[400] bg-[#5a5af19c] duration-200 hover:bg-[#5a5af1ce] px-8 py-2 rounded">{show ? "Cancle" : "Add"}</button>
                 </h1>
                 <br />
                 <div className="grid grid-cols-3 gap-12">

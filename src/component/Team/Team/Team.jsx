@@ -19,14 +19,15 @@ import { AiFillLinkedin } from "react-icons/ai";
 
 const Team = () => {
       const [swiperRef, setSwiperRef] = useState(null);
-      const teamMembers = [
+     const teamMembers = [
   {
     "id": 0,
     "img": mahadi,
     "name": "Mahadi Hassan",
     "gender": "male",
     "post": "CEO and founder",
-    "linkedIn": "https://www.linkedin.com/in/codewithmahadihasan/"
+    "linkedIn": "https://www.linkedin.com/in/codewithmahadihasan/",
+    "gender": "male"
   },
   {
     "id": 1,
@@ -34,7 +35,8 @@ const Team = () => {
     "name": "Latisha Hutchinson",
     "gender": "male",
     "post": "BUZZMAKER",
-    "linkedIn": "latishahutchinson@buzzmaker.com"
+    "linkedIn": "latishahutchinson@buzzmaker.com",
+    "gender": "male"
   },
   {
     "id": 2,
@@ -42,7 +44,8 @@ const Team = () => {
     "name": "Antoinette Peck",
     "gender": "male",
     "post": "ONTAGENE",
-    "linkedIn": "antoinettepeck@ontagene.com"
+    "linkedIn": "antoinettepeck@ontagene.com",
+    "gender": "male"
   },
   {
     "id": 3,
@@ -50,7 +53,8 @@ const Team = () => {
     "name": "Randi Norris",
     "gender": "male",
     "post": "SNORUS",
-    "linkedIn": "randinorris@snorus.com"
+    "linkedIn": "randinorris@snorus.com",
+    "gender": "male"
   },
   {
     "id": 4,
@@ -58,7 +62,9 @@ const Team = () => {
     "name": "Candy White",
     "gender": "male",
     "post": "ATGEN",
-    "linkedIn": "candywhite@atgen.com"
+    "linkedIn": "candywhite@atgen.com",
+    "gender": "male"
+
   },
   {
     "id": 5,
@@ -66,7 +72,8 @@ const Team = () => {
     "name": "Blanchard Bruce",
     "gender": "male",
     "post": "ZINCA",
-    "linkedIn": "blanchardbruce@zinca.com"
+    "linkedIn": "blanchardbruce@zinca.com",
+    "gender": "male"
   },
   {
     "id": 6,
@@ -74,7 +81,8 @@ const Team = () => {
     "name": "Franco Tran",
     "gender": "male",
     "post": "INTERLOO",
-    "linkedIn": "francotran@interloo.com"
+    "linkedIn": "francotran@interloo.com",
+    "gender": "male"
   }
   ,
   {
@@ -83,7 +91,8 @@ const Team = () => {
     "name": "Franco Tran",
     "gender": "male",
     "post": "Junior MERN stack Developer",
-    "linkedIn": "francotran@interloo.com"
+    "linkedIn": "francotran@interloo.com",
+    "gender": "male"
   }
   ,
   {
@@ -92,9 +101,10 @@ const Team = () => {
     "name": "Franco Tran",
     "gender": "male",
     "post": "INTERLOO",
-    "linkedIn": "francotran@interloo.com"
+    "linkedIn": "francotran@interloo.com",
+    "gender": "male"
   }
-]
+]    
     return (
         <div className=" team-bg">
             <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">

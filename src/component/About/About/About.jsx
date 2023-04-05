@@ -1,30 +1,159 @@
 import React from 'react';
-import vec from '../../../Assctes/vectors/vector(mission).png'
-import vt from '../../../Assctes/vectors/vector.jpg'
-const About = () => {
-    return (
-        <div className='py-4 bg-[#020A1C] p-2'>
-            <div className="head px-2 py-5 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 md:grid grid-cols-2 md:w-[85%] w-[98%] mx-auto bg-[#17242c] rounded-lg">
-                    <div className="flex items-center justify-center">
-                            <div className="md:pl-8">
-                                <h1 className='text-white md:text-left text-center md:text-4xl text-2xl font-bold'>
-                                    We Build <br className="md:block" /> Web & <span className="text-[orange]">Web Application</span>
-                                </h1>
-                                  <img src={vec} alt="" className="w-[200px] m-auto mt-5 md:hidden block" />
-                                <p className="mt-3 text-gray-400 md:text-left text-center">
-                                    Bright Future is a startup software company that specializes in
-                                    creating web apps, Android apps, and UI/UX designs.
-                                </p>
-                               <div className="flex md:justify-start justify-center">
-                                    <button className="bg-[#1795F0] text-white mt-8 px-8 py-3 rounded-lg ">Contact us</button>
-                               </div>
-                            </div>
-                    </div>
-                    <div className="flex items-center justify-center">
-                       <img src={vec} alt="" className="w-[300px] md:block hidden" />
-                    </div>
-            </div>
+import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
 
+import vec from '../../../Assctes/vectors/vector(mission).png'
+import vt from '../../../Assctes/vectors/vector(header).png'
+import b from '../../../Assctes/backgrounds/b.png';
+import mahadi from '../../../Assctes/teamMember/mahadi.jpg';
+import oshim from '../../../Assctes/teamMember/ashim.jpeg';
+import mamon from '../../../Assctes/teamMember/abdullah.jpg';
+import nahid from '../../../Assctes/teamMember/nahid.jpeg';
+import obidol from '../../../Assctes/teamMember/Obaidul.png'
+import mushfiq from '../../../Assctes/teamMember/musfiq.jpg'
+import mamonKhan from '../../../Assctes/teamMember/Mamun_Khan.png'
+import n from '../../../Assctes/teamMember/n.jpg'
+import abdurRab from '../../../Assctes/teamMember/Abdur_rab_1.jpg'
+import { HiOutlineMicrophone } from 'react-icons/hi2';
+import Service from '../../Service/Service/Service';
+import Testimonials from '../../Testimonials/Testimonials/Testimonials';
+import Contact from '../../Contact/Contact/Contact';
+const About = () => {
+   const teamMembers = [
+  {
+    "id": 0,
+    "img": mahadi,
+    "name": "Mahadi Hassan",
+    "gender": "male",
+    "post": "CEO and founder",
+    "linkedIn": "https://www.linkedin.com/in/codewithmahadihasan/",
+    "gender": "male"
+  },
+  {
+    "id": 1,
+    "img": oshim,
+    "name": "Latisha Hutchinson",
+    "gender": "male",
+    "post": "BUZZMAKER",
+    "linkedIn": "latishahutchinson@buzzmaker.com",
+    "gender": "male"
+  },
+  {
+    "id": 2,
+    "img": mamon,
+    "name": "Antoinette Peck",
+    "gender": "male",
+    "post": "ONTAGENE",
+    "linkedIn": "antoinettepeck@ontagene.com",
+    "gender": "male"
+  },
+  {
+    "id": 3,
+    "img": nahid,
+    "name": "Randi Norris",
+    "gender": "male",
+    "post": "SNORUS",
+    "linkedIn": "randinorris@snorus.com",
+    "gender": "male"
+  },
+  {
+    "id": 4,
+    "img": obidol,
+    "name": "Candy White",
+    "gender": "male",
+    "post": "ATGEN",
+    "linkedIn": "candywhite@atgen.com",
+    "gender": "male"
+
+  },
+  {
+    "id": 5,
+    "img": mushfiq,
+    "name": "Blanchard Bruce",
+    "gender": "male",
+    "post": "ZINCA",
+    "linkedIn": "blanchardbruce@zinca.com",
+    "gender": "male"
+  },
+  {
+    "id": 6,
+    "img":mamonKhan,
+    "name": "Franco Tran",
+    "gender": "male",
+    "post": "INTERLOO",
+    "linkedIn": "francotran@interloo.com",
+    "gender": "male"
+  }
+  ,
+  {
+    "id": 7,
+    "img": n,
+    "name": "Franco Tran",
+    "gender": "male",
+    "post": "Junior MERN stack Developer",
+    "linkedIn": "francotran@interloo.com",
+    "gender": "male"
+  }
+  ,
+  {
+    "id": 8,
+    "img":abdurRab,
+    "name": "Franco Tran",
+    "gender": "male",
+    "post": "INTERLOO",
+    "linkedIn": "francotran@interloo.com",
+    "gender": "male"
+  }
+]      
+    return (
+        <div className='py-4 bg-[#020A1C] p-2 about-bg'>
+            <div className="head px-2 py-5 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 md:w-[85%] w-[98%] mx-auto rounded-lg">
+                <div className="grid grid-cols-2 h-[300px]">
+                     <div className="flex items-center">
+                          <div className="">
+                              <h1 className='text-xl text-[#3f98fd] font-[400] '>The best employer to </h1>
+                            <h1 className="text-5xl text-white font-[700]">the best <span className="text-[orange]">developers</span></h1>
+
+                            <p className="text-gray-300 mt-6">
+                               Bright Future is a software company. Where we create attractive web and mobile applications for our clients. And we deliver clients' orders on time.
+                            </p>
+                          </div>
+                     </div>
+                     <div className="flex justify-end">
+                          <img src={vt} alt="" className="w-[400px]" />
+                     </div>
+                </div>
+                <br />
+                <div className="mt-[200px]">
+                  <h1 className="text-2xl  font-bold relative after:absolute after:left-0 after:right-0 after:bottom-[-18px] after:w-[60px] after:rounded-full after:h-[6px] after:bg-[#0095ff] after:mx-auto text-center text-white">Our <span className="shadow-tx">Team</span></h1>
+                    <br /><br /><br />
+                    <VerticalTimeline>
+                      {
+                        teamMembers?.map(tData => 
+                            <VerticalTimelineElement
+                                
+                                key={tData.id}
+                                className="vertical-timeline-element--work"
+                                iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                                icon={<img src={b} className='rounded-full' />}
+                            >
+                                <div className="flex gap-2 bg-[#232d3b] p-2 rounded">
+                                    <div style={{backgroundImage : `url("${tData?.img}")`, backgroundSize : "cover"}} className="w-[100px] h-[100px] rounded-lg"></div>
+                                    <div className="text-white">
+                                        <h2>{tData.name}</h2>
+                                        <p>{tData.gender=="male" ? "He" : "She"} is {tData.post} in Bright Future</p>
+                                    </div>
+                                </div>
+                            </VerticalTimelineElement>                            
+                        )
+                    }
+                    </VerticalTimeline>
+                    
+                </div>
+            </div>
+                  <Service />
+                  <Testimonials />
+                  <Contact />
             <br />
             {/* content */}
              

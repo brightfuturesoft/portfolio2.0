@@ -19,6 +19,8 @@ import Blog from '../../component/Blog/Blog';
 import BlogDetails from '../../component/Blog/BlogDetails/BlogDetails';
 import Testimonials from '../../component/Testimonials/Testimonials/Testimonials';
 import AdminBlog from '../../component/Blog/AdminBlog/AdminBlog';
+import SignIn from '../../component/Form/SignIn/SignIn';
+import SignUp from '../../component/Form/SignUp/SignUp';
 
 export const route = createBrowserRouter([
     {
@@ -97,6 +99,14 @@ export const route = createBrowserRouter([
             {
                path : "/contact",
                element : <Contact />
+            },
+            {
+               path : "/sign_in",
+               element : <SignIn />
+            },
+            {
+               path : "/sign_up",
+               element : <SignUp />
             }
              
         ] 

@@ -63,12 +63,12 @@ const Header = () => {
             </li>
               <li className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative">
                 <NavLink
-                    to="/review"
+                    to="/blog"
                     className={({ isActive, isPending }) =>
                         isPending ? "text-red-400" : isActive ? "text-[#00d5ff] after:absolute after:left-0 after:right-0 after:bottom-[-10px] after:h-[4px] after:w-[20px] after:mx-auto after:rounded-full  after:bg-[#00bfff]" : ""
                     }
                     >
-                    Review
+                    Blog
                     </NavLink>
             </li>
            

@@ -41,8 +41,24 @@
   background-image: linear-gradient(190deg, rgba(22, 101, 125, 0.4) -121.64%, #020A1C 74.61%),url('../src/Assctes/backgrounds/header.png');
   background-size: cover;
 }
+.about-bg {
+  background-image: linear-gradient(190deg, rgba(0, 0, 0, 0.505) -121.64%, #020a1cf8 74.61%),url('../src/Assctes/backgrounds/about.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
 .shadow-btn{
   transition: all 0.3s ease;
+}
+
+.vertical-timeline-element-content h2 {
+    color: #3dbff6!important;
+    font-size: 22px!important;
+}
+.vertical-timeline-element-content p {
+    color: #cacaca!important;
+    font-size: 14px!important;
+    font-weight: 200!important;
+    margin-top: -1px!important;
 }
 .shadow-btn:hover{
   transition: all 0.3s ease;
