@@ -108,19 +108,19 @@ const About = () => {
     return (
         <div className='py-4 bg-[#020A1C] p-2 about-bg'>
             <div className="head px-2 py-5 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 md:w-[85%] w-[98%] mx-auto rounded-lg">
-                <div className="grid grid-cols-2 h-[300px]">
+                <div className="md:grid grid-cols-2 h-[300px]">
                      <div className="flex items-center">
                           <div className="">
                               <h1 className='text-xl text-[#3f98fd] font-[400] '>The best employer to </h1>
-                            <h1 className="text-5xl text-white font-[700]">the best <span className="text-[orange]">developers</span></h1>
-
+                            <h1 className="md:text-5xl text-[35px] text-white font-[700]">the best <span className="text-[orange]">developers</span></h1>
+                             <img src={vt} alt="" className="md:w-[400px] block md:hidden w-[80%] md:m-0 m-auto" />
                             <p className="text-gray-300 mt-6">
                                Bright Future is a software company. Where we create attractive web and mobile applications for our clients. And we deliver clients' orders on time.
                             </p>
                           </div>
                      </div>
                      <div className="flex justify-end">
-                          <img src={vt} alt="" className="w-[400px]" />
+                          <img src={vt} alt="" className="md:w-[400px] md:block hidden w-[80%] md:m-0 m-auto" />
                      </div>
                 </div>
                 <br />
@@ -137,9 +137,9 @@ const About = () => {
                                 iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                                 icon={<img src={b} className='rounded-full' />}
                             >
-                                <div className="flex gap-2 bg-[#232d3b] p-2 rounded">
-                                    <div style={{backgroundImage : `url("${tData?.img}")`, backgroundSize : "cover"}} className="w-[100px] h-[100px] rounded-lg"></div>
-                                    <div className="text-white">
+                                <div className="md:flex gap-2 bg-[#232d3b] p-2 rounded">
+                                    <div style={{backgroundImage : `url("${tData?.img}")`, backgroundSize : "cover"}} className="md:w-[100px] w-full md:h-[100px] h-[200px] rounded-lg"></div>
+                                    <div className="text-white md:mt-0 mt-2">
                                         <h2>{tData.name}</h2>
                                         <p>{tData.gender=="male" ? "He" : "She"} is {tData.post} in Bright Future</p>
                                     </div>
@@ -151,12 +151,12 @@ const About = () => {
                     
                 </div>
             </div>
-                  <Service />
-                  <Testimonials />
-                  <Contact />
+                  
             <br />
             {/* content */}
-             
+             <Service />
+                  <Testimonials />
+                  <Contact />
         </div>
     );
 };

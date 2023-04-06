@@ -20,6 +20,8 @@ const AdminBlog = () => {
                     description : description
                 }
             );
+
+            setShow(!show)
        }
     return (
              <div className="p-2 bg-[#1b1b22]">

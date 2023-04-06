@@ -110,6 +110,13 @@
   background-image: radial-gradient(39.53% 37.94% at 63.76% 51.76%, rgba(2, 10, 28, 0.925) 0%, rgba(2, 10, 28, 0.896) 42.36%, #020A1C 100%),url("./Assctes/backgrounds/bg-side.jpg");
   background-size: cover;
 }
+
+.form-bg{
+  background-image: linear-gradient(60deg, #020a1c,80%, #020a1c83),url("./Assctes/backgrounds/pexels-archie-binamira-705075.jpg")!important;
+  background-size: cover;
+  background-position: center;
+}
+
 .common-hover-shadow{
   transition: all 0.2s ease;
 }

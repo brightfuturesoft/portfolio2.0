@@ -1,10 +1,24 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../../Assctes/logo.png';
+import { AuthContext } from '../../../context/UseContext/UseContext';
 
 
 const Header = () => {
  const [isMenuOpen, setIsMenuOpen] = useState(false);
+ const {user, userLogOut} = useContext(AuthContext)
+ const logOut=()=>{
+    userLogOut()
+    .then((result) => {
+        // Sign-out successful.
+        const user = result.user;
+        console.log(user);
+      }).catch((error) => {
+        // An error happened.
+        console.log(error);
+      });
+ }
+ console.log(user);
   return (
      <nav className="relative z-10 ">
       <div className="py-2  mx-auto glass md:py-4 md:px-[4%] w-full px-[4%]">
@@ -81,6 +95,26 @@ const Header = () => {
                 Join us
               </Link>
             </li>
+             {
+              user ? <li className="border border-[#1fb8fa] w-[40px] h-[40px] flex items-center justify-center rounded-full cursor-pointer bg-[#0091ff21]">
+              <div className="dropdown dropdown-end cursor-pointer">
+                <label tabIndex={0} className="text-[#0093fc] font-bold text-xl capitalize">
+                   {user?.displayName.slice(0,1)}
+                </label>
+                 
+                <ul tabIndex={0} className="menu dropdown-content px-2 py-3 shadow rounded-box w-52 mt-4 bg-[#23263d] border border-[#115fd4]">
+                  <div align="center">
+                      <div className="text-3xl w-[70px] h-[70px] mx-auto rounded-full capitalize border border-[blue] flex items-center justify-center text-white font-bold">{user?.displayName.slice(0,1)}</div>
+                      <p className="text-center font-bold text-[#ebeaea] mt-2">{user?.displayName}</p>
+                      <small className="text-center text-gray-300">{user?.email}</small>
+                  </div>
+                  <li className="mt-4">
+                      <button onClick={logOut} className="bg-[#26325c] text-white text-center ">Logout</button>
+                  </li>
+                </ul>
+              </div>
+            </li> : ""
+             }
           </ul>
           <div className="lg:hidden">
              {/* onClick={() => setIsMenuOpen(!isMenuOpen)} */}

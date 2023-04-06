@@ -21,6 +21,7 @@ import Testimonials from '../../component/Testimonials/Testimonials/Testimonials
 import AdminBlog from '../../component/Blog/AdminBlog/AdminBlog';
 import SignIn from '../../component/Form/SignIn/SignIn';
 import SignUp from '../../component/Form/SignUp/SignUp';
+import PrivetRoute from '../PrivetRoute';
 
 export const route = createBrowserRouter([
     {
@@ -68,7 +69,7 @@ export const route = createBrowserRouter([
             },
             {
                path : "/admin/blog",
-               element : <AdminBlog />,
+               element : <PrivetRoute><AdminBlog /></PrivetRoute>,
                loader : async ()=>{
                   return fetch('http://localhost:8000/blog')
                }
