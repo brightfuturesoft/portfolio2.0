@@ -6,7 +6,7 @@ const Blog = () => {
    const blog = useLoaderData()
     return (
         <div className="p-2 bg-[#1b1b22]">
-             <div className="blog-bg py-5 h-[400px] rounded ">
+             <div className="blog-bg py-6 mt-20 h-[400px] rounded ">
                    <div className="px-1 py-10 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-20 lg:px-8 md:w-[80%] w-[95%] ">
                          <div className="text-center mt-8">
                               <h2 className="md:text-6xl text-4xl font-semibold text-[#00ccff]">

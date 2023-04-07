@@ -34,7 +34,7 @@ const Header = () => {
                     to="/"
                     
                     className={({ isActive, isPending }) =>
-                        isPending ? "text-red-400" : isActive ? "text-[#00d5ff] after:absolute after:left-0 after:right-0 after:bottom-[-10px] after:h-[4px] after:w-[20px] after:mx-auto after:rounded-full  after:bg-[#00bfff]" : ""
+                        isPending ? "" : isActive ? "text-[#00d5ff] after:absolute after:left-0 after:right-0 after:bottom-[-10px] after:h-[4px] after:w-[20px] after:mx-auto after:rounded-full  after:bg-[#00bfff]" : ""
                     }
                     >
                     Home
@@ -44,7 +44,7 @@ const Header = () => {
                 <NavLink
                     to="/about"
                     className={({ isActive, isPending }) =>
-                        isPending ? "text-red-400" : isActive ? "text-[#00d5ff] after:absolute after:left-0 after:right-0 after:bottom-[-10px] after:h-[4px] after:w-[20px] after:mx-auto after:rounded-full  after:bg-[#00bfff]" : ""
+                        isPending ? "" : isActive ? "text-[#00d5ff] after:absolute after:left-0 after:right-0 after:bottom-[-10px] after:h-[4px] after:w-[20px] after:mx-auto after:rounded-full  after:bg-[#00bfff]" : ""
                     }
                     >
                     About us
@@ -54,7 +54,7 @@ const Header = () => {
                 <NavLink
                     to="/all_project"
                     className={({ isActive, isPending }) =>
-                        isPending ? "text-red-400" : isActive ? "text-[#00d5ff] after:absolute after:left-0 after:right-0 after:bottom-[-10px] after:h-[4px] after:w-[20px] after:mx-auto after:rounded-full  after:bg-[#00bfff]" : ""
+                        isPending ? "" : isActive ? "text-[#00d5ff] after:absolute after:left-0 after:right-0 after:bottom-[-10px] after:h-[4px] after:w-[20px] after:mx-auto after:rounded-full  after:bg-[#00bfff]" : ""
                     }
                     >
                     Project
@@ -64,7 +64,7 @@ const Header = () => {
                 <NavLink
                     to="/service"
                     className={({ isActive, isPending }) =>
-                        isPending ? "text-red-400" : isActive ? "text-[#00d5ff] after:absolute after:left-0 after:right-0 after:bottom-[-10px] after:h-[4px] after:w-[20px] after:mx-auto after:rounded-full  after:bg-[#00bfff]" : ""
+                        isPending ? "" : isActive ? "text-[#00d5ff] after:absolute after:left-0 after:right-0 after:bottom-[-10px] after:h-[4px] after:w-[20px] after:mx-auto after:rounded-full  after:bg-[#00bfff]" : ""
                     }
                     >
                     Service
@@ -74,7 +74,7 @@ const Header = () => {
                 <NavLink
                     to="/technology"
                     className={({ isActive, isPending }) =>
-                        isPending ? "text-red-400" : isActive ? "text-[#00d5ff] after:absolute after:left-0 after:right-0 after:bottom-[-10px] after:h-[4px] after:w-[20px] after:mx-auto after:rounded-full  after:bg-[#00bfff]" : ""
+                        isPending ? "" : isActive ? "text-[#00d5ff] after:absolute after:left-0 after:right-0 after:bottom-[-10px] after:h-[4px] after:w-[20px] after:mx-auto after:rounded-full  after:bg-[#00bfff]" : ""
                     }
                     >
                     Technology
@@ -84,7 +84,7 @@ const Header = () => {
                 <NavLink
                     to="/blog"
                     className={({ isActive, isPending }) =>
-                        isPending ? "text-red-400" : isActive ? "text-[#00d5ff] after:absolute after:left-0 after:right-0 after:bottom-[-10px] after:h-[4px] after:w-[20px] after:mx-auto after:rounded-full  after:bg-[#00bfff]" : ""
+                        isPending ? "" : isActive ? "text-[#00d5ff] after:absolute after:left-0 after:right-0 after:bottom-[-10px] after:h-[4px] after:w-[20px] after:mx-auto after:rounded-full  after:bg-[#00bfff]" : ""
                     }
                     >
                     Blog
@@ -139,7 +139,7 @@ const Header = () => {
                               <NavLink
                                   to="/"
                                   className={({ isActive, isPending }) =>
-                                      isPending ? "text-red-400" : isActive ? "absolute top-0 left bottom-0 flex items-center rounded px-3 h-full w-full bg-[#1796f034]" : ""
+                                      isPending ? "" : isActive ? "absolute top-0 left bottom-0 flex items-center rounded px-3 h-full w-full bg-[#1796f034]" : ""
                                   }
                                   >
                                   Home
@@ -149,7 +149,7 @@ const Header = () => {
                               <NavLink
                                   to="/about"
                                   className={({ isActive, isPending }) =>
-                                      isPending ? "text-red-400" : isActive ? "absolute top-0 left-0 bottom-0 flex items-center px-3 h-full w-full bg-[#1795F0]" : ""
+                                      isPending ? "" : isActive ? "absolute top-0 left-0 bottom-0 flex items-center px-3 h-full w-full bg-[#1795F0]" : ""
                                   }
                                   >
                                   About us
@@ -159,7 +159,7 @@ const Header = () => {
                               <NavLink
                                   to="/all_project"
                                   className={({ isActive, isPending }) =>
-                                      isPending ? "text-red-400" : isActive ? "absolute top-0 left-0 bottom-0 flex items-center px-3 h-full w-full bg-[#1795F0]" : ""
+                                      isPending ? "" : isActive ? "absolute top-0 left-0 bottom-0 flex items-center px-3 h-full w-full bg-[#1795F0]" : ""
                                   }
                                   >
                                   Project
@@ -169,7 +169,7 @@ const Header = () => {
                               <NavLink
                                   to="/service"
                                   className={({ isActive, isPending }) =>
-                                      isPending ? "text-red-400" : isActive ? "absolute top-0 left-0 bottom-0 flex items-center px-3 h-full w-full bg-[#1795F0]" : ""
+                                      isPending ? "" : isActive ? "absolute top-0 left-0 bottom-0 flex items-center px-3 h-full w-full bg-[#1795F0]" : ""
                                   }
                                   >
                                   Service
@@ -179,7 +179,7 @@ const Header = () => {
                               <NavLink
                                   to="/technology"
                                   className={({ isActive, isPending }) =>
-                                      isPending ? "text-red-400" : isActive ? "absolute top-0 left-0 bottom-0 flex items-center px-3 h-full w-full bg-[#1795F0]" : ""
+                                      isPending ? "" : isActive ? "absolute top-0 left-0 bottom-0 flex items-center px-3 h-full w-full bg-[#1795F0]" : ""
                                   }
                                   >
                                   Technology
@@ -189,7 +189,7 @@ const Header = () => {
                               <NavLink
                                   to="/review"
                                   className={({ isActive, isPending }) =>
-                                      isPending ? "text-red-400" : isActive ? "absolute top-0 left-0 bottom-0 flex items-center px-3 h-full w-full bg-[#1795F0]" : ""
+                                      isPending ? "" : isActive ? "absolute top-0 left-0 bottom-0 flex items-center px-3 h-full w-full bg-[#1795F0]" : ""
                                   }
                                   >
                                   Review
@@ -200,7 +200,7 @@ const Header = () => {
                               <NavLink
                                   to="/blog"
                                   className={({ isActive, isPending }) =>
-                                      isPending ? "text-red-400" : isActive ? "absolute top-0 left-0 bottom-0 flex items-center px-3 h-full w-full bg-[#1795F0]" : ""
+                                      isPending ? "" : isActive ? "absolute top-0 left-0 bottom-0 flex items-center px-3 h-full w-full bg-[#1795F0]" : ""
                                   }
                                   >
                                   Blog
