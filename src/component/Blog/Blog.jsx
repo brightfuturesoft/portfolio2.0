@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import BlogCart from './BlogCart/BlogCart';
 import { useLoaderData } from 'react-router-dom';
+import Title from '../../layout/Title';
 
 const Blog = () => {
    const blog = useLoaderData()
     return (
         <div className="p-2 bg-[#1b1b22]">
+            
              <div className="blog-bg py-6 mt-20 h-[400px] rounded ">
                    <div className="px-1 py-10 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-20 lg:px-8 md:w-[80%] w-[95%] ">
                          <div className="text-center mt-8">

@@ -34,112 +34,112 @@ const Technology = () => {
          front : [
             { 
                id : 0,
-               img : tailwind
+               name : "asd", img : tailwind
             },
             { 
                id : 1,
-               img : bootstrap
+               name : "asd", img : bootstrap
             },
             { 
                id : 2,
-               img : metarial
+               name : "asd", img : metarial
             },
             { 
                id : 3,
-               img : typescript
+               name : "asd", img : typescript
             },
             { 
                id : 4,
-               img : react
+               name : "asd", img : react
             },
             { 
                id : 5,
-               img : redux
+               name : "asd", img : redux
             },
             { 
                id : 6,
-               img : js
+               name : "asd", img : js
             },
         ],
         backend : [
             {
                 id : 0,
-                img : nodejs
+                name : "asd", img : nodejs
             },
             {
                 id : 1,
-                img : ex
+                name : "asd", img : ex
             },
             {
                 id : 2,
-                img : db
+                name : "asd", img : db
             },
             {
                 id : 3,
-                img : mmm
+                name : "asd", img : mmm
             },
             {
                 id : 4,
-                img : sql
+                name : "asd", img : sql
             },
             {
                 id : 5,
-                img : redux
+                name : "asd", img : redux
             },
             {
                 id :6,
-                img : js
+                name : "asd", img : js
             },
         ],
           tools : [
             { 
                id : 0,
-               img : firebase
+               name : "asd", img : firebase
             },
             { 
                id : 1,
-               img : figma
+               name : "asd", img : figma
             },
             { 
                id : 2,
-               img : xd
+               name : "asd", img : xd
             },
             { 
                id : 3,
-               img : ps
+               name : "asd", img : ps
             },
             { 
                id : 4,
-               img : illstator
+               name : "asd", img : illstator
             },
             { 
                id : 5,
-               img : id
+               name : "asd", img : id
             },
             { 
                id : 6,
-               img : aftereffect
+               name : "asd", img : aftereffect
             },
         ],
           app : [
             { 
                id : 0,
-               img : native
+               name : "asd", img : native
             },
             { 
                id : 1,
-               img : flut
+               name : "asd", img : flut
             },
            
         ],
           payment : [
             { 
                id : 0,
-               img : ssl
+               name : "asd", img : ssl
             },
             { 
                id : 1,
-               img : strip
+               name : "asd", img : strip
             },
        
         ],
@@ -148,7 +148,7 @@ const Technology = () => {
 
     return (
         <div>
-           <div className="tech-bg px-2 py-4 text-capitalize">
+           <div className="tech-bg px-2 py-4 text-capitalize" id='tech'>
              <h1 className="text-xl  font-bold relative after:absolute after:left-0 after:right-0 after:bottom-[-18px] after:w-[60px] after:rounded-full after:h-[6px] after:bg-[#0095ff] after:mx-auto text-center text-white">Our Technology <span className="shadow-tx">and Tools</span></h1>
              <br /><br />
             <VerticalTimeline className='text-white'>
@@ -165,7 +165,7 @@ const Technology = () => {
                             </div>
                              <figure className='grid mt-4 grid-cols-6 gap-4'>
                                   {
-                                    tecData[0].front.map(tData => <img key={tData.id} className="" src={tData.img} />)
+                                    tecData[0].front.map(tData => <img key={tData.id} title={tData.name} className="shd"  src={tData.img} />)
                                   }
                              </figure>
                         </div>
@@ -225,8 +225,8 @@ const Technology = () => {
                         </VerticalTimelineElement>
                     
                         <VerticalTimelineElement
-                            className="vertical-timeline-element--work bg-"
-                            iconStyle={{ background: 'rgb(0, 0, 0)', color: '#fff' }}
+                            className="vertical-timeline-element--work "
+                            iconStyle={{ background: '', color: 'red' }}
                             icon={<HiOutlineCurrencyBangladeshi />}
                         >
                               <div className="sp-box relative p-3 border border-[#2a4892]">

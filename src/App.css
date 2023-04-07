@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 .App {
   text-align: center;
 }
@@ -415,4 +418,11 @@ clip-path: polygon(9% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 100%);
 .fxt{
   position: fixed!important;
   right: 0;
+}
+.shd{
+  transition: all 0.2s ease;
+}
+.shd:hover{
+  transition: all 0.2s ease;
+  box-shadow: 0px 2px 16px 0px rgba(0, 140, 255, 0.277);
 }

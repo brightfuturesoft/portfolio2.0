@@ -1,4 +1,5 @@
 import demoVect from '../../../Assctes/backgrounds/5512626.jpg'
+import Title from '../../../layout/Title';
 import ServiceCart from '../../ServiceCart/ServiceCart';
 const Service = () => {
     const serviceInfo = [
@@ -30,7 +31,7 @@ const Service = () => {
     return (
         <div className='service-bg py-16'>
             <div className="px-4 py-20 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-5 md:w-[80%] w-[95%]">
-
+            <Title title="service"/>
                 <h1 className="text-xl  font-bold relative after:absolute after:left-0 after:right-0 after:bottom-[-18px] after:w-[60px] after:rounded-full after:h-[6px] after:bg-[#0095ff] after:mx-auto text-center text-white">Services We  <span className="shadow-tx">Provide</span></h1>
                 <div className="grid md:grid-cols-3 gap-8 mt-16 p-3 mx-auto">
                     {

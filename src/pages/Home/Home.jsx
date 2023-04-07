@@ -10,10 +10,12 @@ import Team from '../../component/Team/Team/Team';
 import Testimonial from '../../component/Testimonials/Testimonials/Testimonials';
 import Technology from '../../component/Technology/Techonology/Technology';
 import Contact from '../../component/Contact/Contact/Contact';
+import Title from '../../layout/Title';
 
 const Home = () => {
     return (
         <div className="relative">
+            <Title title="Home"/>
             <HeadSection />
             <OurRequrement />
             <Service />

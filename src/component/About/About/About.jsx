@@ -18,6 +18,7 @@ import { HiOutlineMicrophone } from 'react-icons/hi2';
 import Service from '../../Service/Service/Service';
 import Testimonials from '../../Testimonials/Testimonials/Testimonials';
 import Contact from '../../Contact/Contact/Contact';
+import Title from '../../../layout/Title';
 const About = () => {
    const teamMembers = [
   {
@@ -107,6 +108,7 @@ const About = () => {
 ]      
     return (
         <div className='py-4 bg-[#020A1C] p-2 about-bg'>
+          <Title title="About"/>
             <div className="head px-2 py-5 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 md:w-[85%] w-[98%] mx-auto rounded-lg">
                 <div className="md:grid grid-cols-2 h-[300px]">
                      <div className="flex items-center">

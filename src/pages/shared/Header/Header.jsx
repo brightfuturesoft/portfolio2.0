@@ -29,7 +29,7 @@ const Header = () => {
         <div className="relative px-4  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 flex items-center justify-between">
           <Link to="/"><img src={logo} alt="" className='w-[135px]' /></Link>
           <ul className=" items-center hidden space-x-8 lg:flex ">
-            <li onClick={()=> setIsMenuOpen(!isMenuOpen)} className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative">
+            <li  className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative">
                 <NavLink
                     to="/"
                     
@@ -71,14 +71,13 @@ const Header = () => {
                     </NavLink>
             </li>
               <li className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative">
-                <NavLink
-                    to="/technology"
+                <a href="#tech"
                     className={({ isActive, isPending }) =>
                         isPending ? "" : isActive ? "text-[#00d5ff] after:absolute after:left-0 after:right-0 after:bottom-[-10px] after:h-[4px] after:w-[20px] after:mx-auto after:rounded-full  after:bg-[#00bfff]" : ""
                     }
                     >
                     Technology
-                    </NavLink>
+                    </a>
             </li>
               <li className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative">
                 <NavLink
