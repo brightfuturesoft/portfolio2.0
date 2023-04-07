@@ -110,7 +110,7 @@ const About = () => {
             <div className="head px-2 py-5 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 md:w-[85%] w-[98%] mx-auto rounded-lg">
                 <div className="md:grid grid-cols-2 h-[300px]">
                      <div className="flex items-center">
-                          <div className="">
+                          <div className="py-16">
                               <h1 className='text-xl text-[#3f98fd] font-[400] '>The best employer to </h1>
                             <h1 className="md:text-5xl text-[35px] text-white font-[700]">the best <span className="text-[orange]">developers</span></h1>
                              <img src={vt} alt="" className="md:w-[400px] block md:hidden w-[80%] md:m-0 m-auto" />

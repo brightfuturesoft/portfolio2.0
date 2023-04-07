@@ -31,8 +31,8 @@ const SignIn = () => {
     return (
         <div className="form-bg py-20">
             <div className="relative px-4  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 flex items-center justify-between">
-                <div className="">
-                    <form onSubmit={handleSignIn} className='md:h-[400px] w-full' >
+                <div className="flex items-center md:w-auto w-full md:h-auto h-full  mt-16">
+                    <form onSubmit={handleSignIn} className='md:h-[400px] w-full  mx-auto' >
                         <h2 className="text-5xl font-[400]">SignIn Account</h2>
                         <span className="">create account? <Link className="text-blue-500 mt-4" to="/sign_up">sign up</Link></span>
                         

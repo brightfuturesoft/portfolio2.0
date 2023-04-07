@@ -412,3 +412,7 @@ clip-path: polygon(9% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 100%);
   background-color: red!important;
   z-index : 10000!important
 }
+.fxt{
+  position: fixed!important;
+  right: 0;
+}

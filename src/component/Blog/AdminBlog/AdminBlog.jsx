@@ -6,6 +6,7 @@ import AdminBlogCart from './AdminBlogCart';
 const AdminBlog = () => {
        const blog = useLoaderData();
        const [show, setShow] = useState(false);
+       
        const blogSubmitHandler =(e)=>{
             e.preventDefault();
             const form = e.target;
@@ -26,7 +27,7 @@ const AdminBlog = () => {
     return (
              <div className="p-2 bg-[#1b1b22]">
              <div className={`${show ? 'block' : 'hidden'} content px-1 pt-2 pb- mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-20 lg:px-2 md:w-[100%] w-[95%] rounded `}>
-                    <form onSubmit={blogSubmitHandler} className='w-[800px] mx-auto bg-[#0c0c27ae] px-4 rounded-md pb-8 pt-4'>
+                    <form onSubmit={blogSubmitHandler} className='md:w-[800px] md:mt-0 mt-20 mx-auto bg-[#0c0c27ae] px-4 rounded-md pb-8 pt-4'>
                          <h1 className="text-center text-white text-2xl">Create a new blog</h1>
                          <div className="md:flex items-center gap-2">
                                  <div className="relative bg-[#0b0a2238] border border-[#1795F0] rounded-lg mt-8 w-full">
@@ -49,12 +50,12 @@ const AdminBlog = () => {
                           <input type="submit" value="submit" className='bg-[#4141e4] px-4 py-2 mt-8 text-white rounded-lg cursor-pointer'/>
                     </form>
              </div>
-             <div className="content px-1 py-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-20 lg:px-2 md:w-[100%] w-[95%]">
+             <div className="content px-1 md:py-2 py-[60px] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-20 lg:px-2 md:w-[100%] w-[95%]">
                 <h1 className="text-white flex justify-between font-semibold text-2xl border-b pb-2 border-[#80808093]">All Blogs 
                    <button onClick={()=> setShow(!show)} className="text-sm font-[400] bg-[#5a5af19c] duration-200 hover:bg-[#5a5af1ce] px-8 py-2 rounded">{show ? "Cancle" : "Add"}</button>
                 </h1>
                 <br />
-                <div className="grid grid-cols-3 gap-12">
+                <div className="grid md:grid-cols-3 gap-12">
                     {
                         blog?.map(bData => <AdminBlogCart key={bData.id} bData={bData} />)
                     }               

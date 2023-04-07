@@ -2,11 +2,15 @@ import React, { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../../Assctes/logo.png';
 import { AuthContext } from '../../../context/UseContext/UseContext';
+import { HiBars3BottomLeft, HiBars3BottomRight } from 'react-icons/hi2';
+import { MdTurnLeft } from 'react-icons/md';
+import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 
 
 const Header = () => {
  const [isMenuOpen, setIsMenuOpen] = useState(false);
  const {user, userLogOut} = useContext(AuthContext)
+ const [optOpen, setOptOpen] = useState(false);
  const logOut=()=>{
     userLogOut()
     .then((result) => {
@@ -20,14 +24,15 @@ const Header = () => {
  }
  console.log(user);
   return (
-     <nav className="relative z-10 ">
+     <nav className="fixed w-full z-10 ">
       <div className="py-2  mx-auto glass md:py-4 md:px-[4%] w-full px-[4%]">
         <div className="relative px-4  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 flex items-center justify-between">
           <Link to="/"><img src={logo} alt="" className='w-[135px]' /></Link>
           <ul className=" items-center hidden space-x-8 lg:flex ">
-            <li className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative">
+            <li onClick={()=> setIsMenuOpen(!isMenuOpen)} className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative">
                 <NavLink
                     to="/"
+                    
                     className={({ isActive, isPending }) =>
                         isPending ? "text-red-400" : isActive ? "text-[#00d5ff] after:absolute after:left-0 after:right-0 after:bottom-[-10px] after:h-[4px] after:w-[20px] after:mx-auto after:rounded-full  after:bg-[#00bfff]" : ""
                     }
@@ -35,7 +40,7 @@ const Header = () => {
                     Home
                     </NavLink>
             </li>
-              <li className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative">
+              <li  className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative">
                 <NavLink
                     to="/about"
                     className={({ isActive, isPending }) =>
@@ -95,6 +100,7 @@ const Header = () => {
                 Join us
               </Link>
             </li>
+           
              {
               user ? <li className="border border-[#1fb8fa] w-[40px] h-[40px] flex items-center justify-center rounded-full cursor-pointer bg-[#0091ff21]">
               <div className="dropdown dropdown-end cursor-pointer">
@@ -120,14 +126,16 @@ const Header = () => {
              {/* onClick={() => setIsMenuOpen(!isMenuOpen)} */}
              <label  className="bg-[#19192d48] w-[50px] h-[40px] rounded-lg swap swap-rotate">
                 <input onClick={() => setIsMenuOpen(!isMenuOpen)}  className='opacity-[0] ' type="checkbox" />
-                <svg className="swap-off  fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"/></svg>
-                <svg className="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"/></svg>
+                   <HiBars3BottomRight className='text-4xl' />
                 </label>
-            {isMenuOpen && (
-              <div className="fixed duration-200 h-screen top-[60px] left-0 w-full overflow-hidden bg-[#00000084]">
-                  <div className={`${isMenuOpen ? 'opacity-[100%]' : 'opacity-[0]'} bg-[#161f2a]  duration-200 h-full w-[320px]`}>
+          </div>
+        </div>
+      </div>
+        {isMenuOpen && (
+              <div className="fxt duration-200 w-full h-[100vh] overflow-hidden bg-[#00000084]">
+                  <div className={`${isMenuOpen ? 'opacity-[100%]' : 'opacity-[0]'} bg-[#161f2a]  duration-200 h-full w-auto`}>
                         <ul className="p-2">
-                          <li className="font-medium mt-300 h-[40px] flex items-center rounded overflow-hidden px-2 racking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative ">
+                          <li onClick={()=> setIsMenuOpen(!isMenuOpen)} className="font-medium mt-300 h-[40px] flex items-center rounded overflow-hidden px-2 racking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative ">
                               <NavLink
                                   to="/"
                                   className={({ isActive, isPending }) =>
@@ -137,7 +145,7 @@ const Header = () => {
                                   Home
                                   </NavLink>
                           </li>
-                            <li className="font-medium mt-3 h-[40px] flex items-center rounded overflow-hidden px-2 tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative ">
+                            <li onClick={()=> setIsMenuOpen(!isMenuOpen)} className="font-medium mt-3 h-[40px] flex items-center rounded overflow-hidden px-2 tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative ">
                               <NavLink
                                   to="/about"
                                   className={({ isActive, isPending }) =>
@@ -147,7 +155,7 @@ const Header = () => {
                                   About us
                                   </NavLink>
                           </li>
-                            <li className="font-medium mt-3 h-[40px] flex items-center rounded overflow-hidden px-2 tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative ">
+                            <li onClick={()=> setIsMenuOpen(!isMenuOpen)} className="font-medium mt-3 h-[40px] flex items-center rounded overflow-hidden px-2 tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative ">
                               <NavLink
                                   to="/all_project"
                                   className={({ isActive, isPending }) =>
@@ -157,7 +165,7 @@ const Header = () => {
                                   Project
                                   </NavLink>
                           </li>
-                            <li className="font-medium mt-3 h-[40px] flex items-center rounded overflow-hidden px-2 tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative ">
+                            <li onClick={()=> setIsMenuOpen(!isMenuOpen)} className="font-medium mt-3 h-[40px] flex items-center rounded overflow-hidden px-2 tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative ">
                               <NavLink
                                   to="/service"
                                   className={({ isActive, isPending }) =>
@@ -167,7 +175,7 @@ const Header = () => {
                                   Service
                                   </NavLink>
                           </li>
-                            <li className="font-medium mt-3 h-[40px] flex items-center rounded overflow-hidden px-2 tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative ">
+                            <li onClick={()=> setIsMenuOpen(!isMenuOpen)} className="font-medium mt-3 h-[40px] flex items-center rounded overflow-hidden px-2 tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative ">
                               <NavLink
                                   to="/technology"
                                   className={({ isActive, isPending }) =>
@@ -177,7 +185,7 @@ const Header = () => {
                                   Technology
                                   </NavLink>
                           </li>
-                            <li className="font-medium mt-3 h-[40px] flex items-center rounded overflow-hidden px-2 tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative ">
+                            <li onClick={()=> setIsMenuOpen(!isMenuOpen)} className="font-medium mt-3 h-[40px] flex items-center rounded overflow-hidden px-2 tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative ">
                               <NavLink
                                   to="/review"
                                   className={({ isActive, isPending }) =>
@@ -187,8 +195,40 @@ const Header = () => {
                                   Review
                                   </NavLink>
                           </li>
-                        
-                          <li>
+                           
+                            <li onClick={()=> setIsMenuOpen(!isMenuOpen)} className="font-medium mt-3 h-[40px] flex items-center rounded overflow-hidden px-2 tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative ">
+                              <NavLink
+                                  to="/blog"
+                                  className={({ isActive, isPending }) =>
+                                      isPending ? "text-red-400" : isActive ? "absolute top-0 left-0 bottom-0 flex items-center px-3 h-full w-full bg-[#1795F0]" : ""
+                                  }
+                                  >
+                                  Blog
+                                  </NavLink>
+                          </li>
+                           {
+                            user ?   <li onClick={()=> setOptOpen(!optOpen)} className={` mt-3 ${optOpen ? 'h-[auto]' : 'h-[42px]'} overflow-hidden`}>
+                                <div className="flex items-center justify-between gap-2">
+                                    <div className="flex items-center gap-3">
+                                         <div className="w-[40px] h-[40px] flex items-center justify-center capitalize rounded-lg border border-[#004cff] bg-[#0000ff23]">  
+                                          <p className='text-xl text-white'>
+                                               {user?.displayName.slice(0,1)}
+                                          </p>
+                                     </div>
+                                     <h5 className="capitalize text-white">{user?.displayName}</h5>
+                                    </div>
+                                    {
+                                      optOpen ?  <FaAngleUp className="text-xl" /> : <FaAngleDown className="text-xl" />
+                                    }
+                                    
+                                   
+                                </div>
+                                <div className=" mt-3 p-2 rounded-lg">
+                                    <button className='bg-[#0d3a73] w-full p-2 rounded-lg text-white' onClick={logOut}>Log out</button>
+                                </div>
+                            </li> : ""
+                           }
+                          <li className="mt-6">
                             <Link to="/joinUs"
                               className="inline-flex bg-[#418CD2] items-center justify-center py-2 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                               aria-label="Sign up"
@@ -197,13 +237,11 @@ const Header = () => {
                               Join us
                             </Link>
                           </li>
+                          
                         </ul>
                   </div>
               </div>
             )}
-          </div>
-        </div>
-      </div>
     </nav>
   );
 };
