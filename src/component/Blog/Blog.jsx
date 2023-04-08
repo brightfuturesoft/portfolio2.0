@@ -4,7 +4,11 @@ import { useLoaderData } from 'react-router-dom';
 import Title from '../../layout/Title';
 
 const Blog = () => {
-   const blog = useLoaderData()
+   const blog = useLoaderData();
+    useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
     return (
         <div className="p-2 bg-[#1b1b22]">
             

@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const ProjectCart = ({allProjectData, stickyTopSpace}) => {
     const {projectData, setProjectData} = useState();
     const {id, name, pic,description, liveLink, technology } = allProjectData;
-  
+   
+
+     useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
     return (
             
         <div className={`sticky mt-[40px] border border-[#007bff] rounded-xl mx-auto md:w-[90%] w-[98%] duration-200 stc-cart bg-[#0b0b16]`}

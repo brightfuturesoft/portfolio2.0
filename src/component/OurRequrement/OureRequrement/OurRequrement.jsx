@@ -68,7 +68,7 @@ const OurRequrement = () => {
     }
   
     return (
-        <div className="text-white common-bg py-[96px]">
+        <div className="text-white common-bg py-[6px]">
             <div className="requirement-box  bg-right-top ">
                 <div className="md:w-[85%] w-[98%]  px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
                      <h1 className="text-xl  font-bold relative after:absolute after:left-0 after:right-0 after:bottom-[-18px] after:w-[60px] after:rounded-full after:h-[6px] after:bg-[#0095ff] after:mx-auto text-center">How We Develop <span className="shadow-tx">Software</span></h1>

@@ -8,7 +8,8 @@ const ProjectDetails = () => {
         fetch(`http://localhost:8000/allProject/${id}`)
         .then(res=> res.json())
         .then(data => setProject(data))
-    },[])
+    },[]);
+    
     return (
         <div className="bg-[#1b2030] text-[#8a8a8a] px-2 pt-6 pb-[80px]">
             <div className='px-1 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>

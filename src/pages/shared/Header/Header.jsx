@@ -71,15 +71,6 @@ const Header = () => {
                     </NavLink>
             </li>
               <li className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative">
-                <a href="#tech"
-                    className={({ isActive, isPending }) =>
-                        isPending ? "" : isActive ? "text-[#00d5ff] after:absolute after:left-0 after:right-0 after:bottom-[-10px] after:h-[4px] after:w-[20px] after:mx-auto after:rounded-full  after:bg-[#00bfff]" : ""
-                    }
-                    >
-                    Technology
-                    </a>
-            </li>
-              <li className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative">
                 <NavLink
                     to="/blog"
                     className={({ isActive, isPending }) =>
@@ -174,16 +165,7 @@ const Header = () => {
                                   Service
                                   </NavLink>
                           </li>
-                            <li onClick={()=> setIsMenuOpen(!isMenuOpen)} className="font-medium mt-3 h-[40px] flex items-center rounded overflow-hidden px-2 tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative ">
-                              <NavLink
-                                  to="/technology"
-                                  className={({ isActive, isPending }) =>
-                                      isPending ? "" : isActive ? "absolute top-0 left-0 bottom-0 flex items-center px-3 h-full w-full bg-[#1795F0]" : ""
-                                  }
-                                  >
-                                  Technology
-                                  </NavLink>
-                          </li>
+                           
                             <li onClick={()=> setIsMenuOpen(!isMenuOpen)} className="font-medium mt-3 h-[40px] flex items-center rounded overflow-hidden px-2 tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative ">
                               <NavLink
                                   to="/review"

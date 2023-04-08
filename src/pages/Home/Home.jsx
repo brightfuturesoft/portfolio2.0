@@ -11,8 +11,13 @@ import Testimonial from '../../component/Testimonials/Testimonials/Testimonials'
 import Technology from '../../component/Technology/Techonology/Technology';
 import Contact from '../../component/Contact/Contact/Contact';
 import Title from '../../layout/Title';
+import { useEffect } from 'react';
 
 const Home = () => {
+     useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
     return (
         <div className="relative">
             <Title title="Home"/>

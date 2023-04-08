@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import BlogCart from '../BlogCart/BlogCart';
 import AdminBlogCart from './AdminBlogCart';
+import Title from '../../../layout/Title';
 
 const AdminBlog = () => {
        const blog = useLoaderData();
        const [show, setShow] = useState(false);
-       
+       const [loading, setLoading] = useState(false);
+       if (blog === null) {
+          setLoading(true);        
+       }
        const blogSubmitHandler =(e)=>{
             e.preventDefault();
             const form = e.target;
@@ -24,8 +28,13 @@ const AdminBlog = () => {
 
             setShow(!show)
        }
+       useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  console.log(blog);
     return (
              <div className="p-2 bg-[#1b1b22]">
+               <Title title="Admin Blog"/>
              <div className={`${show ? 'block' : 'hidden'} content px-1 pt-2 pb- mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-10 lg:px-2 md:w-[100%] w-[99%] rounded `}>
                     <form onSubmit={blogSubmitHandler} className='md:w-[800px] md:mt-20 mt-20 mx-auto bg-[#0c0c27ae] px-4 rounded-md pb-8 pt-4 '>
                          <h1 className="text-center text-white text-2xl">Create a new blog</h1>
@@ -57,6 +66,8 @@ const AdminBlog = () => {
                 <br />
                 <div className="grid md:grid-cols-3 gap-12">
                     {
+
+                        loading === null ? <div className='text-4xl font-bold text-white'>Loading</div> :
                         blog?.map(bData => <AdminBlogCart key={bData.id} bData={bData} />)
                     }               
                 </div>

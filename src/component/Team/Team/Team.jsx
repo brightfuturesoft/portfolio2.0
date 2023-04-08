@@ -18,7 +18,7 @@ import { Link } from "react-router-dom";
 import { AiFillLinkedin } from "react-icons/ai";
 
 const Team = () => {
-      const [swiperRef, setSwiperRef] = useState(null);
+     
      const teamMembers = [
   {
     "id": 0,
