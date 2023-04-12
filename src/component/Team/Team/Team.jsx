@@ -79,7 +79,7 @@ const Team = () => {
     "id": 6,
     "img": nahid,
     "name": "Nahid Ferdaos",
-    "email" : "",
+    "email" : "mdnahid360s@gmail.com",
     "post": "Front End Developer",
     "linkedIn": "https://www.linkedin.com/in/nahid-ferdaos/",
     "gender": "male"
