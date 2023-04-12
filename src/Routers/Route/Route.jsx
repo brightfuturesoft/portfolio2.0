@@ -64,14 +64,14 @@ export const route = createBrowserRouter([
                path : "/blog",
                element : <Blog />,
                loader : async ()=>{
-                  return fetch('http://localhost:8000/blog')
+                  return fetch('https://portfolio-backend-one-kappa.vercel.app/blog')
                }
             },
             {
                path : "/admin/blog",
                element : <PrivetRoute><AdminBlog /></PrivetRoute>,
                loader : async ()=>{
-                  return fetch('http://localhost:8000/blog')
+                  return fetch('https://portfolio-backend-one-kappa.vercel.app/blog')
                }
             },
             {
@@ -79,18 +79,18 @@ export const route = createBrowserRouter([
                element : <BlogDetails />,
                 loader : async ({params})=>{
                   const bId = params.id
-                  return fetch(`http://localhost:8000/blog/${bId}`)
+                  return fetch(`https://portfolio-backend-one-kappa.vercel.app/blog/${bId}`)
                }
             },
             {
                path : "/all_project",
                element : <AllProject />,
                loader : async ()=>{
-                  return fetch('http://localhost:8000/allProject')
+                  return fetch('https://portfolio-backend-one-kappa.vercel.app/allProject')
                }
             },
             {
-               path : "/all_project/:id",
+               path : "https://portfolio-backend-one-kappa.vercel.app/allProject:id",
                element : <ProjectDetails />
             },
             {

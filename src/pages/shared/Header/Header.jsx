@@ -22,7 +22,7 @@ const Header = () => {
         console.log(error);
       });
  }
- console.log('+++++++', process.env.REACT_APP_measurementId);
+ console.log('+++++++', process.env.REACT_APP_apiKey);
   return (
      <nav className="fixed w-full z-10 ">
       <div className="py-2  mx-auto glass md:py-4 md:px-[4%] w-full px-[4%]">

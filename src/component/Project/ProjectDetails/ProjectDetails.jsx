@@ -5,7 +5,7 @@ const ProjectDetails = () => {
     const [project, setProject] = useState()
     const {id} = useParams()
     useEffect(()=>{
-        fetch(`http://localhost:8000/allProject/${id}`)
+        fetch(`https://portfolio-backend-one-kappa.vercel.app/allProject/${id}`)
         .then(res=> res.json())
         .then(data => setProject(data))
     },[]);

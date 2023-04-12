@@ -6,7 +6,7 @@ import Title from '../../../layout/Title';
 const Project = () => {
     const [project, setProject] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:8000/allProject')
+        fetch('https://portfolio-backend-one-kappa.vercel.app/allProject')
         .then(res => res.json())
         .then(data => setProject(data))
     },[])

@@ -4,7 +4,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 const BlogDetails = () => {
     const [blogList, setBlogList] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:8000/blog')
+        fetch('https://portfolio-backend-one-kappa.vercel.app/blog')
         .then(res => res.json())
         .then(data => setBlogList(data))
     },[])
