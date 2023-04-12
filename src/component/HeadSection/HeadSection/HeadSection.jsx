@@ -12,7 +12,7 @@ const HeadSection = () => {
            <div className="px-4 py-5 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 md:grid grid-cols-2 md:w-[85%] w-[98%] mx-auto">
                 <div className="md:flex items-center ">
                           <h4 className="text-lg md:text-left text-center md:hidden block">You have the <div className="text-[orange]">idea</div></h4>
-                        <h1 className='md:text-left text-center md:text-5xl text-2xl md:hidden flex md:font-bold font-[900]'>WE HAVE THE <span className="text-[orange]">TECHNOLOGY</span></h1>
+                        <h1 className='md:text-left md:text-5xl text-xl md:hidden flex md:justify-start justify-center md:font-bold font-[900]'>WE HAVE THE <span className="text-[orange]">TECHNOLOGY</span></h1>
 
                        <div className="flex -mt-10 justify-end overflow-hidden md:hidden ">
                             <Lottie className="md:hidden block" animationData={homeVc} loop={true}/>
@@ -20,7 +20,7 @@ const HeadSection = () => {
 
                    <div className="contain text-white w-full md:block hidden">
                        <h4 className="text-lg md:text-left text-center md:hidden block">You have the <div className="text-[orange]">idea</div></h4>
-                        <h1 className='md:text-left text-center md:text-5xl text-3xl  md:font-bold font-[900] flex gap-2'><div className="text-left">WE HAVE THE</div> <div className="text-[#ff9d00]"> Technology</div></h1>
+                        <h1 className='md:text-left text-center md:text-5xl text-3xl  md:font-bold font-[900] flex gap-2'>WE HAVE THE </h1>
                         <h4 className="font-bold md:mt-4 -mt-20 md:text-2xl text-xl md:w-[auto] w-[170px] mx-auto relative after:absolute after:shadow-lg after:rounded-full after:shadow-[#13ccff] after:bg-[#09a1e8] after:w-[50px] after:h-[5px] after:left-0 after:bottom-0 after:mt-[-20px] pb-3">Service Provider</h4>
                         <span className="md:text-left text-center text-lg text-gray-400 mt-[40px] pt-4">
                               <Typewriter

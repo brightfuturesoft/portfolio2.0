@@ -97,7 +97,7 @@ html{
 .all-project-bg{
   background-image: radial-gradient(37.46% 51.63% at 50% 43.59%, rgb(2, 10, 28) 0%, #020A1C 100%);
   background-size: cover;
-   background-repeat : no-repeat;
+   background-repeat : no-repeat!important;
 }
 .vission-bg{
   background-image: radial-gradient(39.53% 37.94% at 63.76% 51.76%, rgba(2, 10, 28, 0.45) 0%, rgba(2, 10, 28, 0.83) 42.36%, #020A1C 100%),url('../src/Assctes/backgrounds/missionBg.png');
@@ -383,7 +383,8 @@ clip-path: polygon(9% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 100%);
 }
 .p-banner{
   background-image: url('../src/Assctes/backgrounds/banner1.png');
-  background-size: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* width */
