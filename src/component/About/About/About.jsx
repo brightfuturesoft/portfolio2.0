@@ -143,8 +143,8 @@ const About = () => {
                 <div className="md:grid grid-cols-2 md:pt-0 pt-16  mt-2">
                      <div className="flex items-center">
                           <div className="">
-                              <h1 className='text-xl text-[#3f98fd] font-[400] '>The best employer to </h1>
-                            <h1 className="md:text-5xl text-[35px] text-white font-[700]">the best <span className="text-[orange]">developers</span></h1>
+                              <h1 className='text-xl text-[#3f98fd] font-[400] md:text-left text-center'>The best employer to </h1>
+                            <h1 className="md:text-5xl text-[35px] text-white font-[700] md:text-left text-center">the best <span className="text-[orange]">developers</span></h1>
                               <div className="md:hidden flex  justify-end overflow-hidden mt-[-50px]">
                                 <Lottie className="" animationData={homeVc} loop={true}/>
                              </div>

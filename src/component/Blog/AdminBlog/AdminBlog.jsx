@@ -36,7 +36,7 @@ const AdminBlog = () => {
              <div className="p-2 bg-[#1b1b22]">
                <Title title="Admin Blog"/>
              <div className={`${show ? 'block' : 'hidden'} content px-1 pt-2 pb- mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-10 lg:px-2 md:w-[100%] w-[99%] rounded `}>
-                    <form onSubmit={blogSubmitHandler} className='md:w-[800px] md:mt-20 mt-20 mx-auto bg-[#0c0c27ae] px-4 rounded-md pb-8 pt-4 '>
+                    <form onSubmit={blogSubmitHandler} className='md:w-[800px] md:mt-20 mt-20 mx-auto bg-[#0c0c27ae] px-4 rounded-md pb-8 pt-4 capitalize'>
                          <h1 className="text-center text-white text-2xl">Create a new blog</h1>
                          <div className="md:flex items-center gap-2">
                                  <div className="relative bg-[#0b0a2238] border border-[#1795F0] rounded-lg mt-8 w-full">

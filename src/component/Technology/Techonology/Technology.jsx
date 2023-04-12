@@ -34,45 +34,45 @@ const Technology = () => {
          front : [
             { 
                id : 0,
-               name : "asd", img : tailwind
+               name : "tailwind", img : tailwind
             },
             { 
                id : 1,
-               name : "asd", img : bootstrap
+               name : "bootstrap", img : bootstrap
             },
             { 
                id : 2,
-               name : "asd", img : metarial
+               name : "metarial", img : metarial
             },
             { 
                id : 3,
-               name : "asd", img : typescript
+               name : "typescript", img : typescript
             },
             { 
                id : 4,
-               name : "asd", img : react
+               name : "react", img : react
             },
             { 
                id : 5,
-               name : "asd", img : redux
+               name : "redux", img : redux
             },
             { 
                id : 6,
-               name : "asd", img : js
+               name : "java script", img : js
             },
         ],
         backend : [
             {
                 id : 0,
-                name : "asd", img : nodejs
+                name : "node js", img : nodejs
             },
             {
                 id : 1,
-                name : "asd", img : ex
+                name : "express js", img : ex
             },
             {
                 id : 2,
-                name : "asd", img : db
+                name : "mongo DB", img : db
             },
             {
                 id : 3,
@@ -160,8 +160,8 @@ const Technology = () => {
                             icon={<HiOutlineCodeBracket />}
                         >
                         <div className="sp-box border border-[#2a4892]  relative p-3">
-                            <div className="absolute top-[-32px] bg-[#2a4892] sp pl-2 pr-14  py-1 left-[-2px]">
-                                <h1>Front end development</h1>
+                            <div className="absolute top-[-28px] bg-[#2a4892] sp pl-2 pr-14  py-1 left-[-2px]">
+                                <h1 className='md:text-md text-sm'>Front end development</h1>
                             </div>
                              <figure className='grid mt-4 grid-cols-6 gap-4'>
                                   {
@@ -177,8 +177,8 @@ const Technology = () => {
                             icon={<HiOutlineCodeBracket />}
                         >
                               <div className="sp-box relative p-3 border border-[#2a4892]">
-                            <div className="absolute top-[-32px] bg-[#2a4892] sp2 pl-14 pr-2  py-1 right-[-2px]">
-                                <h1>Back end development</h1>
+                            <div className="absolute top-[-28px] bg-[#2a4892] sp2 pl-14 pr-2  py-1 right-[-2px]">
+                                <h1 className='md:text-md text-sm'>Back end development</h1>
                             </div>
                              <figure className='grid mt-4 grid-cols-6 gap-4'>
                                   {
@@ -196,8 +196,8 @@ const Technology = () => {
                             icon={<HiOutlineWrenchScrewdriver />}
                         >
                         <div className="sp-box relative p-3 border border-[#2a4892]">
-                            <div className="absolute top-[-32px] bg-[#2a4892] sp pl-2 pr-14  py-1 left-[-2px]">
-                                <h1>Tools</h1>
+                            <div className="absolute top-[-28px] bg-[#2a4892] sp pl-2 pr-14  py-1 left-[-2px]">
+                                <h1 className='md:text-md text-sm'>Tools</h1>
                             </div>
                              <figure className='grid  mt-4 grid-cols-6 gap-4'>
                                   {
@@ -213,8 +213,8 @@ const Technology = () => {
                             icon={<HiOutlineCodeBracket />}
                         >
                               <div className="sp-box relative p-3 border border-[#2a4892]">
-                            <div className="absolute top-[-32px] bg-[#2a4892] sp2 pl-14 pr-2  py-1 right-[-2px]">
-                                <h1>App Development</h1>
+                            <div className="absolute top-[-28px] bg-[#2a4892] sp2 pl-14 pr-2  py-1 right-[-2px]">
+                                <h1 className='md:text-md text-sm'> App Development</h1>
                             </div>
                              <figure className='grid mt-4 grid-cols-6 gap-4'>
                                   {
@@ -226,12 +226,12 @@ const Technology = () => {
                     
                         <VerticalTimelineElement
                             className="vertical-timeline-element--work "
-                            iconStyle={{ background: '', color: 'red' }}
+                            iconStyle={{ background: '#2196F3', color: 'white' }}
                             icon={<HiOutlineCurrencyBangladeshi />}
                         >
                               <div className="sp-box relative p-3 border border-[#2a4892]">
-                            <div className="absolute top-[-32px] bg-[#2a4892] sp pr-14 pl-2  py-1 left-[-2px]">
-                                <h1>Payment Method</h1>
+                            <div className="absolute top-[-28px] bg-[#2a4892] sp pr-14 pl-2  py-1 left-[-2px]">
+                                <h1 className='md:text-md text-sm'>Payment Method</h1>
                             </div>
                              <figure className='grid mt-4 grid-cols-6 gap-4'>
                                   {

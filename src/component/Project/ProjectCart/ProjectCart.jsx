@@ -1,14 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const ProjectCart = ({allProjectData, stickyTopSpace}) => {
     const {projectData, setProjectData} = useState();
     const {id, name, pic,description, liveLink, technology } = allProjectData;
-   
-
-     useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  
     return (
             
         <div className={`sticky mt-[40px] border border-[#007bff] rounded-xl mx-auto md:w-[90%] w-[98%] duration-200 stc-cart bg-[#0b0b16]`}
@@ -16,13 +12,13 @@ const ProjectCart = ({allProjectData, stickyTopSpace}) => {
                 <div className='p-3'>
                     <div className="bg-[#141425] rounded-xl md:grid grid-cols-3">
                         <div className="p-3">
-                            <div className="h-[200px] rounded-xl" style={{backgroundImage : `url("${pic}")`, backgroundSize : "cover"}}></div>
+                            <img src={pic} alt="" className="h-[250px] w-full rounded-lg" />
                         </div>
                         <div className="p-2 col-span-2">
                             <h1 className="font-bold text-xl text-[#00a2ff]">{name}</h1>
-                            <span className="mt-2 flex items-center gap-2 text-white">
-							<small>Technology used :</small>
-							<ul className="flex flex-wrap gap-2">
+                            <span className="mt-2  text-white">
+							<p>Technology used :</p>
+							<ul className="flex flex-wrap gap-2 mt-2">
 								{
 									technology.map(techData => <li className={`text-[13px] text-white bg-[#064476] px-2 rounded-xl`} key={techData.id}>{techData.name}</li>)
 								}

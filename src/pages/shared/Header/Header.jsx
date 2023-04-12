@@ -22,7 +22,7 @@ const Header = () => {
         console.log(error);
       });
  }
- console.log(user);
+ console.log('+++++++', process.env.REACT_APP_measurementId);
   return (
      <nav className="fixed w-full z-10 ">
       <div className="py-2  mx-auto glass md:py-4 md:px-[4%] w-full px-[4%]">
@@ -92,20 +92,19 @@ const Header = () => {
             </li>
            
              {
-              user ? <li className="border border-[#1fb8fa] w-[40px] h-[40px] flex items-center justify-center rounded-full cursor-pointer bg-[#0091ff21]">
+              user && user ? <li className="">
               <div className="dropdown dropdown-end cursor-pointer">
                 <label tabIndex={0} className="text-[#0093fc] font-bold text-xl capitalize">
-                   {user?.displayName.slice(0,1)}
+                   {user?.displayName}
                 </label>
                  
                 <ul tabIndex={0} className="menu dropdown-content px-2 py-3 shadow rounded-box w-52 mt-4 bg-[#23263d] border border-[#115fd4]">
                   <div align="center">
-                      <div className="text-3xl w-[70px] h-[70px] mx-auto rounded-full capitalize border border-[blue] flex items-center justify-center text-white font-bold">{user?.displayName.slice(0,1)}</div>
-                      <p className="text-center font-bold text-[#ebeaea] mt-2">{user?.displayName}</p>
+                      <p className="text-center text-[21px] font-bold text-[#ebeaea] mt-2">{user?.displayName}</p>
                       <small className="text-center text-gray-300">{user?.email}</small>
                   </div>
                   <li className="mt-4">
-                      <button onClick={logOut} className="bg-[#26325c] text-white text-center ">Logout</button>
+                      <button onClick={logOut} align="center" className="bg-[#26325c] text-white text-center flex justify-center">Logout</button>
                   </li>
                 </ul>
               </div>
@@ -114,17 +113,14 @@ const Header = () => {
           </ul>
           <div className="lg:hidden">
              {/* onClick={() => setIsMenuOpen(!isMenuOpen)} */}
-             <label  className="bg-[#19192d48] w-[50px] h-[40px] rounded-lg swap swap-rotate">
-                <input onClick={() => setIsMenuOpen(!isMenuOpen)}  className='opacity-[0] ' type="checkbox" />
-                   <HiBars3BottomRight className='text-4xl' />
-                </label>
+              <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="">
+                   <HiBars3BottomRight className='text-4xl border-[red]' />
+              </button>
           </div>
         </div>
       </div>
-        {isMenuOpen && (
-              <div className="fxt duration-200 w-full h-[100vh] overflow-hidden bg-[#00000084]">
-                  <div className={`${isMenuOpen ? 'opacity-[100%]' : 'opacity-[0]'} bg-[#161f2a]  duration-200 h-full w-auto`}>
-                        <ul className="p-2">
+         <div className={`${isMenuOpen ? 's-open' : 's-close'} bg-[#14143f] md:hidden block`}>
+                  <ul className="p-2">
                           <li onClick={()=> setIsMenuOpen(!isMenuOpen)} className="font-medium mt-300 h-[40px] flex items-center rounded overflow-hidden px-2 racking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative ">
                               <NavLink
                                   to="/"
@@ -191,12 +187,11 @@ const Header = () => {
                             user ?   <li onClick={()=> setOptOpen(!optOpen)} className={` mt-3 ${optOpen ? 'h-[auto]' : 'h-[42px]'} overflow-hidden`}>
                                 <div className="flex items-center justify-between gap-2">
                                     <div className="flex items-center gap-3">
-                                         <div className="w-[40px] h-[40px] flex items-center justify-center capitalize rounded-lg border border-[#004cff] bg-[#0000ff23]">  
-                                          <p className='text-xl text-white'>
-                                               {user?.displayName.slice(0,1)}
+                                         <div className="">  
+                                          <p className='text-xl text-blue-500'>
+                                               {user?.displayName}
                                           </p>
                                      </div>
-                                     <h5 className="capitalize text-white">{user?.displayName}</h5>
                                     </div>
                                     {
                                       optOpen ?  <FaAngleUp className="text-xl" /> : <FaAngleDown className="text-xl" />
@@ -219,10 +214,8 @@ const Header = () => {
                             </Link>
                           </li>
                           
-                        </ul>
-                  </div>
-              </div>
-            )}
+                  </ul>
+         </div>
     </nav>
   );
 };

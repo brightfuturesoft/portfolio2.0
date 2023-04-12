@@ -7,7 +7,7 @@ import CopyrightBar from '../shared/CopyrightBar/CopyrightBar';
 const Main = () => {
     return (
         <div className="bg-[#ffffff3e]">
-           <div className="red">
+           <div className="relative">
                 <Header/>
            </div>
               <Outlet></Outlet>

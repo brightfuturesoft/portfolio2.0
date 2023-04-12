@@ -15,7 +15,7 @@ const ServiceCart = ({data}) => {
                         <img src="" alt="" className="" />
                         <h2 className="font-[500] mt-3 text-xl">{name}</h2>
                         <small className="mt-2 text-[#d4d4d4]">
-                         {readMore ? description.slice(0, 125) : description}
+                         {readMore ? description?.slice(0, 125) : description}
                         </small>
                          <button className="mt-3 bg-[#1c40bf] w-full p-2 rounded-lg shadow-md duration-200 text-white  hover:bg-[#3454C4]" onClick={()=> setReadMore(!readMore)}>{readMore ? "Read more" : "Show less"}</button>
                         {/* <button className="mt-3 bg-[#1c40bf] w-full p-2 rounded-lg shadow-md duration-200 text-white  hover:bg-[#3454C4]">Get Started with us</button> */}

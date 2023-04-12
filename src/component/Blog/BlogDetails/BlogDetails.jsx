@@ -31,7 +31,7 @@ const BlogDetails = () => {
                                       <img src={blg.pic} alt="" className="md:w-[110px] w-[110px]" />
                                       <div className="">
                                           <h4 className="text-white text-sm ">{blg.name}</h4>
-                                          <small>{blg.details.slice(0, 47)}</small>
+                                          <small>{blg.details?.slice(0, 47)}</small>
                                       </div>
                                 </Link>    
                             )

@@ -21,12 +21,12 @@ const Footer = () => {
                                     <h2 className="text-white font-semibold md:text-left text-center md:mt-0 mt-4">Social media</h2>
                                      <ul className="mt-3">
                                          <li>
-                                            <Link to="" className="text-blue-500 flex items-center md:justify-start justify-center gap-2">
+                                            <Link to="https://www.facebook.com/thebrightfuture.co" className="text-blue-500 flex items-center md:justify-start justify-center gap-2">
                                                 <BsFacebook className='text-xl'/> Facebook
                                             </Link>
                                          </li>
                                          <li className='mt-3'>
-                                            <Link to="" className="text-blue-500 flex items-center md:justify-start justify-center gap-2">
+                                            <Link to="https://www.linkedin.com/company/thebrightfuture-co/mycompany/verification/" className="text-blue-500 flex items-center md:justify-start justify-center gap-2">
                                                 <BsLinkedin className='text-xl'/> Linked In
                                             </Link>
                                          </li>

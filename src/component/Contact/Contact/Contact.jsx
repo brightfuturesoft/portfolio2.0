@@ -75,8 +75,8 @@ const Contact = () => {
                                   </ul>
                               </div>
                               <div className="">
-                                  <form ref={form} onSubmit={sendEmail} className="text-[#0095ff] px-4 py-5 md:w-[80%] rounded-xl mx-auto form-bg">
-                                          <h3 className="text-xl text-center">Your Message</h3>
+                                  <form ref={form} onSubmit={sendEmail} className="text-[#0095ff] px-4 py-5 md:w-[80%] rounded-xl mx-auto form-bg capitalize">
+                                          <h3 className="text-2xl text-center">Your Message</h3>
                                           <div className="relative bg-[#0b0a2238] border border-[#1795F0] rounded-lg mt-4">
                                             <div className="text-[#ff000000] absolute bg-[#0e0b2cf8] w-[47px] h-[3px] left-[14px] top-[-2px]">.</div>
                                             <label htmlFor="" className="absolute text-sm top-[-14px] left-[15px]  px-1">Name</label>

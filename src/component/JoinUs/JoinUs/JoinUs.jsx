@@ -29,7 +29,7 @@ const JoinUs = () => {
     }
     return (
         <div className="bg-[#121c25] md:p-8 p-2">
-            <div className=" mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:w-[80%] w-[95%] md:grid grid-cols-2 bg-[#192330] ">
+            <div className=" mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:w-[80%] w-[95%] md:grid grid-cols-2 bg-[#192330] mt-20">
                 <div className="text-white join-bg flex items-center justify-center py-12">
                     <div className="" align="center">
                            <h1 className='font-bold md:text-4xl text-2xl flex gap-2'>Join <span className="text-[orange]">The Bright Future</span></h1>
@@ -39,12 +39,12 @@ const JoinUs = () => {
                            before:absolute before:top-[20px] before:right-0  before:bottom-[0px] before:md:w-[100px] before:w-[40px] before:h-[1px] before:bg-gray-400
                            ">
                                          <li className="mt-3">
-                                            <Link to="" className="text-blue-500 flex items-center md:justify-start justify-center gap-2">
+                                            <Link to="https://www.facebook.com/thebrightfuture.co/" className="text-blue-500 flex items-center md:justify-start justify-center gap-2">
                                                 <BsFacebook className='text-xl'/> 
                                             </Link>
                                          </li>
                                          <li className='mt-3'>
-                                            <Link to="" className="text-blue-500 flex items-center md:justify-start justify-center gap-2">
+                                            <Link to="https://www.linkedin.com/company/thebrightfuture-co/mycompany/verification/" className="text-blue-500 flex items-center md:justify-start justify-center gap-2">
                                                 <BsLinkedin className='text-xl'/> 
                                             </Link>
                                          </li>
@@ -62,7 +62,7 @@ const JoinUs = () => {
                     </div>
                 </div>
                 <div className="text-white px-3 md:pt-8 md:pb-8 pt-3 pb-[80px]">
-                    <form onSubmit={submitHandler} action="">
+                    <form onSubmit={submitHandler} className='capitalize' action="">
                             <div className="md:flex items-center gap-3">
                                     <div className="relative bg-[#0b0a2238] border border-[#1795F0] rounded-lg mt-8 w-full">
                                              <div className="text-[#ff000000] absolute bg-[#0e0b2cf8] w-[78px] h-[3px] left-[14px] top-[-2px]">.</div>

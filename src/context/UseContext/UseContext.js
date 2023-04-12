@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { createContext } from "react";
-import { getAuth, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword, onAuthStateChanged, signOut, sendEmailVerification} from "firebase/auth";
 import app from '../../firebase/firebase.config';
 
 export const AuthContext = createContext()
@@ -36,13 +36,18 @@ const UseContext = ({children}) => {
           photoURL: "https://example.com/jane-q-user/profile.jpg"
 })
 }
+ const verifyEmail=()=>{
+       return sendEmailVerification(auth.currentUser)
+}
     const authInfo = {
         createUser,
         updateName,
         signInUser,
         user,
         loading,
-        userLogOut
+        setLoading,
+        userLogOut,
+        verifyEmail
     }
     return (
         <div>
