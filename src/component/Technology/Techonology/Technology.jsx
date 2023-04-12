@@ -27,11 +27,15 @@ import id from '../../../Assctes/icon/id.png'
 import aftereffect from '../../../Assctes/icon/aftereffect.png'
 import flut from '../../../Assctes/icon/flutter.png'
 import native from '../../../Assctes/icon/reactNative.png';
+import nextJs from '../../../Assctes/icon/nextjs.png';
 
 const Technology = () => {
-    const tecData =[
-       {
-         front : [
+ 
+   const tData= [
+    {
+        id : 0,
+        title : "front end development",
+        options : [
             { 
                id : 0,
                name : "tailwind", img : tailwind
@@ -60,8 +64,16 @@ const Technology = () => {
                id : 6,
                name : "java script", img : js
             },
-        ],
-        backend : [
+            { 
+               id : 7,
+               name : "next js", img : nextJs
+            },
+        ]
+    },
+    {
+        id : 1,
+        title : "backend development",
+        options : [
             {
                 id : 0,
                 name : "node js", img : nodejs
@@ -76,25 +88,26 @@ const Technology = () => {
             },
             {
                 id : 3,
-                name : "asd", img : mmm
+                name : "mongos", img : mmm
             },
             {
                 id : 4,
-                name : "asd", img : sql
+                name : "mysqli", img : sql
             },
+           
             {
-                id : 5,
-                name : "asd", img : redux
+                id :5,
+                name : "javascript", img : js
             },
-            {
-                id :6,
-                name : "asd", img : js
-            },
-        ],
-          tools : [
+        ]
+    },
+    {
+        id : 2,
+        title : "tools",
+        options : [
             { 
                id : 0,
-               name : "asd", img : firebase
+               name : "firebase", img : firebase
             },
             { 
                id : 1,
@@ -120,9 +133,13 @@ const Technology = () => {
                id : 6,
                name : "asd", img : aftereffect
             },
-        ],
-          app : [
-            { 
+        ]
+    },
+     {
+        id : 3,
+        title : "app",
+        options : [
+              { 
                id : 0,
                name : "asd", img : native
             },
@@ -130,10 +147,13 @@ const Technology = () => {
                id : 1,
                name : "asd", img : flut
             },
-           
-        ],
-          payment : [
-            { 
+        ]
+    },
+     {
+        id : 4,
+        title : "payment",
+        options : [
+              { 
                id : 0,
                name : "asd", img : ssl
             },
@@ -141,18 +161,17 @@ const Technology = () => {
                id : 1,
                name : "asd", img : strip
             },
-       
-        ],
-       }
-    ]
-
+        ]
+    },
+   ]
     return (
         <div>
            <div className="tech-bg px-2 py-4 text-capitalize" id='tech'>
              <h1 className="text-xl  font-bold relative after:absolute after:left-0 after:right-0 after:bottom-[-18px] after:w-[60px] after:rounded-full after:h-[6px] after:bg-[#0095ff] after:mx-auto text-center text-white">Our Technology <span className="shadow-tx">and Tools</span></h1>
              <br /><br />
             <VerticalTimeline className='text-white'>
-                        <VerticalTimelineElement
+                    {
+                        tData.map(tData =>  <VerticalTimelineElement key={tData.id}
                             className="vertical-timeline-element--work"
                             contentArrowStyle={{ borderRight: '7px solid  #ff000000', }}
 
@@ -161,86 +180,16 @@ const Technology = () => {
                         >
                         <div className="sp-box border border-[#2a4892]  relative p-3">
                             <div className="absolute top-[-28px] bg-[#2a4892] sp pl-2 pr-14  py-1 left-[-2px]">
-                                <h1 className='md:text-md text-sm'>Front end development</h1>
+                                <h1 className='md:text-md text-sm'>{tData.title}</h1>
                             </div>
                              <figure className='grid mt-4 grid-cols-6 gap-4'>
                                   {
-                                    tecData[0].front.map(tData => <img key={tData.id} title={tData.name} className="shd"  src={tData.img} />)
+                                    tData?.options?.map(td => <img title={td.name} src={td.img} />)
                                   }
                              </figure>
                         </div>
-                        </VerticalTimelineElement>
-                       
-                        <VerticalTimelineElement
-                            className="vertical-timeline-element--work bg-"
-                            iconStyle={{ background: 'rgb(0, 0, 0)', color: '#fff' }}
-                            icon={<HiOutlineCodeBracket />}
-                        >
-                              <div className="sp-box relative p-3 border border-[#2a4892]">
-                            <div className="absolute top-[-28px] bg-[#2a4892] sp2 pl-14 pr-2  py-1 right-[-2px]">
-                                <h1 className='md:text-md text-sm'>Back end development</h1>
-                            </div>
-                             <figure className='grid mt-4 grid-cols-6 gap-4'>
-                                  {
-                                    tecData[0].backend.map(tData => <img key={tData.id} className="" src={tData.img} />)
-                                  }
-                             </figure>
-                        </div>
-                        </VerticalTimelineElement>
-                      
-                        <VerticalTimelineElement
-                            className="vertical-timeline-element--work"
-                            contentArrowStyle={{ borderRight: '7px solid  #ff000000', }}
-
-                            iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                            icon={<HiOutlineWrenchScrewdriver />}
-                        >
-                        <div className="sp-box relative p-3 border border-[#2a4892]">
-                            <div className="absolute top-[-28px] bg-[#2a4892] sp pl-2 pr-14  py-1 left-[-2px]">
-                                <h1 className='md:text-md text-sm'>Tools</h1>
-                            </div>
-                             <figure className='grid  mt-4 grid-cols-6 gap-4'>
-                                  {
-                                    tecData[0].tools.map(tData => <img key={tData.id} className="" src={tData.img} />)
-                                  }
-                             </figure>
-                        </div>
-                        </VerticalTimelineElement>
-                       
-                        <VerticalTimelineElement
-                            className="vertical-timeline-element--work bg-"
-                            iconStyle={{ background: 'rgb(0, 0, 0)', color: '#fff' }}
-                            icon={<HiOutlineCodeBracket />}
-                        >
-                              <div className="sp-box relative p-3 border border-[#2a4892]">
-                            <div className="absolute top-[-28px] bg-[#2a4892] sp2 pl-14 pr-2  py-1 right-[-2px]">
-                                <h1 className='md:text-md text-sm'> App Development</h1>
-                            </div>
-                             <figure className='grid mt-4 grid-cols-6 gap-4'>
-                                  {
-                                    tecData[0].app.map(tData => <img key={tData.id} className="" src={tData.img} />)
-                                  }
-                             </figure>
-                        </div>
-                        </VerticalTimelineElement>
-                    
-                        <VerticalTimelineElement
-                            className="vertical-timeline-element--work "
-                            iconStyle={{ background: '#2196F3', color: 'white' }}
-                            icon={<HiOutlineCurrencyBangladeshi />}
-                        >
-                              <div className="sp-box relative p-3 border border-[#2a4892]">
-                            <div className="absolute top-[-28px] bg-[#2a4892] sp pr-14 pl-2  py-1 left-[-2px]">
-                                <h1 className='md:text-md text-sm'>Payment Method</h1>
-                            </div>
-                             <figure className='grid mt-4 grid-cols-6 gap-4'>
-                                  {
-                                    tecData[0].payment.map(tData => <img key={tData.id} className="" src={tData.img} />)
-                                  }
-                             </figure>
-                        </div>
-                        </VerticalTimelineElement>
-                
+                        </VerticalTimelineElement>)
+                    }
                 </VerticalTimeline>
            </div>
         </div>

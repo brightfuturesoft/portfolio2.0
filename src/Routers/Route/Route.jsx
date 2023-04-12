@@ -90,9 +90,17 @@ export const route = createBrowserRouter([
                }
             },
             {
-               path : "https://portfolio-backend-one-kappa.vercel.app/allProject:id",
+               path : "/all_project/:id",
+               element : <AllProject />,
+               loader : async (params)=>{
+                  return fetch(`https://portfolio-backend-one-kappa.vercel.app/allProject/${params.id}`)
+               }
+            },
+            {
+               path : "https://portfolio-backend-one-kappa.vercel.app/project:id",
                element : <ProjectDetails />
             },
+        
             {
                path : "/Cart",
                element : <Card />

@@ -26,7 +26,7 @@ const ProjectCart = ({allProjectData, stickyTopSpace}) => {
 						</span>
                         <p className="mt-5 text-sm pb-20">{description}</p>
                         </div>
-                        	<Link to={`/all_project/${id}`} className="absolute bg-[#0066ff] right-[20px] bottom-[20px] text-white px-3 py-2 rounded-md duration-200 hover:bg-[#007bff]">Details</Link>
+                        	<Link to={`/project/${id}`} className="absolute bg-[#0066ff] right-[20px] bottom-[20px] text-white px-3 py-2 rounded-md duration-200 hover:bg-[#007bff]">Details</Link>
                     </div>
                 </div>
         </div>

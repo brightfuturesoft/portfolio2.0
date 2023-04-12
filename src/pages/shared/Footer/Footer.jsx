@@ -31,13 +31,13 @@ const Footer = () => {
                                             </Link>
                                          </li>
                                          <li className='mt-3'>
-                                            <Link to="" className="text-blue-400 flex items-center md:justify-start justify-center gap-2">
+                                            <Link to="https://twitter.com/thebrihgtfuture" className="text-blue-400 flex items-center md:justify-start justify-center gap-2">
                                                 <BsTwitter className='text-xl'/> Twitter
                                             </Link>
                                          </li>
                                          <li className='mt-3'>
-                                            <Link to="" className="text-green-400 flex items-center md:justify-start justify-center gap-2">
-                                                <BsWhatsapp className='text-xl'/> Twitter
+                                            <Link to="https://api.whatsapp.com/send?phone=8801792205520&text=Hello!%20Thank%20you%20for%20contacting%20our%20software%20company%27s%20WhatsApp%20account.%20We%20are%20delighted%20to%20help%20you%20with%20your%20web%20development%2C%20mobile%20app%20creation%2C%20and%20UI%2FUX%20design%20needs.%20Our%20team%20of%20skilled%20professionals%20is%20committed%20to%20delivering%20high-quality%20services%20that%20exceed%20your%20expectations.%0A%0AWhether%20you%27re%20looking%20to%20revamp%20an%20existing%20website%20or%20develop%20a%20brand%20new%20mobile%20app%2C%20we%20have%20the%20expertise%20to%20bring%20your%20ideas%20to%20life.%20Our%20UI%2FUX%20design%20experts%20will%20ensure%20that%20your%20digital%20products%20are%20user-friendly%2C%20visually%20appealing%2C%20and%20meet%20your%20business%20needs.%0A%0AWe%20take%20pride%20in%20our%20ability%20to%20deliver%20exceptional%20results%20on%20time%20and%20within%20budget.%20So%2C%20if%20you%27re%20ready%20to%20take%20your%20digital%20presence%20to%20the%20next%20level%2C%20let%27s%20chat!%20Our%20team%20is%20ready%20to%20assist%20you%20with%20all%20your%20software%20needs." className="text-green-400 flex items-center md:justify-start justify-center gap-2">
+                                                <BsWhatsapp className='text-xl'/> Whatsapp
                                             </Link>
                                          </li>
                                      </ul>

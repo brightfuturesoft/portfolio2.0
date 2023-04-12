@@ -95,7 +95,7 @@ html{
 }
 
 .all-project-bg{
-  background-image: radial-gradient(37.46% 51.63% at 50% 43.59%, rgb(2, 10, 28) 0%, #020A1C 100%);
+  background-image: radial-gradient(37.46% 51.63% at 50% 43.59%, rgb(2, 10, 28) 0%, #020A1C 100%)!important;
   background-size: cover;
    background-repeat : no-repeat!important;
 }
@@ -431,7 +431,7 @@ clip-path: polygon(9% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 100%);
 
 .s-open{
   transition: all 0.2s ease;
-  height: 400px!important;
+  height: 450px!important;
   overflow: hidden;
 }
 .s-close{

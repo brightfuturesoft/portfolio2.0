@@ -7,15 +7,13 @@ import "swiper/css/navigation";
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import vec from '../../../Assctes/vectors/vector(mission).png'
-import vt from '../../../Assctes/vectors/vector(header).png'
-import b from '../../../Assctes/backgrounds/b.png';
-import mahadi from '../../../Assctes/teamMember/mahadi (2).jpg';
+import mahadi from '../../../Assctes/teamMember/mahadi.jpg';
+import acccountManager from '../../../Assctes/teamMember/accountManager.jpeg';
+import seyam from '../../../Assctes/teamMember/seyam.jpg';
 import oshim from '../../../Assctes/teamMember/ashim.jpeg';
-import maruf from '../../../Assctes/teamMember/maruf.jpeg';
 import mamon from '../../../Assctes/teamMember/abdullah.jpg';
 import nahid from '../../../Assctes/teamMember/nahid.jpeg';
-import obidol from '../../../Assctes/teamMember/Obaidul.png'
+import maruf from '../../../Assctes/teamMember/maruf.jpeg'
 import mushfiq from '../../../Assctes/teamMember/musfiq.jpg'
 import mamonKhan from '../../../Assctes/teamMember/Mamun_Khan.png'
 import n from '../../../Assctes/teamMember/n.jpg'
@@ -32,106 +30,99 @@ import Lottie from "lottie-react";
 import homeVc from '../../../Assctes/vectors/App Development.json';
 const About = () => {
    const [swiperRef, setSwiperRef] = useState(null);
-   const teamMembers = [
+      const teamMembers = [
   {
     "id": 0,
     "img": mahadi,
     "name": "Mahadi Hassan",
-    "gender": "male",
     "post": "CEO and founder",
     "linkedIn": "https://www.linkedin.com/in/codewithmahadihasan/",
+    "gender": "male"
   },
   {
     "id": 1,
-    "img": oshim,
-    "name": "Latisha Hutchinson",
-    "gender": "male",
-    "post": "BUZZMAKER",
-    "linkedIn": "latishahutchinson@buzzmaker.com",
+    "img": seyam,
+    "name": "Saidur Rahman Siam",
+    "post": "Project manager & android developer",
+    "linkedIn": "https://www.linkedin.com/in/saidur-rahman-siam-11822286/",
+    "gender": "male"
   },
   {
     "id": 2,
     "img": maruf,
     "name": "Maruf Ali Khan",
-    "gender": "male",
-    "post": "Project Manager",
+    "email" : "marufalikhan18@gmail.com",
+    "post": "Project manager",
     "linkedIn": "https://www.linkedin.com/in/maruf-ali-khan-742b1a1a4/",
-  },
-    {
-    "id": 1,
-    "img": oshim,
-    "name": "Latisha Hutchinson",
-    "gender": "male",
-    "post": "BUZZMAKER",
-    "linkedIn": "latishahutchinson@buzzmaker.com",
-  },
-  {
-    "id": 2,
-    "img": mamon,
-    "name": "Antoinette Peck",
-    "gender": "male",
-    "post": "ONTAGENE",
-    "linkedIn": "antoinettepeck@ontagene.com",
     "gender": "male"
   },
   {
     "id": 3,
-    "img": nahid,
-    "name": "Randi Norris",
-    "gender": "male",
-    "post": "SNORUS",
-    "linkedIn": "randinorris@snorus.com",
-    "gender": "male"
+    "img": acccountManager,
+    "name": "Regita Redhe",
+    "email" : "",
+    "post": "Account manager",
+    "linkedIn": "https://www.linkedin.com/in/regita-redhe-30b357271/",
+    "gender": "female"
   },
   {
     "id": 4,
-    "img": obidol,
-    "name": "Candy White",
-    "gender": "male",
-    "post": "ATGEN",
-    "linkedIn": "candywhite@atgen.com",
+    "img": oshim,
+    "name": "Ashim Rudra Paul",
+    "email" : "",
+    "post": "MERN STACK DEVELOPER",
+    "linkedIn": "https://www.linkedin.com/in/codewithashim/",
+    "gender": "male"
+  },
+  {
+    "id": 5,
+    "img": mamon,
+    "name": "Md. Abdullah Al Mamun",
+    "email" : "abdullahalmamun.cs@gmail.com",
+    "post": "Front End Developer",
+    "linkedIn": "https://www.linkedin.com/in/mdmamunabdullah/",
     "gender": "male"
 
   },
   {
-    "id": 5,
-    "img": mushfiq,
-    "name": "Blanchard Bruce",
-    "gender": "male",
-    "post": "ZINCA",
-    "linkedIn": "blanchardbruce@zinca.com",
+    "id": 6,
+    "img": nahid,
+    "name": "Nahid Ferdaos",
+    "email" : "mdnahid360s@gmail.com",
+    "post": "Front End Developer",
+    "linkedIn": "https://www.linkedin.com/in/nahid-ferdaos/",
     "gender": "male"
   },
   {
-    "id": 6,
-    "img":mamonKhan,
-    "name": "Franco Tran",
-    "gender": "male",
-    "post": "INTERLOO",
-    "linkedIn": "francotran@interloo.com",
-    "gender": "male"
-  }
-  ,
-  {
     "id": 7,
-    "img": n,
-    "name": "Franco Tran",
-    "gender": "male",
-    "post": "Junior MERN stack Developer",
-    "linkedIn": "francotran@interloo.com",
+    "img":mushfiq,
+    "name": "Musfiqur Rahman",
+    "email" : "",
+    "post": "Marn stack developer",
+    "linkedIn": "https://www.linkedin.com/in/musfiqurofficial/",
     "gender": "male"
   }
   ,
   {
     "id": 8,
-    "img":abdurRab,
-    "name": "Franco Tran",
-    "gender": "male",
-    "post": "INTERLOO",
-    "linkedIn": "francotran@interloo.com",
+    "img": mamonKhan,
+    "name": "Md Mamun Khan",
+    "email" : "",
+    "post": "Marketing",
+    "linkedIn": "https://www.linkedin.com/in/md-mamun-khan/",
     "gender": "male"
   }
-]   
+  ,
+  {
+    "id": 9,
+    "img":abdurRab,
+    "name": "MD. ABDUR RAB",
+    "email" : "",
+    "post": "UI/UX Designer",
+    "linkedIn": "https://www.linkedin.com/in/md-abdur-rab-90b110185/",
+    "gender": "male"
+  }
+]    
       useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -205,12 +196,13 @@ const About = () => {
                     teamMembers.map(tData =>  
                     <SwiperSlide key={tData.id} className="cursor-grab">
                         <div className=" py-[100px] px-2">
-                            <div className="cart-box  p-2 bg-[#1d1e37bc] border-2 border-[#0059ff] rounded-xl">
+                            <div className="cart-box  p-2 bg-[#1d1e37bc] border-2 border-[#0059ff] rounded-xl h-[340px]">
                                     <div style={{backgroundImage : `url("${tData.img}")`, backgroundSize : "cover"}} className="cart-header rounded-[20px]   w-[200px] h-[200px] mx-auto mt-[-40px] i-box">
                                     </div>
                                     <div className="body pb-4">
                                         <h2 className="text-white font-semibold mt-2">{tData.name}</h2>
                                         <p className="text-sm">{tData.post}</p>
+                                        <small>{tData?.email}</small>
                                         <Link to={tData.linkedIn}>
                                         <AiFillLinkedin className="text-4xl mt-4 m-auto text-[#1e6dff]" />
                                         </Link>
