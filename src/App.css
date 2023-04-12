@@ -42,11 +42,11 @@ html{
 
 .header-bg {
   background-image: linear-gradient(190deg, rgba(22, 101, 125, 0.4) -121.64%, #020A1C 74.61%),url('../src/Assctes/backgrounds/header.png');
-  background-size: cover;
+  background-size: cover;   background-repeat : no-repeat;
 }
 .about-bg {
   background-image: linear-gradient(190deg, rgba(0, 0, 0, 0.505) -121.64%, #020a1cf8 74.61%),url('../src/Assctes/backgrounds/about.jpg');
-  background-size: cover;
+  background-size: cover;   background-repeat : no-repeat;
   background-attachment: fixed;
 }
 .shadow-btn{
@@ -77,46 +77,47 @@ html{
 }
 .requirement-box{
   background-image: url('../src/Assctes/backgrounds/RqBg.png');
-  background-size: cover;
+  background-size: cover;   background-repeat : no-repeat;
 }
 .service-bg{
   background-image: radial-gradient(38.6% 47.29% at 50% 50.08%, rgba(2, 10, 28, 0.57) 0%, #020A1C 100%),url('../src/Assctes/backgrounds/5512626.jpg');
-  background-size: cover;
+  background-size: cover;   background-repeat : no-repeat;
   background-position:fixed!important;
 }
 .work-bg{
   background-image: url('../src/Assctes/backgrounds/workBg.png');
-  background-size: cover;
+  background-size: cover;   background-repeat : no-repeat;
   background-position:fixed!important;
 }
 .tech-bg{
   background-image: radial-gradient(37.46% 51.63% at 50% 43.59%, rgba(2, 10, 28, 0.66) 0%, #020A1C 100%),url('../src/Assctes/backgrounds/techBg.png');
-  background-size: cover;
+  background-size: cover;   background-repeat : no-repeat;
 }
 
 .all-project-bg{
   background-image: radial-gradient(37.46% 51.63% at 50% 43.59%, rgb(2, 10, 28) 0%, #020A1C 100%);
   background-size: cover;
+   background-repeat : no-repeat;
 }
 .vission-bg{
   background-image: radial-gradient(39.53% 37.94% at 63.76% 51.76%, rgba(2, 10, 28, 0.45) 0%, rgba(2, 10, 28, 0.83) 42.36%, #020A1C 100%),url('../src/Assctes/backgrounds/missionBg.png');
-  background-size: cover;
+  background-size: cover;   background-repeat : no-repeat;
 }
 .blog-bg{
   background-image: linear-gradient(60deg, rgba(0, 0, 0, 0.979), rgba(3, 9, 20, 0.782)),url('/src/Assctes/backgrounds/blog-bg.jpg');
-  background-size: cover;
+  background-size: cover;   background-repeat : no-repeat;
   background-position: 50%;
   
 
 }
 .join-bg{
   background-image: radial-gradient(39.53% 37.94% at 63.76% 51.76%, rgba(2, 10, 28, 0.925) 0%, rgba(2, 10, 28, 0.896) 42.36%, #020A1C 100%),url("./Assctes/backgrounds/bg-side.jpg");
-  background-size: cover;
+  background-size: cover;   background-repeat : no-repeat;
 }
 
 .form-bg{
   background-image: linear-gradient(60deg, #020a1c,80%, #020a1c83),url("./Assctes/backgrounds/pexels-archie-binamira-705075.jpg")!important;
-  background-size: cover;
+  background-size: cover;   background-repeat : no-repeat;
   background-position: center;
 }
 
@@ -210,21 +211,21 @@ clip-path: polygon(9% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 100%);
 }
 .mrg-bg{
   background-image:radial-gradient(50.35% 50.39% at 42.03% 53.31%, rgba(2, 10, 28, 0.58) 0%, #020A1C 100%),url('../src/Assctes/backgrounds/5430284.jpg');
-  background-size: cover;
+  background-size: cover;   background-repeat : no-repeat;
 }
 .team-bg{
   background-image: radial-gradient(53.72% 53.72% at 40.82% 46.28%, rgba(2, 11, 29, 0.49) 0%, #020A1C 100%),url('../src/Assctes/backgrounds/Rectangle\ 50.png');
-  background-size: cover;
+  background-size: cover;   background-repeat : no-repeat;
 }
 
 .testimonial-bg{
   background-image: radial-gradient(50.28% 48.61% at 50.04% 54.71%, rgba(2, 11, 29, 0.78) 0%, #020A1C 100%),url('../src/Assctes/backgrounds/5528701.jpg');
-  background-size: cover;
+  background-size: cover;   background-repeat : no-repeat;
 }
 
 .contact-bg{
   background-image: radial-gradient(50.28% 48.61% at 50.04% 54.71%, rgba(2, 11, 29, 0.78) 0%, #020A1C 100%),url('../src/Assctes/backgrounds/contact.png');
-  background-size: cover;
+  background-size: cover;   background-repeat : no-repeat;
 }
 
 .box{
@@ -348,7 +349,7 @@ clip-path: polygon(9% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 100%);
 }
 .form-bg{
   background-image: radial-gradient(37.46% 51.63% at 50% 43.59%, rgba(2, 10, 28, 0.921) 0%, #020A1C 100%),url('../src/Assctes/backgrounds/missionBg.png');
-  background-size: cover;
+  background-size: cover;   background-repeat : no-repeat;
 }
 
  

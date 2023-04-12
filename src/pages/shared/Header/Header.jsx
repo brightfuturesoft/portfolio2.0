@@ -24,7 +24,7 @@ const Header = () => {
  }
  console.log('+++++++', process.env.REACT_APP_apiKey);
   return (
-     <nav className="fixed w-full z-10 ">
+     <nav className="fixed w-full z-10 top-0 left-0 right-0">
       <div className="py-2  mx-auto glass md:py-4 md:px-[4%] w-full px-[4%]">
         <div className="relative px-4  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 flex items-center justify-between">
           <Link to="/"><img src={logo} alt="" className='w-[135px]' /></Link>
