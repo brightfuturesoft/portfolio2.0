@@ -25,12 +25,10 @@ const Contact = () => {
             .then(
             (result) => {
                 setActiveMdl(true)
-                console.log(result);
                 setLoading(false)
             },
             (error) => {
                setActiveMdl(false)
-                console.log(error.text);
                 setLoading(false)
             }
             );

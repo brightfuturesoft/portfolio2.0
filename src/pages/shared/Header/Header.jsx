@@ -16,13 +16,10 @@ const Header = () => {
     .then((result) => {
         // Sign-out successful.
         const user = result.user;
-        console.log(user);
       }).catch((error) => {
         // An error happened.
-        console.log(error);
       });
  }
- console.log('+++++++', process.env.REACT_APP_apiKey);
   return (
      <nav className="fixed w-full z-10 top-0 left-0 right-0">
       <div className="py-2  mx-auto glass md:py-4 md:px-[4%] w-full px-[4%]">

@@ -8,14 +8,6 @@ const EditModal = ({id, bData}) => {
             const name = form.name.value;
             const attachment = form.attachment.value;
             const description = form.description.value;
-
-            console.log(
-                {
-                    name : name,
-                    attachment : attachment,
-                    description : description
-                }
-            );
        }
     return (
         <div>

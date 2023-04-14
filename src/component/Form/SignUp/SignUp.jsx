@@ -22,7 +22,6 @@ const SignUp = () => {
       .then((userCredential) => {
     const user = userCredential.user;
     updateName(name);
-    console.log("new :::::", user);
      navigate('/sign_in');
      verifyEmailHandler();
      alert("please check your email for verify your account")

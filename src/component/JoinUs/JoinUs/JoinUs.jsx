@@ -25,7 +25,6 @@ const JoinUs = () => {
                 file : file,
                 message : message
             }
-            console.log(user);
     }
     return (
         <div className="bg-[#121c25] md:p-8 p-2">

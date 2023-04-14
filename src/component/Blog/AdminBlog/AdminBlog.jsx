@@ -17,21 +17,11 @@ const AdminBlog = () => {
             const name = form.name.value;
             const attachment = form.attachment.value;
             const description = form.description.value;
-
-            console.log(
-                {
-                    name : name,
-                    attachment : attachment,
-                    description : description
-                }
-            );
-
             setShow(!show)
        }
        useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  console.log(blog);
     return (
              <div className="p-2 bg-[#1b1b22]">
                <Title title="Admin Blog"/>
