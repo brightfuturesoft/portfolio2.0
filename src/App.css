@@ -431,7 +431,7 @@ clip-path: polygon(9% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 100%);
 
 .s-open{
   transition: all 0.2s ease;
-  height: 450px!important;
+  height: 500px!important;
   overflow: hidden;
 }
 .s-close{

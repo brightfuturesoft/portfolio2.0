@@ -111,27 +111,27 @@ const Technology = () => {
             },
             { 
                id : 1,
-               name : "asd", img : figma
+               name : "figma", img : figma
             },
             { 
                id : 2,
-               name : "asd", img : xd
+               name : "adobe XD", img : xd
             },
             { 
                id : 3,
-               name : "asd", img : ps
+               name : "Photoshop", img : ps
             },
             { 
                id : 4,
-               name : "asd", img : illstator
+               name : "illastator", img : illstator
             },
             { 
                id : 5,
-               name : "asd", img : id
+               name : "adobe in design", img : id
             },
             { 
                id : 6,
-               name : "asd", img : aftereffect
+               name : "after effect", img : aftereffect
             },
         ]
     },
@@ -141,11 +141,11 @@ const Technology = () => {
         options : [
               { 
                id : 0,
-               name : "asd", img : native
+               name : "React Native", img : native
             },
             { 
                id : 1,
-               name : "asd", img : flut
+               name : "Flutter", img : flut
             },
         ]
     },
@@ -155,11 +155,11 @@ const Technology = () => {
         options : [
               { 
                id : 0,
-               name : "asd", img : ssl
+               name : "SSLCOMMERZ ", img : ssl
             },
             { 
                id : 1,
-               name : "asd", img : strip
+               name : "Stripe", img : strip
             },
         ]
     },
