@@ -13,6 +13,8 @@ import mushfiq from '../../../Assctes/teamMember/musfiq.jpg'
 import mamonKhan from '../../../Assctes/teamMember/Mamun_Khan.png'
 import n from '../../../Assctes/teamMember/n.jpg'
 import abdurRab from '../../../Assctes/teamMember/Abdur_rab_1.jpg'
+import nezaul from '../../../Assctes/teamMember/nezamul.jpeg'
+import minhaz from '../../../Assctes/teamMember/minhaz.jpg'
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -111,6 +113,26 @@ const Team = () => {
     "email" : "",
     "post": "UI/UX Designer",
     "linkedIn": "https://www.linkedin.com/in/md-abdur-rab-90b110185/",
+    "gender": "male"
+  }
+  ,
+  {
+    "id": 10,
+    "img":nezaul,
+    "name": "Nazmul Hoque",
+    "email" : "",
+    "post": "MERN Stack Developer",
+    "linkedIn": "https://www.linkedin.com/in/nazmul-sujon/",
+    "gender": "male"
+  }
+  ,
+  {
+    "id": 11,
+    "img":minhaz,
+    "name": "Minhaz Khan",
+    "email" : "",
+    "post": "MERN Stack Developer",
+    "linkedIn": "https://www.linkedin.com/in/minhaz-khan-/",
     "gender": "male"
   }
 ]    
