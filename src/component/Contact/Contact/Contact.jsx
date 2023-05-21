@@ -74,7 +74,7 @@ const Contact = () => {
                                          <a target='_blank' href="https://www.linkedin.com/company/thebrightfuture-co/mycompany/verification/" className="flex items-center gap-2 duration-200 hover:text-blue-400"><BsLinkedin className='text-xl text-[#00a2ff]'/> Linked In</a>
                                       </li>
                                   </ul>
-                              </div>
+                              </div>   
                               <div className="">
                                   <form ref={form} onSubmit={sendEmail} className="text-[#0095ff] px-4 py-5 md:w-[80%] rounded-xl mx-auto form-bg capitalize">
                                           <h3 className="text-2xl text-center">Your Message</h3>
