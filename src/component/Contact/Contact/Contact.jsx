@@ -17,19 +17,22 @@ const Contact = () => {
         e.preventDefault();
         emailjs
             .sendForm(
-            "thebrightfuture",
-            "template_igpf148",
+            "service_5g617lv",
+            "template_vdzg5ic",
             form.current,
-            "k1X9xhaxBhNtWQbrr"
+            "4Yw1gIlSKjjI-TUZO"
             )
             .then(
             (result) => {
                 setActiveMdl(true)
                 setLoading(false)
+
+                console.log(result);
             },
             (error) => {
                setActiveMdl(false)
                 setLoading(false)
+                console.log(error)
             }
             );
 
