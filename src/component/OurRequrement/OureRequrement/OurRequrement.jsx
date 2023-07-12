@@ -90,7 +90,7 @@ const OurRequrement = () => {
                                 
                               <div onClick={()=> handleReqData(data)} key={data.id} align="center" className="mt-10 ">
                                      <div className="w-[100px] h-[100px] rounded-xl bg-[#1e2a31a3] duration-200  common-hover-shadow cursor-pointer flex items-center justify-center">
-                                        <img src={data.pic} alt="" className="vc-img" />
+                                        <img  loading="lazy"src={data.pic} alt="" className="vc-img" />
                                      </div>
                                      <p className='mt-3'>{data.name}</p>
                                </div>)

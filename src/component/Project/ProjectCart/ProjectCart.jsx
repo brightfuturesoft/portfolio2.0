@@ -12,7 +12,7 @@ const ProjectCart = ({allProjectData, stickyTopSpace}) => {
                 <div className='p-3'>
                     <div className="bg-[#141425] rounded-xl md:grid grid-cols-3">
                         <div className="p-3">
-                            <img src={pic} alt="" className="h-[250px] w-full rounded-lg" />
+                            <img  loading="lazy"src={pic} alt="" className="h-[250px] w-full rounded-lg" />
                         </div>
                         <div className="p-2 col-span-2">
                             <h1 className="font-bold text-xl text-[#00a2ff]">{name}</h1>

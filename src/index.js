@@ -7,6 +7,7 @@ import UseContext from './context/UseContext/UseContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  
   <React.StrictMode>
     <UseContext>
         <App />

@@ -17,10 +17,10 @@ const Contact = () => {
         e.preventDefault();
         emailjs
             .sendForm(
-            "service_5g617lv",
-            "template_vdzg5ic",
+            "thebrightfuture",
+            "thebrightfuture.co",
             form.current,
-            "4Yw1gIlSKjjI-TUZO"
+            "k1X9xhaxBhNtWQbrr"
             )
             .then(
             (result) => {
@@ -60,7 +60,7 @@ const Contact = () => {
                               <div className="py-[40px] px-[60px]">
                                   <h1 className="font-bold text-3xl">Contact us</h1>
 
-                                  <ul className="mt-7">
+                                  <ul className="mt-7 flex flex-col justify-start">
                                       <li className=''>
                                          <a href="tel:/info@thebrightfuture.co" className="flex items-center gap-2 duration-200 hover:text-blue-400"><MdOutlineMail className='text-2xl text-[#00a2ff]'/> info@thebrightfuture.co</a>
                                       </li>
@@ -71,7 +71,7 @@ const Contact = () => {
                                          <Link target='_blank' to="https://www.facebook.com/thebrightfuture.co" className="flex items-center gap-2 duration-200 hover:text-blue-400"><MdFacebook className='text-2xl text-[#00a2ff]'/>Facebook</Link>
                                       </li>
                                       <li className='mt-6'>
-                                         <a target='_blank' href="https://www.linkedin.com/company/thebrightfuture-co/mycompany/verification/" className="flex items-center gap-2 duration-200 hover:text-blue-400"><BsLinkedin className='text-xl text-[#00a2ff]'/> Linked In</a>
+                                         <a target='_blank' href="https://bd.linkedin.com/company/thebrightfuture-co" className="flex items-center gap-2 duration-200 hover:text-blue-400"><BsLinkedin className='text-xl text-[#00a2ff]'/> Linked In</a>
                                       </li>
                                   </ul>
                               </div>   
@@ -81,18 +81,18 @@ const Contact = () => {
                                           <div className="relative bg-[#0b0a2238] border border-[#1795F0] rounded-lg mt-4">
                                             <div className="text-[#ff000000] absolute bg-[#0e0b2cf8] w-[47px] h-[3px] left-[14px] top-[-2px]">.</div>
                                             <label htmlFor="" className="absolute text-sm top-[-14px] left-[15px]  px-1">Name</label>
-                                            <input required name="user_name" type="text" className="w-full rounded-lg outline-none border-none bg-[#00000034]" placeholder="enter your name" />
+                                            <input required name="from_name" id='from_name' type="text" className="w-full rounded-lg outline-none border-none bg-[#00000034]" placeholder="Enter your name" />
                                           </div>
                                         
                                           <div className="relative bg-[#0b0a2238] border border-[#1795F0] rounded-lg mt-8">
                                              <div className="text-[#ff000000] absolute bg-[#0e0b2cf8] w-[47px] h-[3px] left-[14px] top-[-2px]">.</div>
                                             <label htmlFor="" className="absolute text-sm top-[-14px] left-[15px]  px-1">Email</label>
-                                            <input required type="email" name="user_email" className="w-full rounded-lg outline-none border-none bg-[#00000034]" placeholder="enter your email" />
+                                            <input required type="email" id='reply_to' name="reply_to" className="w-full rounded-lg outline-none border-none bg-[#00000034]" placeholder="Enter your email" />
                                           </div>
                                           <div className="relative bg-[#0b0a2238] border border-[#1795F0] rounded-lg mt-8">
                                              <div className="text-[#ff000000] absolute bg-[#0e0b2cf8] w-[67px] h-[3px] left-[14px] top-[-2px]">.</div>
                                             <label htmlFor="" className="absolute text-sm top-[-14px] left-[15px]  px-1">Message</label>
-                                            <textarea  name="message" type="text" className="w-full h-[110px] rounded-lg outline-none border-none bg-[#00000034] " placeholder="enter your message" />
+                                            <textarea  name="message" type="text" className="w-full h-[110px] rounded-lg outline-none border-none bg-[#00000034] " placeholder="Enter your message" />
                                           </div>
 
                                         <button type="submit" className="mt-8 bg-[#1A2644] w-full p-3 rounded-lg" disabled={loading}>{!loading? "Submit" : <div align="center" className='flex items-center justify-center'>

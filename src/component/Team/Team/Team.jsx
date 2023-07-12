@@ -27,25 +27,19 @@ const Team = () => {
   {
     "id": 0,
     "img": mahadi,
-    "name": "Mahadi Hassan",
+         "name": "Mahadi Hassan",
+    "email" : "info@thebrightfuture.co",
     "post": "CEO and founder",
     "linkedIn": "https://www.linkedin.com/in/codewithmahadihasan/",
     "gender": "male"
   },
-  {
-    "id": 1,
-    "img": seyam,
-    "name": "Saidur Rahman Siam",
-    "post": "Project manager & android developer",
-    "linkedIn": "https://www.linkedin.com/in/saidur-rahman-siam-11822286/",
-    "gender": "male"
-  },
+  
   {
     "id": 2,
     "img": maruf,
     "name": "Maruf Ali Khan",
-    "email" : "marufalikhan18@gmail.com",
-    "post": "Project manager",
+    "email" : "maruf@thebrightfuture.co",
+    "post": "Managing Director",
     "linkedIn": "https://www.linkedin.com/in/maruf-ali-khan-742b1a1a4/",
     "gender": "male"
   },
@@ -53,7 +47,7 @@ const Team = () => {
     "id": 3,
     "img": acccountManager,
     "name": "Regita Redhe",
-    "email" : "",
+    "email" : "redhe@@thebrightfuture.co",
     "post": "Account manager",
     "linkedIn": "https://www.linkedin.com/in/regita-redhe-30b357271/",
     "gender": "female"
@@ -62,7 +56,7 @@ const Team = () => {
     "id": 4,
     "img": oshim,
     "name": "Ashim Rudra Paul",
-    "email" : "",
+    "email" : "ashim@thebrightfuture.co",
     "post": "MERN STACK DEVELOPER",
     "linkedIn": "https://www.linkedin.com/in/codewithashim/",
     "gender": "male"
@@ -71,7 +65,7 @@ const Team = () => {
     "id": 5,
     "img": mamon,
     "name": "Md. Abdullah Al Mamun",
-    "email" : "abdullahalmamun.cs@gmail.com",
+    "email" : "mamun@thebrightfuture.co",
     "post": "Front End Developer",
     "linkedIn": "https://www.linkedin.com/in/mdmamunabdullah/",
     "gender": "male"
@@ -81,7 +75,7 @@ const Team = () => {
     "id": 6,
     "img": nahid,
     "name": "Nahid Ferdaos",
-    "email" : "mdnahid360s@gmail.com",
+    "email" : "nahid@thebrightfuture.co",
     "post": "Front End Developer",
     "linkedIn": "https://www.linkedin.com/in/nahid-ferdaos/",
     "gender": "male"
@@ -90,7 +84,7 @@ const Team = () => {
     "id": 7,
     "img":mushfiq,
     "name": "Musfiqur Rahman",
-    "email" : "",
+    "email" : "mushfiq@thebrightfuture.co",
     "post": "Marn stack developer",
     "linkedIn": "https://www.linkedin.com/in/musfiqurofficial/",
     "gender": "male"
@@ -100,7 +94,7 @@ const Team = () => {
     "id": 8,
     "img": mamonKhan,
     "name": "Md Mamun Khan",
-    "email" : "",
+    "email" : "info@thebrightfuture.co",
     "post": "Marketing",
     "linkedIn": "https://www.linkedin.com/in/md-mamun-khan/",
     "gender": "male"
@@ -110,7 +104,7 @@ const Team = () => {
     "id": 9,
     "img":abdurRab,
     "name": "MD. ABDUR RAB",
-    "email" : "",
+    "email" : "abdur@thebrightfuture.co",
     "post": "UI/UX Designer",
     "linkedIn": "https://www.linkedin.com/in/md-abdur-rab-90b110185/",
     "gender": "male"
@@ -120,7 +114,7 @@ const Team = () => {
     "id": 10,
     "img":nezaul,
     "name": "Nazmul Hoque",
-    "email" : "",
+    "email" : "nazmul@thebrightfuture.co",
     "post": "MERN Stack Developer",
     "linkedIn": "https://www.linkedin.com/in/nazmul-sujon/",
     "gender": "male"
@@ -130,7 +124,7 @@ const Team = () => {
     "id": 11,
     "img":minhaz,
     "name": "Minhaz Khan",
-    "email" : "",
+    "email" : "minhaz@thebrightfuture.co",
     "post": "MERN Stack Developer",
     "linkedIn": "https://www.linkedin.com/in/minhaz-khan-/",
     "gender": "male"
@@ -144,10 +138,7 @@ const Team = () => {
                 <Swiper
                 modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
                 pagination={{ clickable: true }}
-                  autoplay={{
-                    delay: 2500,
-                    disableOnInteraction: false,
-                    }}
+                 
                  breakpoints={{
                     320: {
                       slidesPerView: 1,

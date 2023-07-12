@@ -8,7 +8,7 @@ const AdminBlogCart = ({bData}) => {
     return (
         <div>
             <div className="">
-                          <img src={pic} />
+                          <img  loading="lazy"src={pic} />
 
                           <h1 className="mt-5 font-semibold text-lg text-[#5081f3]">{name}</h1>
                           <p className="text-sm mt-2 text-white">{details?.slice(0, 300)}</p>

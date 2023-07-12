@@ -2,8 +2,9 @@ import React, { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../../Assctes/logo.png';
 import { AuthContext } from '../../../context/UseContext/UseContext';
-import { HiBars3BottomLeft, HiBars3BottomRight } from 'react-icons/hi2';
-import { MdTurnLeft } from 'react-icons/md';
+import { HiBars3BottomLeft, HiBars3BottomRight, HiMinus } from 'react-icons/hi2';
+import { RiMenu3Fill } from 'react-icons/ri';
+import { GiCancel} from 'react-icons/gi';
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 
 
@@ -24,7 +25,7 @@ const Header = () => {
      <nav className="fixed w-full z-10 top-0 left-0 right-0">
       <div className="py-2  mx-auto glass md:py-4 md:px-[4%] w-full px-[4%]">
         <div className="relative px-4  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 flex items-center justify-between">
-          <Link to="/"><img src={logo} alt="" className='w-[135px]' /></Link>
+          <Link to="/"><img  loading="lazy"src={logo} alt="" className='w-[135px]' /></Link>
           <ul className=" items-center hidden space-x-8 lg:flex ">
             <li  className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative">
                 <NavLink
@@ -111,70 +112,71 @@ const Header = () => {
           <div className="lg:hidden">
              {/* onClick={() => setIsMenuOpen(!isMenuOpen)} */}
               <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="">
-                   <HiBars3BottomRight className='text-4xl border-[red]' />
+                  {!isMenuOpen ? <RiMenu3Fill className='text-4xl border-[red]' />
+                 :  <GiCancel className='text-4xl border-[red]' />}
               </button>
           </div>
         </div>
       </div>
-         <div className={`${isMenuOpen ? 's-open' : 's-close'} bg-[#14143f] md:hidden block`}>
-                  <ul className="p-2">
-                          <li onClick={()=> setIsMenuOpen(!isMenuOpen)} className="font-medium mt-300 h-[40px] flex items-center rounded overflow-hidden px-2 racking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative ">
+         <div className={`${isMenuOpen ? 's-open' : 's-close'} bg-[#14143f] text-center md:hidden block`}>
+                  <ul className="p-2 text-center">
+                          <li onClick={()=> setIsMenuOpen(!isMenuOpen)} className="font-medium justify-center  mt-300 h-[40px] flex items-center rounded overflow-hidden px-2 racking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative ">
                               <NavLink
                                   to="/"
                                   className={({ isActive, isPending }) =>
-                                      isPending ? "" : isActive ? "absolute top-0 left bottom-0 flex items-center rounded px-3 h-full w-full bg-[#1796f034]" : ""
+                                      isPending ? "" : isActive ? "absolute top-0 left bottom-0 flex items-center rounded px-3 h-full justify-center w-full bg-[#1796f034]" : ""
                                   }
                                   >
                                   Home
                                   </NavLink>
                           </li>
-                            <li onClick={()=> setIsMenuOpen(!isMenuOpen)} className="font-medium mt-3 h-[40px] flex items-center rounded overflow-hidden px-2 tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative ">
+                            <li onClick={()=> setIsMenuOpen(!isMenuOpen)} className="font-medium justify-center mt-3 h-[40px] flex items-center rounded overflow-hidden px-2 tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative ">
                               <NavLink
                                   to="/about"
                                   className={({ isActive, isPending }) =>
-                                      isPending ? "" : isActive ? "absolute top-0 left-0 bottom-0 flex items-center px-3 h-full w-full bg-[#1795F0]" : ""
+                                      isPending ? "" : isActive ? "absolute top-0 left-0 bottom-0 flex justify-center items-center px-3 h-full w-full bg-[#1796f034]" : ""
                                   }
                                   >
                                   About us
                                   </NavLink>
                           </li>
-                            <li onClick={()=> setIsMenuOpen(!isMenuOpen)} className="font-medium mt-3 h-[40px] flex items-center rounded overflow-hidden px-2 tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative ">
+                            <li onClick={()=> setIsMenuOpen(!isMenuOpen)} className="font-medium justify-center mt-3 h-[40px] flex items-center rounded overflow-hidden px-2 tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative ">
                               <NavLink
                                   to="/all_project"
                                   className={({ isActive, isPending }) =>
-                                      isPending ? "" : isActive ? "absolute top-0 left-0 bottom-0 flex items-center px-3 h-full w-full bg-[#1795F0]" : ""
+                                      isPending ? "" : isActive ? "absolute top-0 left-0 bottom-0 flex justify-center items-center px-3 h-full w-full bg-[#1796f034]" : ""
                                   }
                                   >
                                   Project
                                   </NavLink>
                           </li>
-                            <li onClick={()=> setIsMenuOpen(!isMenuOpen)} className="font-medium mt-3 h-[40px] flex items-center rounded overflow-hidden px-2 tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative ">
+                            <li onClick={()=> setIsMenuOpen(!isMenuOpen)} className="font-medium justify-center mt-3 h-[40px] flex items-center rounded overflow-hidden px-2 tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative ">
                               <NavLink
                                   to="/service"
                                   className={({ isActive, isPending }) =>
-                                      isPending ? "" : isActive ? "absolute top-0 left-0 bottom-0 flex items-center px-3 h-full w-full bg-[#1795F0]" : ""
+                                      isPending ? "" : isActive ? "absolute top-0 left-0 bottom-0 flex justify-center items-center px-3 h-full w-full bg-[#1796f034]" : ""
                                   }
                                   >
                                   Service
                                   </NavLink>
                           </li>
                            
-                            <li onClick={()=> setIsMenuOpen(!isMenuOpen)} className="font-medium mt-3 h-[40px] flex items-center rounded overflow-hidden px-2 tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative ">
+                            <li onClick={()=> setIsMenuOpen(!isMenuOpen)} className="font-medium justify-center mt-3 h-[40px] flex items-center rounded overflow-hidden px-2 tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative ">
                               <NavLink
                                   to="/review"
                                   className={({ isActive, isPending }) =>
-                                      isPending ? "" : isActive ? "absolute top-0 left-0 bottom-0 flex items-center px-3 h-full w-full bg-[#1795F0]" : ""
+                                      isPending ? "" : isActive ? "absolute top-0 left-0 bottom-0 flex justify-center items-center px-3 h-full w-full bg-[#1796f034]" : ""
                                   }
                                   >
                                   Review
                                   </NavLink>
                           </li>
                            
-                            <li onClick={()=> setIsMenuOpen(!isMenuOpen)} className="font-medium mt-3 h-[40px] flex items-center rounded overflow-hidden px-2 tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative ">
+                            <li onClick={()=> setIsMenuOpen(!isMenuOpen)} className="font-medium justify-center mt-3 h-[40px] flex items-center rounded overflow-hidden px-2 tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative ">
                               <NavLink
                                   to="/blog"
                                   className={({ isActive, isPending }) =>
-                                      isPending ? "" : isActive ? "absolute top-0 left-0 bottom-0 flex items-center px-3 h-full w-full bg-[#1795F0]" : ""
+                                      isPending ? "" : isActive ? "absolute justify-center top-0 left-0 bottom-0 flex items-center px-3 h-full w-full bg-[#1796f034]" : ""
                                   }
                                   >
                                   Blog

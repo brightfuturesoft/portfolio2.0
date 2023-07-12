@@ -4,6 +4,7 @@ import web from '../../../Assctes/vectors/web.gif';
 import app from '../../../Assctes/vectors/app.gif';
 import Title from '../../../layout/Title';
 import ServiceCart from '../../ServiceCart/ServiceCart';
+import Contact from '../../Contact/Contact/Contact';
 const Service = () => {
     const serviceInfo = [
         {   id:0,
@@ -39,6 +40,7 @@ const Service = () => {
                     }
                 </div>
             </div>
+            <Contact></Contact>
         </div>
     );
 };

@@ -184,7 +184,7 @@ const Technology = () => {
                             </div>
                              <figure className='grid mt-4 grid-cols-6 gap-4'>
                                   {
-                                    tData?.options?.map(td => <img title={td.name} src={td.img} />)
+                                    tData?.options?.map(td => <img  loading="lazy"title={td.name} src={td.img} />)
                                   }
                              </figure>
                         </div>

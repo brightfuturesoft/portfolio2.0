@@ -9,7 +9,7 @@ const Card = ({ data, stickyTopSpace }) => {
 			className={`sticky mt-[40px] border border-[#007bff] rounded-xl mx-auto md:w-[90%] w-[98%] duration-200 stc-cart`}
 			style={{ top: stickyTopSpace }}>
 			 <div className="bg-[#121923fa] p-4 rounded-xl grid md:grid-cols-3 grid-cols-1 gap-3 relative">
-					<img src={pic} alt="" className="w-full h-[250px] rounded-lg" />
+					<img  loading="lazy"src={pic} alt="" className="w-full h-[250px] rounded-lg" />
 					<div className="col-span-2">
 						<h2 className="font-bold text-2xl text-[#008cff]">{name}</h2>
 						<span className="mt-2  text-white">

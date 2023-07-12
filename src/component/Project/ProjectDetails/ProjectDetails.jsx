@@ -16,7 +16,7 @@ const ProjectDetails = () => {
                 <div className="md:grid grid-cols-2 md:mt-20 mt-8">
                     <div className="">
                         <div className="p-2 bg-[#2f4056a1] rounded-xl">
-                            <img src={`${project?.picLg}`} alt="" className="rounded-xl " />
+                            <img  loading="lazy"src={`${project?.picLg}`} alt="" className="rounded-xl " />
                         </div>
                     </div>
                     <div className="md:px-4 ">

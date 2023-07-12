@@ -30,31 +30,27 @@ import { AiFillLinkedin } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import Lottie from "lottie-react";
 import homeVc from '../../../Assctes/vectors/App Development.json';
+import { Faq } from './Faq';
+import { OurProjects } from '../Projects';
 const About = () => {
    const [swiperRef, setSwiperRef] = useState(null);
       const teamMembers = [
   {
     "id": 0,
     "img": mahadi,
-    "name": "Mahadi Hassan",
+         "name": "Mahadi Hassan",
+    "email" : "info@thebrightfuture.co",
     "post": "CEO and founder",
     "linkedIn": "https://www.linkedin.com/in/codewithmahadihasan/",
     "gender": "male"
   },
-  {
-    "id": 1,
-    "img": seyam,
-    "name": "Saidur Rahman Siam",
-    "post": "Project manager & android developer",
-    "linkedIn": "https://www.linkedin.com/in/saidur-rahman-siam-11822286/",
-    "gender": "male"
-  },
+  
   {
     "id": 2,
     "img": maruf,
     "name": "Maruf Ali Khan",
-    "email" : "marufalikhan18@gmail.com",
-    "post": "Project manager",
+    "email" : "maruf@thebrightfuture.co",
+    "post": "Managing Director",
     "linkedIn": "https://www.linkedin.com/in/maruf-ali-khan-742b1a1a4/",
     "gender": "male"
   },
@@ -62,7 +58,7 @@ const About = () => {
     "id": 3,
     "img": acccountManager,
     "name": "Regita Redhe",
-    "email" : "",
+    "email" : "redhe@@thebrightfuture.co",
     "post": "Account manager",
     "linkedIn": "https://www.linkedin.com/in/regita-redhe-30b357271/",
     "gender": "female"
@@ -71,7 +67,7 @@ const About = () => {
     "id": 4,
     "img": oshim,
     "name": "Ashim Rudra Paul",
-    "email" : "",
+    "email" : "ashim@thebrightfuture.co",
     "post": "MERN STACK DEVELOPER",
     "linkedIn": "https://www.linkedin.com/in/codewithashim/",
     "gender": "male"
@@ -80,7 +76,7 @@ const About = () => {
     "id": 5,
     "img": mamon,
     "name": "Md. Abdullah Al Mamun",
-    "email" : "abdullahalmamun.cs@gmail.com",
+    "email" : "mamun@thebrightfuture.co",
     "post": "Front End Developer",
     "linkedIn": "https://www.linkedin.com/in/mdmamunabdullah/",
     "gender": "male"
@@ -90,7 +86,7 @@ const About = () => {
     "id": 6,
     "img": nahid,
     "name": "Nahid Ferdaos",
-    "email" : "mdnahid360s@gmail.com",
+    "email" : "nahid@thebrightfuture.co",
     "post": "Front End Developer",
     "linkedIn": "https://www.linkedin.com/in/nahid-ferdaos/",
     "gender": "male"
@@ -99,7 +95,7 @@ const About = () => {
     "id": 7,
     "img":mushfiq,
     "name": "Musfiqur Rahman",
-    "email" : "",
+    "email" : "mushfiq@thebrightfuture.co",
     "post": "Marn stack developer",
     "linkedIn": "https://www.linkedin.com/in/musfiqurofficial/",
     "gender": "male"
@@ -109,7 +105,7 @@ const About = () => {
     "id": 8,
     "img": mamonKhan,
     "name": "Md Mamun Khan",
-    "email" : "",
+    "email" : "info@thebrightfuture.co",
     "post": "Marketing",
     "linkedIn": "https://www.linkedin.com/in/md-mamun-khan/",
     "gender": "male"
@@ -119,17 +115,17 @@ const About = () => {
     "id": 9,
     "img":abdurRab,
     "name": "MD. ABDUR RAB",
-    "email" : "",
+    "email" : "abdur@thebrightfuture.co",
     "post": "UI/UX Designer",
     "linkedIn": "https://www.linkedin.com/in/md-abdur-rab-90b110185/",
     "gender": "male"
   }
-   ,
+  ,
   {
     "id": 10,
     "img":nezaul,
     "name": "Nazmul Hoque",
-    "email" : "",
+    "email" : "nazmul@thebrightfuture.co",
     "post": "MERN Stack Developer",
     "linkedIn": "https://www.linkedin.com/in/nazmul-sujon/",
     "gender": "male"
@@ -139,7 +135,7 @@ const About = () => {
     "id": 11,
     "img":minhaz,
     "name": "Minhaz Khan",
-    "email" : "",
+    "email" : "minhaz@thebrightfuture.co",
     "post": "MERN Stack Developer",
     "linkedIn": "https://www.linkedin.com/in/minhaz-khan-/",
     "gender": "male"
@@ -156,13 +152,13 @@ const About = () => {
                 <div className="md:grid grid-cols-2 md:pt-0 pt-16  mt-2">
                      <div className="flex items-center">
                           <div className="">
-                              <h1 className='text-xl text-[#3f98fd] font-[400] md:text-left text-center'>The best employer to </h1>
-                            <h1 className="md:text-5xl text-[35px] text-white font-[700] md:text-left text-center">the best <span className="text-[orange]">developers</span></h1>
+                              <h1 className='text-xl text-[#3f98fd] font-[400] md:text-left text-center'>Software Company </h1>
+                            <h1 className="md:text-5xl text-[35px] text-white font-[700] md:text-left text-center">The <span className="text-[orange]">Bright Future</span></h1>
                               <div className="md:hidden flex  justify-end overflow-hidden mt-[-50px]">
                                 <Lottie className="" animationData={homeVc} loop={true}/>
                              </div>
                             <p className="text-gray-300 md:mt-6 mt-[-50px]">
-                               Bright Future is a software company. Where we create attractive web and mobile applications for our clients. And we deliver clients' orders on time.
+                               At Bright Future, we are a leading software company based in Bangladesh, founded in January 2023. We are passionate about harnessing the power of technology to drive positive change and empower individuals and businesses. With our innovative solutions and dedication to excellence, we strive to make a lasting impact in the software industry.
                             </p>
                           </div>
                      </div>
@@ -179,10 +175,7 @@ const About = () => {
                     <Swiper
                 modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
                 pagination={{ clickable: true }}
-                  autoplay={{
-                    delay: 2500,
-                    disableOnInteraction: false,
-                    }}
+                 
                  breakpoints={{
                     320: {
                       slidesPerView: 1,
@@ -243,7 +236,7 @@ const About = () => {
                                 key={tData.id}
                                 className="vertical-timeline-element--work"
                                 iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                                icon={<img src={b} className='rounded-full' />}
+                                icon={<img  loading="lazy"src={b} className='rounded-full' />}
                             >
                                 <div className="md:flex gap-2 bg-[#232d3b] p-2 rounded">
                                     <div style={{backgroundImage : `url("${tData?.img}")`, backgroundSize : "cover"}} className="md:w-[100px] w-full md:h-[100px] h-[200px] rounded-lg"></div>
@@ -261,7 +254,9 @@ const About = () => {
                   
             <br />
             {/* content */}
-             <Service />
+        <Service />
+        <Faq></Faq>
+    <OurProjects></OurProjects>
                   <Testimonials />
                   <Contact />
         </div>

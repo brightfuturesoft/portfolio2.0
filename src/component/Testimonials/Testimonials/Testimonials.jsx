@@ -22,87 +22,46 @@ const Testimonials = () => {
 const teamMembers = [
   {
   id: 0,
-   img: mahadi,
-   name: "Mahadi Hassan",
-   companyName: "Mahadi Hassan",
+   img: 'https://media.licdn.com/dms/image/D4E0BAQFv3agJCyO96A/company-logo_200_200/0/1685864947796?e=1697068800&v=beta&t=hAGt7wP4ldQ5vIt58OKiFFyZw2hqOQkLp_YnYcP0NtE',
+   name: "Mosiur Rahman",
+    companyName: "ESoftRain",
+   comments:'"We have 2 projects competed through Bright Future and we are very happy to work with them. I hope to work with them in the future."',
     
    title: "CEO and founder",
-    "linkedIn": "https://www.linkedin.com/in/codewithmahadihasan/"
+    
   },
   {
   id: 1,
-   img: oshim,
-   name: "Latisha Hutchinson",
-   companyName: "Mahadi Hassan",
+   img: 'https://www.fcwin4.live/static/media/logo.a5bdbf76ac070f8e5d90.png',
+   name: "FcWin4",
+    companyName: "FCWIN4",
+   comments:'We made our product from them. Thanks to them for giving us very good output as per our requirement.',
     
    title: "BUZZMAKER",
-    "linkedIn": "latishahutchinson@buzzmaker.com"
+
   },
   {
   id: 2,
-   img: mamon,
-   name: "Antoinette Peck",
-   companyName: "Mahadi Hassan",
+   img: 'https://media.licdn.com/dms/image/C560BAQFyfhBrzxAyZg/company-logo_200_200/0/1675933497965?e=1697068800&v=beta&t=T81_KvcodKmmlCl5V4VOGGUu3a0A2IHO9qpvWy4ypeo',
+   name: "FcWin4",
+    companyName: "AI Carrier Expert",
+   comments:'We designed and developed our website from Bright Future. We are very happy to work through them.',
     
-   title: "ONTAGENE",
-    "linkedIn": "antoinettepeck@ontagene.com"
+   title: "BUZZMAKER",
+   
   },
   {
-  id: 3,
-   img: nahid,
-   name: "Randi Norris",
-   companyName: "Mahadi Hassan",
+  id: 2,
+   img: 'https://media.licdn.com/dms/image/C510BAQEtgY58kvTO0A/company-logo_200_200/0/1558514432075?e=1697068800&v=beta&t=eMAgq1lT80AG8GVzVvqAco_OUT2NIfEozWaYk_n1gec',
+   name: "CGL Consulting Co",
+    companyName: "CGL Consulting Co",
+   comments:'We made our product from them. Thanks to them for giving us very good output as per our requirement.',
     
-   title: "SNORUS",
-    "linkedIn": "randinorris@snorus.com"
+   title: "CGL Consulting Co",
+   
   },
-  {
-  id: 4,
-   img: obidol,
-   name: "Candy White",
-   companyName: "Mahadi Hassan",
-    
-   title: "ATGEN",
-    "linkedIn": "candywhite@atgen.com"
-  },
-  {
-  id: 5,
-   img: mushfiq,
-   name: "Blanchard Bruce",
-   companyName: "Mahadi Hassan",
-    
-   title: "ZINCA",
-    "linkedIn": "blanchardbruce@zinca.com"
-  },
-  {
-  id: 6,
-   img:mamonKhan,
-   name: "Franco Tran",
-   companyName: "Mahadi Hassan",
-    
-   title: "INTERLOO",
-    description: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil harum commodi impedit dolores voluptates. Natus id, impedit velit repudiandae fugiat eos facere nemo expedita dolorum voluptate, voluptatum, provident deserunt distinctio"
-  }
-  ,
-  {
-  id: 7,
-   img: n,
-   name: "Franco Tran",
-   companyName: "Mahadi Hassan",
-    
-   title: "Junior MERN stack Developer",
-    description: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil harum commodi impedit dolores voluptates. Natus id, impedit velit repudiandae fugiat eos facere nemo expedita dolorum voluptate, voluptatum, provident deserunt distinctio"
-  }
-  ,
-  {
-  id: 8,
-   img:abdurRab,
-   name: "Franco Tran",
-   companyName: "Mahadi Hassan",
-    
-   title: "INTERLOO",
-    description: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil harum commodi impedit dolores voluptates. Natus id, impedit velit repudiandae fugiat eos facere nemo expedita dolorum voluptate, voluptatum, provident deserunt distinctio",
-  }
+
+  
 ]
 
     return (
@@ -172,11 +131,11 @@ const teamMembers = [
 
                                 <h2 className="text-white text-xl mt-12">{testimonialData.companyName}</h2>
                                 <p className="text-sm text-center mt-2 text-gray-400">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil harum commodi impedit dolores voluptates. Natus id, impedit velit repudiandae fugiat eos facere nemo expedita dolorum voluptate, voluptatum, provident deserunt distinctio.
+                                    {testimonialData?.comments}
                                    
-                                    <img src={testimonialData.img} alt="" className="ts-img" />
-                                    <h3 className="text-center text-lg text-[#2b72ff] mt-3">{testimonialData.name}</h3>
-                                    <p className="text-center text-sm">{testimonialData.title}</p>
+                                    <img  loading="lazy"src={testimonialData.img} alt="" className="ts-img" />
+                                    
+                                   
                                 </p>
                             </div>
                         </div>

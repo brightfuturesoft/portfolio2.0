@@ -1,6 +1,8 @@
 import React from 'react';
 import { BsFacebook, BsLinkedin, BsTwitter, BsWhatsapp } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
+import emailjs from "@emailjs/browser";
+import Swal from 'sweetalert2';
 
 const JoinUs = () => {
     const submitHandler =(e)=>{
@@ -12,19 +14,30 @@ const JoinUs = () => {
             const phone = form.phone.value;
             const address = form.address.value;
             const linkedIn = form.linkedIn.value;
-            const file = form.file.value;
+            const file = form.resume.value;
             const message = form.message.value;
+            const possition = form.possition.value;
 
             const user = {
-                fName : fName,
-                lName : lName,
+                name : fName + ' '+ lName,
                 email : email,
                 phone : phone,
                 address : address,
                 linkedIn : linkedIn,
-                file : file,
+                resume: file,
+                possition : possition,
                 message : message
-            }
+              
+        }
+         
+        
+        Swal.fire({
+  position: 'center',
+  icon: 'success',
+  title: 'Thank You So Much',
+  showConfirmButton: false,
+  timer: 1500
+})
     }
     return (
         <div className="bg-[#121c25] md:p-8 p-2">
@@ -66,50 +79,67 @@ const JoinUs = () => {
                                     <div className="relative bg-[#0b0a2238] border border-[#1795F0] rounded-lg mt-8 w-full">
                                              <div className="text-[#ff000000] absolute bg-[#0e0b2cf8] w-[78px] h-[3px] left-[14px] top-[-2px]">.</div>
                                             <label htmlFor="" className="absolute text-sm top-[-14px] left-[15px]  px-1">first name</label>
-                                            <input required type="text" name="first_name" className="w-full rounded-lg outline-none border-none bg-[#00000034]" placeholder="enter your first name" />
+                                            <input required type="text" name="first_name" className="w-full rounded-lg outline-none border-none bg-[#00000034]" />
                                     </div>
                                     <div className="relative bg-[#0b0a2238] border w-full border-[#1795F0] rounded-lg mt-8">
                                              <div className="text-[#ff000000] absolute bg-[#0e0b2cf8] w-[78px] h-[3px] left-[14px] top-[-2px]">.</div>
                                             <label htmlFor="" className="absolute text-sm top-[-14px] left-[15px]  px-1">last name</label>
-                                            <input required type="text" name="last_name" className="w-full rounded-lg outline-none border-none bg-[#00000034]" placeholder="enter your last name" />
+                                            <input required type="text" name="last_name" className="w-full rounded-lg outline-none border-none bg-[#00000034]"  />
                                     </div>
                             </div>
                              <div className="md:flex items-center gap-3">
                                     <div className="relative bg-[#0b0a2238] border border-[#1795F0] rounded-lg mt-8 w-full">
                                              <div className="text-[#ff000000] absolute bg-[#0e0b2cf8] w-[48px] h-[3px] left-[14px] top-[-2px]">.</div>
                                             <label htmlFor="" className="absolute text-sm top-[-14px] left-[15px]  px-1">email</label>
-                                            <input required type="email" name="email" className="w-full rounded-lg outline-none border-none bg-[#00000034]" placeholder="enter your email" />
+                                            <input required type="email" name="email" className="w-full rounded-lg outline-none border-none bg-[#00000034]"  />
                                     </div>
                                     <div className="relative bg-[#0b0a2238] border w-full border-[#1795F0] rounded-lg mt-8">
                                              <div className="text-[#ff000000] absolute bg-[#0e0b2cf8] w-[102px] h-[3px] left-[14px] top-[-2px]">.</div>
                                             <label htmlFor="" className="absolute text-sm top-[-14px] left-[15px]  px-1">phone number</label>
-                                            <input required type="tel" name="phone" className="w-full rounded-lg outline-none border-none bg-[#00000034]" placeholder="enter your phone number" />
+                                            <input required type="tel" name="phone" className="w-full rounded-lg outline-none border-none bg-[#00000034]"  />
                                     </div>
                             </div>                             
                              <div className="md:flex items-center gap-3">
                                     <div className="relative bg-[#0b0a2238] border border-[#1795F0] rounded-lg mt-8 w-full">
                                              <div className="text-[#ff000000] absolute bg-[#0e0b2cf8] w-[59px] h-[3px] left-[14px] top-[-2px]">.</div>
                                             <label htmlFor="" className="absolute text-sm top-[-14px] left-[15px]  px-1">address</label>
-                                            <input required type="text" name="address" className="w-full rounded-lg outline-none border-none bg-[#00000034]" placeholder="enter your address" />
+                                            <input required type="text" name="address" className="w-full rounded-lg outline-none border-none bg-[#00000034]"  />
                                     </div>
                                     <div className="relative bg-[#0b0a2238] border w-full border-[#1795F0] rounded-lg mt-8">
                                              <div className="text-[#ff000000] absolute bg-[#0e0b2cf8] w-[62px] h-[3px] left-[14px] top-[-2px]">.</div>
                                             <label htmlFor="" className="absolute text-sm top-[-14px] left-[15px]  px-1">linkedIn</label>
-                                            <input required type="text" name="linkedIn" className="w-full rounded-lg outline-none border-none bg-[#00000034]" placeholder="enter your linkedin profile" />
+                                            <input required type="text" name="linkedIn" className="w-full rounded-lg outline-none border-none bg-[#00000034]" />
                                     </div>
                             </div>       
-                              <div className="relative bg-[#0b0a2238] border w-full border-[#1795F0] rounded-lg mt-8">
-                                             <div className="text-[#ff000000] absolute bg-[#0e0b2cf8] w-[92px] h-[3px] left-[14px] top-[-2px]">.</div>
-                                            <label htmlFor="" className="absolute text-sm top-[-14px] left-[15px]  px-1">drop resume</label>
-                                            <input required type="file" name="file" className="w-full rounded-lg outline-none border-none bg-[#00000034]" placeholder="enter your linkedin profile" />
-                                    </div>       
+                        <div  className="md:flex items-center gap-3">
+                              <div className="relative bg-[#0b0a2238] border border-[#1795F0] rounded-lg mt-8 w-full">
+                                             <div className="text-[#ff000000] absolute bg-[#0e0b2cf8] w-[59px] h-[3px] left-[14px] top-[-2px]">.</div>
+                                            <label htmlFor="" className="absolute text-sm top-[-14px] left-[15px]  px-1">Resume Link</label>
+                                            <input required type="url" name="resume" className="w-full rounded-lg outline-none border-none bg-[#00000034]"  />
+                                    </div>
+                     <div>
+
+                                <select
+                                    required
+    name="possition"
+    id="HeadlineAct"
+    className="relative bg-[#0b0a2238] border  w-full border-[#1795F0] rounded-lg mt-8"
+  >
+    <option className='text-black'  value="">Please select</option>
+    <option className='text-black' value="Ui/UX">UI/UX Designer</option>
+    <option className='text-black' value="Frontend Developer">Frontend Developer</option>
+    <option className='text-black' value="Fullstack Developer">Fullstack Developer</option>
+    
+  </select>
+</div>
+                             </div>       
                                       <div className="relative bg-[#0b0a2238] border w-full border-[#1795F0] rounded-lg mt-8 p-0">
                                              <div className="text-[#ff000000] absolute bg-[#0e0b2cf8] w-[90px] h-[3px] left-[14px] top-[-2px]">.</div>
                                             <label htmlFor="" className="absolute text-sm top-[-14px] left-[15px]  px-1">Cover Letter</label>
-                                            <textarea required type="text" name="message" className="w-full rounded-lg outline-none md:h-[160px] h-[140px] border-none bg-[#00000034]" placeholder="Enter your Cover Letter" />
+                                            <textarea required type="text" name="message" className="w-full rounded-lg outline-none md:h-[160px] h-[140px] border-none bg-[#00000034]" />
                                     </div>          
 
-                                    <input type="submit" className="bg-[#3e8ca9] px-8 py-3 mt-4 float-right rounded-lg" value="submit" />     
+                                    <button type="submit" className="bg-[#3e8ca9] px-8 py-3 mt-4 float-right rounded-lg"  >Submit</button>     
                     </form>
                 </div>
             </div>

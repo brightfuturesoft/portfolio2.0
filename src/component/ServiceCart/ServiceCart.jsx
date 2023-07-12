@@ -9,10 +9,10 @@ const ServiceCart = ({data}) => {
                     <div className="cart bg-[#0525b70a] p-2 rounded-xl border border-[#0084ff]">
                         <div className="cart-contain bg-[#11223caf] text-white p-3 rounded-xl">
                               <div className="cart-header">
-                           <img src={pic} alt="" className="rounded-xl md:h-[300px] h-[260px] w-full" />
+                           <img  loading="lazy"src={pic} alt="" className="rounded-xl md:h-[300px] h-[260px] w-full" />
                       </div>
                       <div className="cart-body">
-                        <img src="" alt="" className="" />
+                        <img  loading="lazy"src="" alt="" className="" />
                         <h2 className="font-[500] mt-3 text-xl">{name}</h2>
                         <small className="mt-2 text-[#d4d4d4]">
                          {readMore ? description?.slice(0, 125) : description}
