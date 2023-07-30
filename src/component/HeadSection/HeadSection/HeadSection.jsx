@@ -3,71 +3,75 @@ import vectorHdr from '../../../Assctes/vectors/vector(header).png';
 import Typewriter from 'typewriter-effect';
 import { HiArrowSmallRight } from "react-icons/hi2";
 import "animate.css/animate.min.css";
-import homeVc from '../../../Assctes/vectors/soft_dev.json';
+import homeVc from './company.json';
 import Lottie from "lottie-react";
+import { Link } from 'react-router-dom';
 
 const HeadSection = () => {
-    return (
-        <div className=" header-bg w-full md:pt-[10px] pt-[100px]  md:pb-[0px] pb-[90px]  capitalize">
-           <div className="px-4 py-5 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 md:grid grid-cols-2 md:w-[85%] w-[98%] mx-auto">
-                <div className="md:flex items-center ">
-                        <div className="flex gap-4 uppercase items-center justify-center">
-                              <h4 className="text-lg md:text-left text-center md:hidden block upp">You have the</h4>
-                        </div>
-                           
-                        <h1 className='md:text-left md:text-5xl text-xl md:hidden flex md:justify-start justify-center md:font-bold font-[900]'>WE HAVE THE <span className="text-[orange]">TECHNOLOGY</span></h1>
+      return (
+            <div className=" header-bg w-full md:pt-[100px] pt-[100px]     capitalize">
 
-                       <div className="flex -mt-10 justify-end overflow-hidden md:hidden ">
-                            <Lottie className="md:hidden block" animationData={homeVc} loop={true}/>
-                      </div>
+                  <div className="px-4  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl  lg:px-8 ">
+                        <div className="flex flex-col items-center justify-between w-full  lg:flex-row">
+                              <div className="mb-16 lg:mb-0 lg:max-w-lg lg:pr-5">
+                                    <div className="max-w-xl mb-6">
+                                          <div>
+                                                <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider uppercase bg-teal-400 text-teal-900 rounded-full">
+                                                      <Typewriter
+                                                            options={{
+                                                                  strings: ['Web Design', 'Web Development', 'Apps Design', 'Apps Development', 'Software Consultant', 'Software Solutions', 'POS', 'E-commerce', 'E-learning'],
+                                                                  autoStart: true,
+                                                                  loop: true,
+                                                            }}
+                                                      />
+                                                </p>
+                                          </div>
+                                          <h2 className="font-sans text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl sm:leading-none max-w-lg mb-6">
+                                                You have an {' '}
+                                                <span className="inline-block text-purple-400">IDEA,</span>
+                                                <br className="" />
+                                                we have the{' '}
+                                                <span className="inline-block text-purple-400">technology.</span>
+                                          </h2>
+                                          <p className="text-gray-300 text-base md:text-lg">You can be confident that we will provide you with nothing but the best service from our side.</p>
+                                    </div>
+                                    <div className="flex items-center space-x-3">
+                                          <Link
+                                                className="group flex items-center justify-between gap-4  border border-indigo-600 bg-indigo-600 px-10 py-3 transition-colors hover:bg-transparent focus:outline-none focus:ring"
+                                                to='/contract'
+                                          >
+                                                <span
+                                                      className="font-medium text-white transition-colors group-hover:text-indigo-600 group-active:text-indigo-500"
+                                                >
+                                                      Contract Us
+                                                </span>
 
-                   <div className="contain text-white w-full md:block hidden">
-                         <div className="flex gap-4 text-lg"><h2>YOU HAVE THE </h2> <h2 className="text-[orange]">IDEA</h2></div>
-                         <div className="flex gap-4 mt-2">
-                            <h2 className="md:text-left md:text-4xl text-xl  flex md:justify-start justify-center md:font-bold font-[900]">WE HAVE THE</h2> <h3 className="text-[orange] md:text-left md:text-4xl text-xl  flex md:justify-start justify-center md:font-bold font-[900]">TECHNOLOGY</h3>
-                         </div>
-                        <h4 className="font-bold md:mt-8 -mt-20 md:text-2xl text-xl md:w-[auto] w-[170px] mx-auto relative after:absolute after:shadow-lg after:rounded-full after:shadow-[#13ccff] after:bg-[#09a1e8] after:w-[50px] after:m-auto after:h-[5px] after:left-0 after:bottom-0 after:mt-[-20px] pb-3">Service Provider</h4>
-                        <span className="md:text-left text-center text-lg text-gray-400 mt-[40px] pt-4">
-                              <Typewriter
-                                options={{
-                                    strings: ['Develop and design', 'Client Management', 'Web application based interface'],
-                                    autoStart: true,
-                                    loop: true,
-                                }}
-                               />
-                        </span>
-                        <div className="md:block flex justify-center items-center">
-                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSebfghbC9kvuOcJ6QQTF0gRFkqJZLFhvGsgSdkNLrF51qWXmQ/viewform" className="mt-[50px] w-[200px] flex shadow-btn items-center gap-2 bg-[#079dbf] px-3 py-2 rounded-lg "><span className="bg-[#125e82] w-[30px] h-[30px] flex justify-center items-center rounded-lg text-xl duration-200 "><HiArrowSmallRight /> </span> Build your future </a>
-                        </div>
-                   </div>
 
-                  <div className="md:hidden block ">
-                             <h4 className="font-bold md:mt-4 -mt-14 md:text-2xl text-xl md:w-[auto] w-[170px] mx-auto relative after:absolute after:shadow-lg after:rounded-full after:shadow-[#13ccff] after:bg-[#09a1e8] after:w-[50px] after:h-[5px] after:left-0 after:bottom-0 after:mt-[-20px] pb-3">Service Provider</h4>
-                        <span className="md:text-left text-center text-lg text-gray-400 mt-[40px] pt-4">
-                              <Typewriter
-                                options={{
-                                    strings: ['Develop and design', 'Client Management', 'Web application based interface'],
-                                    autoStart: true,
-                                    loop: true,
-                                }}
-                               />
-                        </span>
-                                
-                             <div className="md:block flex justify-center items-center text-white">
-                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSebfghbC9kvuOcJ6QQTF0gRFkqJZLFhvGsgSdkNLrF51qWXmQ/viewform" className="mt-[50px] w-[200px] flex shadow-btn items-center gap-2 bg-[#079dbf] px-3 py-2 rounded-lg "><span className="bg-[#125e82] w-[30px] h-[30px] flex justify-center items-center rounded-lg text-xl duration-200 "><HiArrowSmallRight /> </span> Build your future </a>
+                                          </Link>
+
+                                          {/* Border */}
+
+                                          <Link
+                                                className="group flex items-center justify-between gap-4  border border-current px-10 py-3 text-indigo-600 transition-colors hover:bg-indigo-600 focus:outline-none focus:ring active:bg-indigo-500"
+                                                to="/careers"
+                                          >
+                                                <span className="font-medium transition-colors group-hover:text-white">
+
+                                                      View Jobs
+                                                </span>
+
+
+                                          </Link>
+                                    </div>
+                              </div>
+                              <div className="flex items-center justify-center lg:w-1/2">
+                                    <Lottie className='lg:w-10/12' animationData={homeVc} loop={true} />
+                              </div>
                         </div>
+
                   </div>
-                </div>
-                <div className="flex items-center md:justify-end justify-end ">
-                      <div className="hidden md:flex justify-end overflow-hidden ">
-                            <Lottie className="hidden md:block" animationData={homeVc} loop={true}/>
-                      </div>
-
-                       
-                </div>
-           </div>
-        </div>
-    );
+            </div>
+      );
 };
 
 export default HeadSection;

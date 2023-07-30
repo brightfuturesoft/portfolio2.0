@@ -16,9 +16,8 @@ const Item = ({ title, children }) => {
         <div className="flex ml-3 items-center justify-center w-8 h-8 p-2 border rounded-full">
           <svg
             viewBox="0 0 24 24"
-            className={`w-3 text-gray-600 transition-transform duration-200 ${
-              isOpen ? 'transform rotate-180' : ''
-            }`}
+            className={`w-3 text-gray-600 transition-transform duration-200 ${isOpen ? 'transform rotate-180' : ''
+              }`}
           >
             <polyline
               fill="none"
@@ -43,13 +42,13 @@ const Item = ({ title, children }) => {
 
 export const Faq = () => {
   return (
-    <div class="px-4 text-white py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-      <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
-        <div class="flex flex-col mb-16 sm:text-center">
-          <a href="/" class="mb-6 sm:mx-auto">
-            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
+    <div className="px-4 text-white py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
+        <div className="flex flex-col mb-16 sm:text-center">
+          <a href="/" className="mb-6 sm:mx-auto">
+            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
               <svg
-                class="w-10 h-10 text-purple-400"
+                className="w-10 h-10 text-purple-400"
                 stroke="currentColor"
                 viewBox="0 0 52 52"
               >
@@ -63,13 +62,13 @@ export const Faq = () => {
               </svg>
             </div>
           </a>
-          <div class="max-w-xl md:mx-auto sm:text-center lg:max-w-2xl">
-            <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
-              <span class="relative inline-block">
+          <div className="max-w-xl md:mx-auto sm:text-center lg:max-w-2xl">
+            <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+              <span className="relative inline-block">
                 <svg
                   viewBox="0 0 52 24"
                   fill="currentColor"
-                  class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
+                  className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
                 >
                   <defs>
                     <pattern
@@ -88,14 +87,14 @@ export const Faq = () => {
                     height="24"
                   />
                 </svg>
-                <span class="relative text-white">Frequently Asked Questions</span>
+                <span className="relative text-white">Frequently Asked Questions</span>
               </span>{' '}
-             
+
             </h2>
-            
+
           </div>
         </div>
-        <div class="space-y-4">
+        <div className="space-y-4">
           <Item title="What services does Bright Future provide?">
             Bright Future offers a range of software solutions, including web application development, mobile app development, UI/UX design, and software consultancy. We specialize in creating innovative, user-friendly, and scalable solutions tailored to meet our clients' specific needs.
           </Item>
@@ -103,7 +102,7 @@ export const Faq = () => {
             Getting started with Bright Future is simple. You can reach out to us via our website contact form, email us at hello@thebrightfuture.co, or give us a call at +880179225520. Our team will be happy to discuss your project requirements and guide you through the next steps.
           </Item>
           <Item title="How long does it typically take to complete a software project?">
-             The project timeline can vary depending on the scope and complexity of the project. After discussing your specific requirements, we will provide you with an estimated timeline during the initial consultation. We prioritize timely delivery without compromising on quality.
+            The project timeline can vary depending on the scope and complexity of the project. After discussing your specific requirements, we will provide you with an estimated timeline during the initial consultation. We prioritize timely delivery without compromising on quality.
           </Item>
           <Item title="Can Bright Future help with ongoing maintenance and support after the project is completed?">
             Absolutely. We offer post-development support and maintenance services to ensure the smooth operation of your software solution. We can provide updates, security patches, bug fixes, and technical assistance as needed to keep your application up-to-date and functioning optimally.

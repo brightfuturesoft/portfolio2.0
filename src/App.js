@@ -3,10 +3,12 @@ import './App.css';
 import { RouterProvider } from 'react-router-dom';
 import { route } from './Routers/Route/Route';
 import { useEffect, useState } from 'react';
-import Loader from './pages/shared/Loader';
+import whatsapp from './Assctes/whatsapp-svgrepo-com.svg'
+
+
 
 function App() {
-   const [sppin, setSppin] = useState(false);
+  const [sppin, setSppin] = useState(false);
 
 
   useEffect(() => {
@@ -15,12 +17,16 @@ function App() {
       setSppin(false);
     }, 2000);
   }, []);
-  
+
   return (
     <div>
-{sppin ? <Loader></Loader>: <RouterProvider router={route}></RouterProvider>}
+
+     
+
+      <RouterProvider router={route}></RouterProvider>
+
     </div>
-    
+
   );
 }
 
