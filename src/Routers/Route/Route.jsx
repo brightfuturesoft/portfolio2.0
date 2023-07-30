@@ -22,106 +22,121 @@ import AdminBlog from '../../component/Blog/AdminBlog/AdminBlog';
 import SignIn from '../../component/Form/SignIn/SignIn';
 import SignUp from '../../component/Form/SignUp/SignUp';
 import PrivetRoute from '../PrivetRoute';
+import ServicePage from '../../component/Service/Service/ServicePage';
+import Job from '../../component/Jobs/Job';
+import MainContract from '../../component/Contact/Contact/MainContract';
 
 export const route = createBrowserRouter([
-    {
-        path: '/',
-        element : <Main></Main>,
-        children : [
-            {
-               path : "/",
-               element : <Home />
-            },
-            {
-               path : "/about",
-               element : <About />
-            },
-            {
-               path : "/service",
-               element : <Service />
-            },
-            {
-               path : "/technology",
-               element : <Technology />
-            },
-            {
-               path : "/review",
-               element : <Testimonials />
-            },
-            {
-               path : "/joinUs",
-               element : <JoinUs />
-            },
-            {
-               path : "/project",
-               element : <Project />
-            },
-            {
-               path : "/project/:id",
-               element : <ProjectDetails />
-            },
-            {
-               path : "/blog",
-               element : <Blog />,
-               loader : async ()=>{
-                  return fetch('https://portfolio-backend-one-kappa.vercel.app/blog')
-               }
-            },
-            {
-               path : "/admin/blog",
-               element : <PrivetRoute><AdminBlog /></PrivetRoute>,
-               loader : async ()=>{
-                  return fetch('https://portfolio-backend-one-kappa.vercel.app/blog')
-               }
-            },
-            {
-               path : "/blog/:id",
-               element : <BlogDetails />,
-                loader : async ({params})=>{
-                  const bId = params.id
-                  return fetch(`https://portfolio-backend-one-kappa.vercel.app/blog/${bId}`)
-               }
-            },
-            {
-               path : "/all_project",
-               element : <AllProject />,
-               loader : async ()=>{
-                  return fetch('https://portfolio-backend-one-kappa.vercel.app/allProject')
-               }
-            },
-            {
-               path : "/all_project/:id",
-               element : <AllProject />,
-               loader : async (params)=>{
-                  return fetch(`https://portfolio-backend-one-kappa.vercel.app/allProject/${params.id}`)
-               }
-            },
-            {
-               path : "https://portfolio-backend-one-kappa.vercel.app/project:id",
-               element : <ProjectDetails />
-            },
-        
-            {
-               path : "/Cart",
-               element : <Card />
-            },
-            {
-               path : "/contact",
-               element : <Contact />
-            },
-            {
-               path : "/sign_in",
-               element : <SignIn />
-            },
-            {
-               path : "/sign_up",
-               element : <SignUp />
+   {
+      path: '/',
+      element: <Main></Main>,
+      children: [
+         {
+            path: "/",
+            element: <Home />
+         },
+         {
+            path: "/about",
+            element: <About />
+         },
+         {
+            path: "/service",
+            element: <ServicePage />
+         },
+         {
+            path: "/technology",
+            element: <Technology />
+         },
+         {
+            path: "/review",
+            element: <Testimonials />
+         },
+         {
+            path: "/joinUs",
+            element: <JoinUs />
+         },
+         {
+            path: "/project",
+            element: <Project />
+         },
+         {
+            path: "/project/:id",
+            element: <ProjectDetails />
+         },
+         {
+            path: "/careers",
+            element: <Job />
+         },
+         {
+            path: "/careers",
+            element: <Job />
+         },
+         {
+            path: "/contract",
+            element: <MainContract />
+         },
+         {
+            path: "/blog",
+            element: <Blog />,
+            loader: async () => {
+               return fetch('https://portfolio-backend-one-kappa.vercel.app/blog')
             }
-             
-        ] 
-    },
-    {
-        path : '*',
-        element : <NotFound />
-    }
+         },
+         {
+            path: "/admin/blog",
+            element: <PrivetRoute><AdminBlog /></PrivetRoute>,
+            loader: async () => {
+               return fetch('https://portfolio-backend-one-kappa.vercel.app/blog')
+            }
+         },
+         {
+            path: "/blog/:id",
+            element: <BlogDetails />,
+            loader: async ({ params }) => {
+               const bId = params.id
+               return fetch(`https://portfolio-backend-one-kappa.vercel.app/blog/${bId}`)
+            }
+         },
+         {
+            path: "/all_project",
+            element: <AllProject />,
+            loader: async () => {
+               return fetch('https://portfolio-backed.vercel.app/projects')
+            }
+         },
+         {
+            path: "/all_project/:id",
+            element: <AllProject />,
+            loader: async (params) => {
+               return fetch(`https://portfolio-backend-one-kappa.vercel.app/allProject/${params.id}`)
+            }
+         },
+         {
+            path: "https://portfolio-backed.vercel.app/projects:id",
+            element: <ProjectDetails />
+         },
+
+         {
+            path: "/Cart",
+            element: <Card />
+         },
+         {
+            path: "/contact",
+            element: <Contact />
+         },
+         {
+            path: "/sign_in",
+            element: <SignIn />
+         },
+         // {
+         //    path: "/sign_up",
+         //    element: <SignUp />
+         // }
+
+      ]
+   },
+   {
+      path: '*',
+      element: <NotFound />
+   }
 ])

@@ -10,33 +10,34 @@ import Team from '../../component/Team/Team/Team';
 import Testimonial from '../../component/Testimonials/Testimonials/Testimonials';
 import Technology from '../../component/Technology/Techonology/Technology';
 import Contact from '../../component/Contact/Contact/Contact';
-import Title from '../../layout/Title';
+
 import { useEffect } from 'react';
+import Title from '../../layout/Title';
 
 const Home = () => {
-     useEffect(() => {
+  useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-    return (
-        <div className="relative">
-            <Title title="Home"/>
-            <HeadSection />
-            <OurRequrement />
-            <Service />
-              <div className="mrg-bg">
-                   <Project />
-                   <OurMission />
-              </div>
-            <Technology />
-            <Offer />
-            <OurVission />
-            <Team></Team>
-            <Testimonial />
-            <Contact />
+  return (
+    <div className="relative">
+      <Title title="Software Company" />
+      <HeadSection />
+      <OurRequrement />
+      <Service />
+      <div className="mrg-bg">
+        <Project />
+        <OurMission />
+      </div>
+      <Technology />
+      <Offer />
+      <OurVission />
+      <Team></Team>
+      <Testimonial />
+      <Contact />
 
-        </div>
-    );
+    </div>
+  );
 };
 
 export default Home;

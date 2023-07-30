@@ -17,6 +17,7 @@
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.8.0",
+    "react-messenger-customer-chat": "^0.8.0",
     "react-router-dom": "^6.9.0",
     "react-scripts": "5.0.1",
     "react-sticky-box": "^2.0.0",
