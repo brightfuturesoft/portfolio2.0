@@ -16,10 +16,7 @@ const Main = () => {
                 <Header />
             </div>
             <Outlet />
-            <MessengerCustomerChat
-                pageId="YOUR_PAGE_ID"
-                appId="YOUR_APP_ID"
-            />
+
             <Footer />
             <CopyrightBar />
         </div>

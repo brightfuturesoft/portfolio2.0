@@ -28,12 +28,12 @@ const Contact = () => {
                     setActiveMdl(true)
                     setLoading(false)
 
-                    console.log(result);
+                  
                 },
                 (error) => {
                     setActiveMdl(false)
                     setLoading(false)
-                    console.log(error)
+                    
                 }
             );
 

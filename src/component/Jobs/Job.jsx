@@ -1,10 +1,19 @@
 import React, { useEffect } from 'react';
 import JobCard from './Card';
+import { useState } from 'react';
 
 const Job = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+
+    const [jobList, setBlogList] = useState([])
+    useEffect(() => {
+        fetch('http://localhost:5000/job')
+            .then(res => res.json())
+            .then(data => setBlogList(data))
+    }, [])
+
     return (
         <div className='join-bg py-20'>
 
@@ -97,9 +106,11 @@ const Job = () => {
                 </div>
                 <h1 className='lg:text-5xl text-xl md:text-2xl text-center font-sans font-bold lg:mt-36 mt-8 relative z-5'>At Bright Future, our company values reflect the core beliefs and guiding principles that shape our culture, decision-making process, and overall behavior.</h1>
             </div>
+            <h1 className='text-5xl font-bold text-center mb-8'>Come join us at Bright Future</h1>
+            <div className='grid grid-cols-1 gap-4 px-4  mx-auto sm:max-w-xl md:max-w-full text-white lg:max-w-screen-xl '>
+                {jobList.map(data => <JobCard data={data}></JobCard>)}
 
-            <JobCard></JobCard>
-
+            </div>
         </div>
     );
 };

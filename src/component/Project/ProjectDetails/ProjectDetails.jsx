@@ -22,22 +22,40 @@ const ProjectDetails = () => {
                 <div className="md:grid grid-cols-2 md:mt-20 mt-8">
                     <div className="">
                         <div className="p-2 bg-[#2f4056a1] rounded-xl">
-                            <img loading="lazy" src={`${project?.img}`} alt="" className="rounded-xl " />
+                            <img loading="lazy" src={`${project?.image_url}`} alt="" className="rounded-xl " />
                         </div>
                     </div>
                     <div className="md:px-4 ">
-                        <h1 className='font-bold text-[#5571ee] md:text-4xl text-2xl mt-2'>{project?.name}</h1>
+                        <h1 className='font-bold text-[#5571ee] md:text-4xl text-2xl mt-2'>{project?.product_name}</h1>
 
-                        <p className="text-gray-300 mt-4">
-                            {project?.describtion}
+                        <p className="text-gray-300 text-[18px] mt-4">
+                            {project?.description}
                         </p>
-                        <p className='mt-3 text-white'>Technology  :</p>
-                        <ul className="flex text-white gap-2 flex-wrap">
+                        <p className='mt-3 text-white text-2xl font-semibold'>Features  :</p>
+                        <ul className=" text-white gap-2 ">
                             {
-                                project?.tecnology?.map((i) =>
-                                    <li className='bg-[#00bfff7e] px-2 py-1 rounded-md text-sm'>
-                                        {[i]}
-                                    </li>)
+                                project?.features?.map((i) =>
+                                    <li className="flex items-start text-gray-300">
+                                        <span className="mr-1">
+                                            <svg
+                                                className="w-5 h-5 mt-px text-purple-400"
+                                                stroke="currentColor"
+                                                viewBox="0 0 52 52"
+                                            >
+                                                <polygon
+                                                    strokeWidth="4"
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    fill="none"
+                                                    points="29 13 14 29 25 29 23 39 38 23 27 23"
+                                                />
+                                            </svg>
+                                        </span>
+                                        {[i]}.
+                                    </li>
+
+
+                                )
                             }
                         </ul>
                     </div>

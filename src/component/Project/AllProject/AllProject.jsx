@@ -5,6 +5,7 @@ import Title from '../../../layout/Title';
 
 const AllProject = () => {
     const datas = useLoaderData();
+   
     // const stickyTopSpace = 50;
     const [searchValue, setSearchValue] = useState("");
     const [searchResults, setSearchResults] = useState([]);
@@ -65,15 +66,15 @@ const AllProject = () => {
                             className="overflow-hidden bg-cover rounded-lg cursor-pointer h-96 group"
                             style={{
                                 backgroundImage:
-                                    `url(${data?.img})`
+                                    `url(${data?.image_url})`
                             }}
                         >
                             <div className="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100">
                                 <h2 className="mt-20 text-xl font-semibold text-white capitalize">
-                                    {data?.name}
+                                    {data?.product_name}
                                 </h2>
                                 <div className="mt-2  tracking-wider  ">
-                                    {data?.describtion?.slice(0, 100)}...{' '} <Link className="text-white" to={`/project/${data?._id}`}> More</Link>
+                                    {data?.description?.slice(0, 100)}...{' '} <Link className="text-white" to={`/project/${data?._id}`}> More</Link>
                                 </div>
                             </div>
                         </Link>
@@ -91,27 +92,3 @@ const AllProject = () => {
 export default AllProject;
 
 
-{/* <div className="overflow-hidden transition-shadow duration-300 hover:shadow-xl hover:shadow-purple-500 bg-white hover:bg-gray-500 rounded ">
-                            <Link to={`/project/${data?._id}`} aria-label="Article">
-                                <img
-                                    loading="lazy" src={data?.img}
-                                    className=" w-full  h-60 rounded"
-                                    alt=""
-                                />
-                            </Link>
-                            <div className="p-5 text-black hover:text-white">
-                                <p className="mb-2 text-xs font-semibold  hover:text-white uppercase">
-                                    13 Jul 2020
-                                </p>
-                                <Link
-                                    to={`/project/${data?._id}`}
-                                    className="inline-block mb-3  transition-colors duration-200 hover:text-purple-300"
-                                >
-                                    <p className="text-2xl font-bold leading-5">{data?.name}</p>
-                                </Link>
-                                <div className="mb-4 ">
-                                    {data?.describtion?.slice(0, 100)}...{' '} <Link className="text-blue-500" to={`/project/${data?._id}`}> More</Link>
-                                </div>
-
-                            </div>
-                        </div> */}
