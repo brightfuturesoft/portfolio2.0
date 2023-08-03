@@ -4,50 +4,51 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const SignIn = () => {
-    const { signInUser, setLoading, loading } = useContext(AuthContext);
+
     const location = useLocation();
-    const [verify, setVerify] = useState(false)
+
     let from = location.state?.from?.pathname || "/";
-    const [error, setError] = useState("")
+    const [loading, setLoading] = useState(false)
+    const [error, setError] = useState('')
     const navigate = useNavigate();
 
+
+
     const handleSignIn = (e) => {
-        setLoading(true)
+
         e.preventDefault();
         const form = e.target;
-        console.log(form);
         const email = form.hello.value;
         const password = form.password.value;
-        console.log(email);
+        const data = { email, password }
+        fetch('http://localhost:5000/sign_in', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+            .then((res) => res.json())
+            .then((data) => {
 
-        signInUser(email, password)
-            .then((userCredential) => {
-                // Signed in 
-                const user = userCredential.user;
-                setError("");
-                if (user.emailVerified === true) {
-                    setLoading(false);
-                    navigate(from, { replace: true });
+                if (data.data) {
+
                     Swal.fire({
-                        position: 'center',
                         icon: 'success',
-                        title: 'Thank You So Much',
+                        title: 'Login Successful',
                         showConfirmButton: false,
                         timer: 1500
                     })
-
+                    localStorage.setItem('data', JSON.stringify(data.data));
+                   
+                    navigate(from)
                 }
                 else {
-                    navigate('/sign_in');
-                    setError('Please check your email and verify your account')
+                    alert(data.message)
                 }
 
+
             })
-            .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                setError(errorMessage);
-            });
     }
 
 
@@ -115,7 +116,7 @@ const SignIn = () => {
                                 >
                                     <span className="absolute inset-x-0 bottom-0 h-[2px] bg-indigo-600 transition-all group-hover:h-full group-active:bg-indigo-500" />
                                     <span className="relative text-sm font-medium text-indigo-600 transition-colors group-hover:text-white">
-                                        {loading ? "Loading ..": "Log In"}
+                                        {loading ? "Loading .." : "Log In"}
                                     </span>
                                 </button>
 

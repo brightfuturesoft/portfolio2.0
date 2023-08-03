@@ -9,6 +9,8 @@ const Blog = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  console.log(blog);
+
   return (
     <div className="p-2 bg-[#1b1b22]">
       <Title title="Blog" />

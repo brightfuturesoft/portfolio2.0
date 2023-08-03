@@ -25,6 +25,11 @@ import PrivetRoute from '../PrivetRoute';
 import ServicePage from '../../component/Service/Service/ServicePage';
 import Job from '../../component/Jobs/Job';
 import MainContract from '../../component/Contact/Contact/MainContract';
+import AdminBlogForm from '../../component/Blog/AdminBlogForm';
+import AdminRoute from '../AdminRoute';
+import Issue from '../../pages/Eployee/Issue/Issue';
+import JobPost from '../../pages/Eployee/Issue/JobPost/JobPost';
+import UplodNotice from '../../pages/Eployee/UplodNotice/UplodNotice';
 
 export const route = createBrowserRouter([
    {
@@ -79,7 +84,7 @@ export const route = createBrowserRouter([
             path: "/blog",
             element: <Blog />,
             loader: async () => {
-               return fetch('https://portfolio-backend-one-kappa.vercel.app/blog')
+               return fetch('http://localhost:5000/blog')
             }
          },
          {
@@ -90,11 +95,17 @@ export const route = createBrowserRouter([
             }
          },
          {
+            path: "/admin-blog-from",
+            element: <PrivetRoute><AdminBlogForm /></PrivetRoute>,
+
+         },
+
+         {
             path: "/blog/:id",
             element: <BlogDetails />,
             loader: async ({ params }) => {
                const bId = params.id
-               return fetch(`https://portfolio-backend-one-kappa.vercel.app/blog/${bId}`)
+               return fetch(`http://localhost:5000/blog/${bId}`)
             }
          },
          {
@@ -128,10 +139,22 @@ export const route = createBrowserRouter([
             path: "/sign_in",
             element: <SignIn />
          },
-         // {
-         //    path: "/sign_up",
-         //    element: <SignUp />
-         // }
+         {
+            path: "/sign_up",
+            element: <AdminRoute><SignUp /></AdminRoute>
+         },
+         {
+            path: "employee_issue",
+            element: <PrivetRoute><Issue></Issue></PrivetRoute>
+         },
+         {
+            path: "job_post",
+            element: <AdminRoute><JobPost></JobPost></AdminRoute>
+         },
+         {
+            path: "upload_notice",
+            element: <AdminRoute><UplodNotice></UplodNotice></AdminRoute>
+         }
 
       ]
    },
