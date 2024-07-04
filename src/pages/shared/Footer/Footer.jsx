@@ -9,10 +9,10 @@ const Footer = () => {
                     <div className="grid md:grid-cols-3  gap-2">
                          <div className="">
                               <img loading="lazy" src={logo} alt="" className="w-[120px] md:mx-0 mx-auto" />
-                              <p className="mt-4 text-sm md:text-left text-center text-[gray]">
-                                   Sed ut perspiciatis unde omnis iste natus error
-                                   sit voluptatem accusantium doloremque laudantium,
-                                   totam rem aperiam.
+                              <p className="mt-4 ml-1 text-sm md:text-left text-center text-[gray]">
+                                   You have an IDEA,
+                                   <br />
+                                   We have the TECNOLOGY
                               </p>
                               <div className="goodfirm-widget" data-widget-type="goodfirms-widget-t8" data-widget-pattern="poweredby-star" data-height="60" data-company-id="134938"></div>
                          </div>
@@ -68,7 +68,7 @@ const Footer = () => {
                                         <h2 className="text-white font-semibold md:text-left text-center md:mt-0 mt-4">Our Product</h2>
                                         <ul className="">
                                              <li className='mt-3 md:text-left text-center'>
-                                                  <Link to='' className="text-[#00bfff]  hover:border-b-2 hover:border-blue-500">Polytactnic Reselt Api</Link>
+                                                  <a target='_blank' href='https://erp.brightfuturesoft.com/' className="text-[#00bfff]  hover:border-b-2 hover:border-blue-500">Bright Erp</a>
                                              </li>
                                              <li className='mt-3 md:text-left text-center'>
                                                   <Link to='' className="text-[#00bfff]  hover:border-b-2 hover:border-blue-500">POS</Link>

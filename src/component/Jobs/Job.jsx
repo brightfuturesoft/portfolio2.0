@@ -47,11 +47,11 @@ const Job = () => {
                             <br className="hidden md:block" />
                             with us at
                             <span className="inline-block ml-4 text-purple-400">
-                                Bright Future
+                                Bright Future Soft
                             </span>
                         </h5>
                         <p className="mb-6 text-gray-100">
-                            Bright Future is a trusted tech company offering software solutions, web development, app solutions, and software consulting. Our skilled team of innovators creates scalable, secure, and forward-thinking solutions for businesses across industries. Join us and discover the limitless potential for your business.Bright Future is a trusted tech company offering software solutions, web development, app solutions, and software consulting. Our skilled team of innovators creates scalable, secure, and forward-thinking solutions for businesses across industries. Join us and discover the limitless potential for your business.
+                            Bright Future Soft is a trusted tech company offering software solutions, web development, app solutions, and software consulting. Our skilled team of innovators creates scalable, secure, and forward-thinking solutions for businesses across industries. Join us and discover the limitless potential for your business.Bright Future Soft is a trusted tech company offering software solutions, web development, app solutions, and software consulting. Our skilled team of innovators creates scalable, secure, and forward-thinking solutions for businesses across industries. Join us and discover the limitless potential for your business.
                         </p>
                         <hr className="mb-5 border-gray-100" />
                         <div className="flex items-center space-x-4">
@@ -102,11 +102,11 @@ const Job = () => {
                 </div> */}
 
                 <div className='flex justify-center'>
-                    <h1 className='lg:text-[180px] md:text-7xl text-5xl font-bold text-[#6666671a] text-center z-1 absolute'>Bright Future</h1>
+                    <h1 className='lg:text-[180px] md:text-7xl text-5xl font-bold text-[#6666671a] text-center z-1 absolute'>Bright Future Soft</h1>
                 </div>
-                <h1 className='lg:text-5xl text-xl md:text-2xl text-center font-sans font-bold lg:mt-36 mt-8 relative z-5'>At Bright Future, our company values reflect the core beliefs and guiding principles that shape our culture, decision-making process, and overall behavior.</h1>
+                <h1 className='lg:text-5xl text-xl md:text-2xl text-center font-sans font-bold lg:mt-36 mt-8 relative z-5'>At Bright Future Soft, our company values reflect the core beliefs and guiding principles that shape our culture, decision-making process, and overall behavior.</h1>
             </div>
-            <h1 className='text-5xl font-bold text-center mb-8'>Come join us at Bright Future</h1>
+            <h1 className='text-5xl font-bold text-center mb-8'>Come join us at Bright Future Soft</h1>
             <div className='grid grid-cols-1 gap-4 px-4  mx-auto sm:max-w-xl md:max-w-full text-white lg:max-w-screen-xl '>
                 {jobList.map(data => <JobCard data={data}></JobCard>)}
 

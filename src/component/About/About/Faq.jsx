@@ -95,20 +95,20 @@ export const Faq = () => {
           </div>
         </div>
         <div className="space-y-4">
-          <Item title="What services does Bright Future provide?">
-            Bright Future offers a range of software solutions, including web application development, mobile app development, UI/UX design, and software consultancy. We specialize in creating innovative, user-friendly, and scalable solutions tailored to meet our clients' specific needs.
+          <Item title="What services does Bright Future Soft provide?">
+            Bright Future Soft offers a range of software solutions, including web application development, mobile app development, UI/UX design, and software consultancy. We specialize in creating innovative, user-friendly, and scalable solutions tailored to meet our clients' specific needs.
           </Item>
-          <Item title="How can I get started with Bright Future for my project?">
-            Getting started with Bright Future is simple. You can reach out to us via our website contact form, email us at hello@thebrightfuture.co, or give us a call at +880179225520. Our team will be happy to discuss your project requirements and guide you through the next steps.
+          <Item title="How can I get started with Bright Future Soft for my project?">
+            Getting started with Bright Future Soft is simple. You can reach out to us via our website contact form, email us at hello@thebrightfuture.co, or give us a call at +880179225520. Our team will be happy to discuss your project requirements and guide you through the next steps.
           </Item>
           <Item title="How long does it typically take to complete a software project?">
             The project timeline can vary depending on the scope and complexity of the project. After discussing your specific requirements, we will provide you with an estimated timeline during the initial consultation. We prioritize timely delivery without compromising on quality.
           </Item>
-          <Item title="Can Bright Future help with ongoing maintenance and support after the project is completed?">
+          <Item title="Can Bright Future Soft help with ongoing maintenance and support after the project is completed?">
             Absolutely. We offer post-development support and maintenance services to ensure the smooth operation of your software solution. We can provide updates, security patches, bug fixes, and technical assistance as needed to keep your application up-to-date and functioning optimally.
           </Item>
-          <Item title=" How does Bright Future ensure the security and confidentiality of my project?">
-            At Bright Future, we take security and confidentiality seriously. We adhere to industry best practices to safeguard your project information. We can sign non-disclosure agreements (NDAs) to protect your intellectual property and ensure that sensitive data is handled with the utmost care and security.
+          <Item title=" How does Bright Future Soft ensure the security and confidentiality of my project?">
+            At Bright Future Soft, we take security and confidentiality seriously. We adhere to industry best practices to safeguard your project information. We can sign non-disclosure agreements (NDAs) to protect your intellectual property and ensure that sensitive data is handled with the utmost care and security.
           </Item>
         </div>
       </div>

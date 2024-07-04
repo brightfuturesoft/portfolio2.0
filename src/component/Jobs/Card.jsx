@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const JobCard = ({ data }) => {
-    console.log(data);
+
     return (
         <div className=''>
            

@@ -1,3 +1,4 @@
+import JoditEditor from 'jodit-react';
 import React from 'react';
 import Swal from 'sweetalert2';
 
@@ -10,35 +11,43 @@ const JobPost = () => {
         const job_type = form.job_type.value
         const workplace = form.workplace.value
         const link = form.link.value
+        const description = form.description.value
         const jobData = {
             job_position,
             job_type,
             workplace,
-            link
+            link,
+            description
         }
-        console.log(jobData);
-        fetch(`http://localhost:5000/job_post`, {
+
+        fetch(`http://localhost:5010/api/v1/job-post/add-job`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
+                'author': 'bright_future_soft'
             },
             body: JSON.stringify(jobData),
         })
             .then((res) => res.json())
             .then((data) => {
                 Swal.fire('Job Post Publish Successfully', ' ', 'success')
+                form.reset()
+
             })
 
     }
 
     return (
-        <div className='py-20 flex justify-center px-1  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 md:w-[80%] w-[95%] mt-5'>
+        <div className='py-20 flex justify-center px-1 text-black  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 md:w-[80%] w-[95%] mt-5'>
             <form onSubmit={jobForm} className='w-10/12'>
-                <h1 className='text-2xl font-bold text-center py-8'>Upload Job Post</h1>
-                <input className='w-full my-2' name='job_position' placeholder='Job Position' type="text" />
-                <input className='w-full my-2' name='job_type' placeholder='Job type' type="text" />
-                <input className='w-full my-2' name='workplace' placeholder='Workplace type' type="text" />
-                <input className='w-full my-2' name='link' placeholder='Link' type="text" />
+                <h1 className='text-2xl font-bold text-center text-white py-8'>Upload Job Post</h1>
+                <input className='w-full my-2 rounded' name='job_position' placeholder='Job Position' type="text" />
+                <input className='w-full my-2 rounded' name='job_type' placeholder='Job type' type="text" />
+                <input className='w-full my-2 rounded' name='workplace' placeholder='Workplace type' type="text" />
+                <input className='w-full my-2 rounded' name='link' placeholder='Link' type="text" />
+                <JoditEditor name='description' className='rounded jodit-editor' />
+                <br />
+                <br />
                 <button
                     type='submit'
                     className="group flex items-center justify-center gap-4 w-full border border-indigo-600 bg-indigo-600 px-10 py-3 transition-colors hover:bg-transparent focus:outline-none focus:ring"

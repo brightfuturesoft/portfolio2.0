@@ -1,10 +1,10 @@
 import React from 'react';
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
 
-const Title = ({title}) => {
+const Title = ({ title }) => {
     return (
         <Helmet>
-            <title>Bright Future | {title}</title>
+            <title>Bright Future Soft | {title}</title>
         </Helmet>
     );
 };

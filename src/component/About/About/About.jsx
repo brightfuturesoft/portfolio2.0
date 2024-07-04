@@ -8,19 +8,14 @@ import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import mahadi from '../../../Assctes/teamMember/mahadi.jpg';
+import hadi from '../../../Assctes/teamMember/mohotasimhadi.jpeg';
 import acccountManager from '../../../Assctes/teamMember/accountManager.jpeg';
-import seyam from '../../../Assctes/teamMember/seyam.jpg';
-import oshim from '../../../Assctes/teamMember/ashim.jpeg';
-import mamon from '../../../Assctes/teamMember/abdullah.jpg';
+import sarwar from '../../../Assctes/teamMember/Sarwar.png';
 import nahid from '../../../Assctes/teamMember/nahid.jpeg';
 import maruf from '../../../Assctes/teamMember/maruf.jpeg'
-import mushfiq from '../../../Assctes/teamMember/musfiq.jpg'
-import mamonKhan from '../../../Assctes/teamMember/Mamun_Khan.png'
-import n from '../../../Assctes/teamMember/n.jpg'
-import abdurRab from '../../../Assctes/teamMember/Abdur_rab_1.jpg'
-import nezaul from '../../../Assctes/teamMember/nezamul.jpeg'
-import minhaz from '../../../Assctes/teamMember/minhaz.jpg'
-import Foysal from '../../../Assctes/teamMember/Foysal.png';
+import riky from '../../../Assctes/teamMember/riky.png'
+import mursed from '../../../Assctes/teamMember/mursed.jpg'
+
 import un from '../../../Assctes/teamMember/unknown.svg'
 import { HiOutlineMicrophone } from 'react-icons/hi2';
 import Service from '../../Service/Service/Service';
@@ -35,15 +30,16 @@ import homeVc from '../../../Assctes/vectors/App Development.json';
 import { Faq } from './Faq';
 import { OurProjects } from '../Projects';
 
-import shuchi from '../../../Assctes/teamMember/Suchi Roy.jpg'
 const About = () => {
   const [swiperRef, setSwiperRef] = useState(null);
+
+
   const teamMembers = [
     {
       "id": 0,
       "img": mahadi,
-      "name": "Mahadi Hassan",
-      "email": "info@thebrightfuture.co",
+      "name": "Mahadi Hasan",
+      "email": "ceo@brightfuturesoft.com",
       "post": "CEO and founder",
       "linkedIn": "https://www.linkedin.com/in/codewithmahadihasan/",
       "gender": "male"
@@ -53,129 +49,72 @@ const About = () => {
       "id": 2,
       "img": maruf,
       "name": "Maruf Ali Khan",
-      "email": "maruf@thebrightfuture.co",
+      "email": "maruf@brightfuturesoft.com",
       "post": "Managing Director",
       "linkedIn": "https://www.linkedin.com/in/maruf-ali-khan-742b1a1a4/",
       "gender": "male"
     },
-
     {
       "id": 3,
-      "img": Foysal,
-      "name": "Foysal Ahmed",
-      "email": "foysal@thebrightfuture.co",
-      "post": "Project Manager",
-      "linkedIn": "https://www.linkedin.com/in/regita-redhe-30b357271/",
-      "gender": "female"
+      "img": hadi,
+      "name": "Mohotasim Hadi Rafi",
+      "email": "hadi@brightfuturesoft.com",
+      "post": "Advisor",
+      "linkedIn": "https://www.linkedin.com/in/mohtasimhadi/",
+      "gender": "male"
     },
+
+
     {
       "id": 3,
       "img": acccountManager,
       "name": "Regita Redhe",
-      "email": "redhe@thebrightfuture.co",
+      "email": "redhe@brightfuturesoft.com",
       "post": "Account Manager",
       "linkedIn": "https://www.linkedin.com/in/regita-redhe-30b357271/",
       "gender": "female"
     },
     {
-      "id": 4,
-      "img": oshim,
-      "name": "Ashim Rudra Paul",
-      "email": "ashim@thebrightfuture.co",
-      "post": "Software Engineer",
-      "linkedIn": "https://www.linkedin.com/in/codewithashim/",
-      "gender": "male"
-    },
-
-    ,
-    {
-      "id": 9,
-      "img": abdurRab,
-      "name": "MD. ABDUR RAB",
-      "email": "abdur@thebrightfuture.co",
-      "post": "Product Designer",
-      "linkedIn": "https://www.linkedin.com/in/md-abdur-rab-90b110185/",
-      "gender": "male"
-    }
-    ,
-    {
-      "id": 10,
-      "img": nezaul,
-      "name": "Nazmul Hoque",
-      "email": "nazmul@thebrightfuture.co",
-      "post": "Product Developer",
-      "linkedIn": "https://www.linkedin.com/in/nazmul-sujon/",
-      "gender": "male"
-    }
-    ,
-    {
-      "id": 10,
-      "img": un,
-      "name": "Farhan Ahmed",
-      "email": "farhan@thebrightfuture.co",
-      "post": "Product Developer",
-      "linkedIn": "https://www.linkedin.com/in/nazmul-sujon/",
-      "gender": "male"
-    }
-    ,
-
-    {
-      "id": 12,
-      "img": shuchi,
-      "name": "Suchi Roy",
-      "email": "suchi@thebrightfuture.co",
-      "post": "Product Designer",
-      "linkedIn": "https://www.linkedin.com/in/minhaz-khan-/",
-      "gender": "Female"
-    }, {
-      "id": 5,
-      "img": mamon,
-      "name": "Md. Abdullah Al Mamun",
-      "email": "mamun@thebrightfuture.co",
-      "post": "Front End Developer",
-      "linkedIn": "https://www.linkedin.com/in/mdmamunabdullah/",
-      "gender": "male"
-
-    },
-    {
       "id": 6,
       "img": nahid,
       "name": "Nahid Ferdaos",
-      "email": "nahid@thebrightfuture.co",
-      "post": "Front End Developer",
+      "email": "nahid@brightfuturesoft.com",
+      "post": "Software Engineer",
       "linkedIn": "https://www.linkedin.com/in/nahid-ferdaos/",
       "gender": "male"
     },
     {
-      "id": 7,
-      "img": mushfiq,
-      "name": "Musfiqur Rahman",
-      "email": "mushfiq@thebrightfuture.co",
-      "post": "Web Developer",
-      "linkedIn": "https://www.linkedin.com/in/musfiqurofficial/",
+      "id": 6,
+      "img": sarwar,
+      "name": "Sarwar Hossain",
+      "email": "sarwar@brightfuturesoft.com",
+      "post": "Software Engineer",
+      "linkedIn": "https://www.linkedin.com/in/sarwar-asik/",
+      "gender": "male"
+    },
+    {
+      "id": 6,
+      "img": mursed,
+      "name": "MH. Murshed",
+      "email": "mursed@brightfuturesoft.com",
+      "post": "Software Developer",
+      "linkedIn": "https://www.linkedin.com/in/murshed1806/",
+      "gender": "male"
+    },
+    {
+      "id": 6,
+      "img": riky,
+      "name": "Uyemong Marma",
+      "email": "riky@brightfuturesoft.com",
+      "post": "UI/UX Designer",
+      // "linkedIn": "https://www.linkedin.com/in/sarwar-asik/",
       "gender": "male"
     }
-    ,
-    {
-      "id": 8,
-      "img": mamonKhan,
-      "name": "Md Mamun Khan",
-      "email": "info@thebrightfuture.co",
-      "post": "Marketing Manager",
-      "linkedIn": "https://www.linkedin.com/in/md-mamun-khan/",
-      "gender": "male"
-    },
-    {
-      "id": 8,
-      "img": minhaz,
-      "name": "Minhaz Khan",
-      "email": "minhaz@thebrightfuture.co",
-      "post": "Web Developer",
-      "linkedIn": "https://www.linkedin.com/in/md-mamun-khan/",
-      "gender": "male"
-    },
+
 
   ]
+
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []); useEffect(() => {
@@ -190,12 +129,12 @@ const About = () => {
           <div className="flex items-center">
             <div className="">
               <h1 className='text-xl text-[#3f98fd] font-[400] md:text-left text-center'>Software Company </h1>
-              <h1 className="md:text-5xl text-[35px] text-white font-[700] md:text-left text-center">The <span className="text-[orange]">Bright Future</span></h1>
+              <h1 className="md:text-5xl text-[35px] text-white font-[700] md:text-left text-center">The <span className="text-[orange]">Bright Future Soft</span></h1>
               <div className="md:hidden flex  justify-end overflow-hidden mt-[-50px]">
                 <Lottie className="" animationData={homeVc} loop={true} />
               </div>
               <p className="text-gray-300 md:mt-6 mt-[-50px]">
-                At Bright Future, we are a leading software company based in Bangladesh, founded in January 2023. We are passionate about harnessing the power of technology to drive positive change and empower individuals and businesses. With our innovative solutions and dedication to excellence, we strive to make a lasting impact in the software industry.
+                At Bright Future Soft, we are a leading software company based in Bangladesh, founded in January 2023. We are passionate about harnessing the power of technology to drive positive change and empower individuals and businesses. With our innovative solutions and dedication to excellence, we strive to make a lasting impact in the software industry.
               </p>
             </div>
           </div>
@@ -279,7 +218,7 @@ const About = () => {
                                     <div style={{backgroundImage : `url("${tData?.img}")`, backgroundSize : "cover"}} className="md:w-[100px] w-full md:h-[100px] h-[200px] rounded-lg"></div>
                                     <div className="text-white md:mt-0 mt-2">
                                         <h2>{tData.name}</h2>
-                                        <p>{tData.gender=="male" ? "He" : "She"} is {tData.post} in Bright Future</p>
+                                        <p>{tData.gender=="male" ? "He" : "She"} is {tData.post} in Bright Future Soft</p>
                                     </div>
                                 </div>
                             </VerticalTimelineElement>                            

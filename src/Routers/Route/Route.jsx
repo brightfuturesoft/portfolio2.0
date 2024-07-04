@@ -30,6 +30,8 @@ import AdminRoute from '../AdminRoute';
 import Issue from '../../pages/Eployee/Issue/Issue';
 import JobPost from '../../pages/Eployee/Issue/JobPost/JobPost';
 import UplodNotice from '../../pages/Eployee/UplodNotice/UplodNotice';
+import ProjectList from '../../component/Project/AdminProject/ProjectList';
+import Add_Meting from '../../pages/Eployee/Meeting/Add_Metting';
 
 export const route = createBrowserRouter([
    {
@@ -84,7 +86,7 @@ export const route = createBrowserRouter([
             path: "/blog",
             element: <Blog />,
             loader: async () => {
-               return fetch('http://localhost:5000/blog')
+               return fetch('https://portfolio-backend-one-kappa.vercel.app/blog')
             }
          },
          {
@@ -105,7 +107,7 @@ export const route = createBrowserRouter([
             element: <BlogDetails />,
             loader: async ({ params }) => {
                const bId = params.id
-               return fetch(`http://localhost:5000/blog/${bId}`)
+               return fetch(`http://localhost:5001/blog/${bId}`)
             }
          },
          {
@@ -141,7 +143,8 @@ export const route = createBrowserRouter([
          },
          {
             path: "/sign_up",
-            element: <AdminRoute><SignUp /></AdminRoute>
+            // element: <AdminRoute><SignUp /></AdminRoute>
+            element: <SignUp />
          },
          {
             path: "employee_issue",
@@ -154,6 +157,14 @@ export const route = createBrowserRouter([
          {
             path: "upload_notice",
             element: <AdminRoute><UplodNotice></UplodNotice></AdminRoute>
+         },
+         {
+            path: "project_list",
+            element: <AdminRoute><ProjectList></ProjectList></AdminRoute>
+         },
+         {
+            path: "meeting_management",
+            element: <AdminRoute><Add_Meting></Add_Meting></AdminRoute>
          }
 
       ]

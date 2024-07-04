@@ -18,3 +18,71 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.jodit-editor ul,
+.jodit-editor ol {
+  /* List styles */
+  padding-left: 20px;
+  /* Adjust as needed */
+}
+
+.jodit-editor ul li,
+.jodit-editor ol li {
+  /* List item styles */
+  list-style-type: disc;
+  /* Unordered list marker style */
+  margin-bottom: 5px;
+  /* Adjust as needed */
+}
+
+.jodit-editor ol li {
+  /* Additional styles for ordered list items */
+  list-style-type: decimal;
+  /* Ordered list marker style */
+}
+
+/* Targeting unordered and ordered lists within JoditEditor */
+.jodit-wysiwyg ul,
+.jodit-wysiwyg ol {
+  padding-left: 20px;
+  /* Adjust as needed */
+}
+
+/* Default unordered list item */
+.jodit-wysiwyg ul li {
+  list-style-type: disc;
+  /* Unordered list marker style */
+  margin-bottom: 5px;
+  /* Adjust as needed */
+}
+
+/* Specific styles for different unordered list types */
+.jodit-wysiwyg ul.circle li {
+  list-style-type: circle;
+  /* Circle marker style */
+}
+
+.jodit-wysiwyg ul.square li {
+  list-style-type: square;
+  /* Square marker style */
+}
+
+/* Default ordered list item */
+.jodit-wysiwyg ol li {
+  list-style-type: decimal;
+  /* Ordered list marker style */
+  margin-bottom: 5px;
+  /* Adjust as needed */
+}
+
+/* Specific styles for different ordered list types */
+.jodit-wysiwyg ol.lower-alpha li {
+  list-style-type: lower-alpha;
+  /* Lowercase alphabetic marker style */
+}
+
+.jodit-wysiwyg ol.lower-greek li {
+  list-style-type: lower-greek;
+  /* Lowercase Greek marker style */
+}

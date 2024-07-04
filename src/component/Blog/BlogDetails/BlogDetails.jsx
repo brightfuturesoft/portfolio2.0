@@ -9,7 +9,7 @@ const BlogDetails = () => {
             .then(data => setBlogList(data))
     }, [])
     const blogInfo = useLoaderData()
-    console.log(blogInfo);
+   
     return (
         <div className="bg-[#151520]">
             <div className="px-1 md:py-20 py-20 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-20 lg:px-8 md:w-[80%] w-[95%] grid md:grid-cols-3 gap-3 ">

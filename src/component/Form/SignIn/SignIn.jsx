@@ -6,7 +6,7 @@ import Swal from 'sweetalert2';
 const SignIn = () => {
 
     const location = useLocation();
-
+    const { user, setUser } = useContext(AuthContext);
     let from = location.state?.from?.pathname || "/";
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState('')
@@ -21,26 +21,23 @@ const SignIn = () => {
         const email = form.hello.value;
         const password = form.password.value;
         const data = { email, password }
-        fetch('http://localhost:5000/sign_in', {
+        fetch('http://localhost:5010/api/v1/auth/sign-in', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                'author': 'bright_future_soft'
             },
+
             body: JSON.stringify(data),
         })
             .then((res) => res.json())
             .then((data) => {
 
-                if (data.data) {
+                if (data.user) {
 
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'Login Successful',
-                        showConfirmButton: false,
-                        timer: 1500
-                    })
-                    localStorage.setItem('data', JSON.stringify(data.data));
-                   
+                    Swal.fire(data.message, '', 'success')
+                    localStorage.setItem('data', JSON.stringify(data.user));
+                    setUser(data.user)
                     navigate(from)
                 }
                 else {
@@ -132,6 +129,7 @@ const SignIn = () => {
                     </div>
                 </div>
             </div>
+
         </div>
     );
 };

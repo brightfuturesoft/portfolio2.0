@@ -6,6 +6,8 @@ import Title from '../../../layout/Title';
 
 const AdminBlog = () => {
    const blog = useLoaderData();
+
+
    const [show, setShow] = useState(false);
    const [loading, setLoading] = useState(false);
    if (blog === null) {

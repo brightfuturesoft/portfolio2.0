@@ -3,56 +3,60 @@ import { AuthContext } from '../../../context/UseContext/UseContext';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { FiAlertCircle } from "react-icons/fi";
 import Swal from 'sweetalert2';
+import uploadImage from '../../../Hook/ImageUpload';
 const SignUp = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
     let from = location?.state?.from?.pathname || "/";
 
-    const handleSignUp = (e) => {
+    const handleSignUp = async (e) => {
         e.preventDefault();
-        const form = e.target;
 
-        const name = form.name.value
+        const form = e.target;
+        const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
-        const Designation = form.designation.value;
-        const Image = form.img_url.value;
-        const data = {
-            name,
-            email,
-            password,
-            Designation,
-            Image,
+        const designation = form.designation.value;
+
+        try {
+            const image = await uploadImage(form.img_url.files[0]);
+
+            const data = {
+                name,
+                email,
+                password,
+                designation,
+                image,
+            };
+
+
+
+            const response = await fetch('http://localhost:5010/api/v1/auth/sign-up', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                Swal.fire(result.message, '', 'success');
+
+                navigate('/sign_in');
+            } else {
+
+                Swal.fire(result.message, '', 'warning');
+            }
+        } catch (error) {
+
+            Swal.fire('Failed to sign up', '', 'error');
         }
-
-        fetch('http://localhost:5000/sign-up', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data),
-        })
-            .then((res) => res.json())
-            .then((data) => {
-            
-                Swal.fire({
-
-                    icon: 'success',
-                    title: 'Your work has been saved',
-                    showConfirmButton: false,
-                    timer: 1500
-                })
-                navigate(from)
-
-            })
-
-    
+    };
 
 
-    }
-
-   
 
     return (
         <div className="form-bg py-20">
@@ -87,13 +91,13 @@ const SignUp = () => {
                                     htmlFor="lastName"
                                     className="inline-block mb-1 font-medium"
                                 >
-                                    Image URL
+                                    Image
                                 </label>
                                 <input
                                     placeholder="Doe"
                                     required
-                                    type="url"
-                                    className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-purple-400 focus:outline-none focus:shadow-outline"
+                                    type='file'
+                                    className="flex-grow w-full  px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-purple-400 focus:outline-none focus:shadow-outline"
                                     id="img_url"
                                     name="img_url"
                                 />

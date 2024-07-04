@@ -35,7 +35,7 @@ const Offer = () => {
         <div className="w-full bg-[#020A1C]">
             <div className="work-bg ">
                 <div className='md:w-[85%] w-[98%] pt-8 pb-12 px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
-                    <h1 className="text-xl  font-bold relative after:absolute after:left-0 after:right-0 after:bottom-[-18px] after:w-[60px] after:rounded-full after:h-[6px] after:bg-[#0095ff] after:mx-auto text-center text-white">Why Choose <span className="shadow-tx">Bright Future</span></h1>
+                    <h1 className="text-xl  font-bold relative after:absolute after:left-0 after:right-0 after:bottom-[-18px] after:w-[60px] after:rounded-full after:h-[6px] after:bg-[#0095ff] after:mx-auto text-center text-white">Why Choose <span className="shadow-tx">Bright Future Soft</span></h1>
                     <p className="text-center mt-8 text-blue-500">
                         We provide comprehensive solutions for web and mobile applications, encompassing the entire development stack.
                         <br />From crafting distinctive branding identities to delivering top-notch UI/UX design, our services are tailored to meet your needs at every step of the process.

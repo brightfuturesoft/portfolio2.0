@@ -75,8 +75,8 @@ const AdminBlogForm = () => {
         <div className='py-20 bg-gray-900 text-white '>
             <div className=' mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
 
-                <h1 className='text-2xl font-bold text-center'>Publish a blog for you and next</h1>
-                <div className='p-10 border-2 rounded m-10' >
+                <h1 className='text-2xl font-bold mt-10 text-center'>Publish a blog for you and next</h1>
+                <div className='p-10 border-2 rounded-xl m-10' >
                     <form onSubmit={dataSubmit} className="space-y-4 text-black">
                         <div>
                             <label className="sr-only" htmlFor="title">

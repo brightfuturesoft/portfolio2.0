@@ -44,7 +44,7 @@ const JoinUs = () => {
             <div className=" mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:w-[80%] w-[95%] md:grid grid-cols-2 bg-[#192330] mt-20">
                 <div className="text-white join-bg flex items-center justify-center py-12">
                     <div className="" align="center">
-                        <h1 className='font-bold md:text-4xl text-2xl flex gap-2'>Join <span className="text-[orange]">The Bright Future</span></h1>
+                        <h1 className='font-bold md:text-4xl text-2xl flex gap-2'>Join <span className="text-[orange]">The Bright Future Soft</span></h1>
                         <p>build up your skill</p>
                         <ul className="mt-3 flex items-center gap-6 justify-center relative after:absolute after:top-[20px] after:left-0  after:bottom-[0px] after:md:w-[100px] after:w-[40px] after:h-[1px] after:bg-gray-400   
                            

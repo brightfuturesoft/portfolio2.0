@@ -25,7 +25,7 @@ const UseContext = ({ children }) => {
 
 
     const authInfo = {
-
+        setUser,
         user,
         loading,
         setLoading,
