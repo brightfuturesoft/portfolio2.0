@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import Swal from 'sweetalert2';
 
-const UplodNotice = () => {
+const UploadNotice = () => {
     const jobForm = (e) => {
         e.preventDefault();
         const form = e.target;
@@ -47,7 +47,7 @@ const UplodNotice = () => {
                         <span
                             className="font-medium text-white transition-colors text-center group-hover:text-indigo-600 group-active:text-indigo-500"
                         >
-                           Upload
+                            Upload
                         </span>
 
 
@@ -58,4 +58,4 @@ const UplodNotice = () => {
     );
 };
 
-export default UplodNotice;
+export default UploadNotice;

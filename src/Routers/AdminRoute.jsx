@@ -9,7 +9,7 @@ const AdminRoute = ({ children }) => {
     if (loading) {
         return <h2>Loading.....</h2>
     }
-    if (user && user.designation === 'Chief Executive Officer') {
+    if (user && user?.designation === 'Chief Executive Officer') {
         return children
     }
     return <Navigate to='/sign_in' state={{ from: location }} replace />

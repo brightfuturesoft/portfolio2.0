@@ -45,7 +45,7 @@ const JobPost = () => {
                 <input className='w-full my-2 rounded' name='job_type' placeholder='Job type' type="text" />
                 <input className='w-full my-2 rounded' name='workplace' placeholder='Workplace type' type="text" />
                 <input className='w-full my-2 rounded' name='link' placeholder='Link' type="text" />
-                <JoditEditor name='description' className='rounded jodit-editor' />
+                <JoditEditor name='description' className='rounded  jodit-editor' />
                 <br />
                 <br />
                 <button

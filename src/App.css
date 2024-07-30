@@ -390,6 +390,7 @@ clip-path: polygon(9% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 100%);
 /* width */
 ::-webkit-scrollbar {
   width: 6px;
+  height: 6px;
 }
 
 /* Track */
