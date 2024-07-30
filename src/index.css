@@ -86,3 +86,27 @@ code {
   list-style-type: lower-greek;
   /* Lowercase Greek marker style */
 }
+
+.scrollbar-hidden {
+  overflow: hidden;
+}
+
+.scrollbar-auto {
+  overflow: auto;
+}
+
+.scrollbar-visible {
+  overflow: scroll;
+}
+
+.scrollbar-auto:hover {
+  overflow-y: auto;
+}
+
+.scrollbar-auto::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-auto:hover::-webkit-scrollbar {
+  display: block;
+}

@@ -4,11 +4,12 @@ import { useLoaderData } from 'react-router-dom';
 import Title from '../../layout/Title';
 
 const Blog = () => {
-  const blog = useLoaderData();
+  const blog_data = useLoaderData();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  const blog = blog_data?.data
 
 
   return (

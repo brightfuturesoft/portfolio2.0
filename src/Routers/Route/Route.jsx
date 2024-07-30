@@ -27,11 +27,16 @@ import Job from '../../component/Jobs/Job';
 import MainContract from '../../component/Contact/Contact/MainContract';
 import AdminBlogForm from '../../component/Blog/AdminBlogForm';
 import AdminRoute from '../AdminRoute';
-import Issue from '../../pages/Eployee/Issue/Issue';
-import JobPost from '../../pages/Eployee/Issue/JobPost/JobPost';
-import UplodNotice from '../../pages/Eployee/UplodNotice/UplodNotice';
+import Issue from '../../pages/Eployee/Issue/AddNewIssue';
+import JobPost from '../../pages/Eployee/JobPost/JobPost';
+import UplodNotice from '../../pages/Eployee/UplodNotice/UploadNotice';
 import ProjectList from '../../component/Project/AdminProject/ProjectList';
 import Add_Meting from '../../pages/Eployee/Meeting/Add_Metting';
+import Dashboard from '../../layout/Dashboard';
+import { dashboardRouter } from './DashboardRouter';
+import ForgetPass from '../../component/Form/Password/ForgetPass';
+import ResetPassword from '../../component/Form/Password/ResetPassword';
+import { base_url } from '../../layout/Title';
 
 export const route = createBrowserRouter([
    {
@@ -59,7 +64,7 @@ export const route = createBrowserRouter([
             element: <Testimonials />
          },
          {
-            path: "/joinUs",
+            path: "/join-with-us",
             element: <JoinUs />
          },
          {
@@ -75,10 +80,6 @@ export const route = createBrowserRouter([
             element: <Job />
          },
          {
-            path: "/careers",
-            element: <Job />
-         },
-         {
             path: "/contract",
             element: <MainContract />
          },
@@ -86,7 +87,7 @@ export const route = createBrowserRouter([
             path: "/blog",
             element: <Blog />,
             loader: async () => {
-               return fetch('https://portfolio-backend-one-kappa.vercel.app/blog')
+               return fetch(`${base_url}/blog/get-blog`)
             }
          },
          {
@@ -96,18 +97,13 @@ export const route = createBrowserRouter([
                return fetch('https://portfolio-backend-one-kappa.vercel.app/blog')
             }
          },
-         {
-            path: "/admin-blog-from",
-            element: <PrivetRoute><AdminBlogForm /></PrivetRoute>,
-
-         },
 
          {
             path: "/blog/:id",
             element: <BlogDetails />,
             loader: async ({ params }) => {
-               const bId = params.id
-               return fetch(`http://localhost:5001/blog/${bId}`)
+               const id = params.id
+               return fetch(`${base_url}/blog/get-blog-by-id?blog_id=${id}`)
             }
          },
          {
@@ -147,27 +143,41 @@ export const route = createBrowserRouter([
             element: <SignUp />
          },
          {
-            path: "employee_issue",
-            element: <PrivetRoute><Issue></Issue></PrivetRoute>
+            path: 'forget-password',
+            element: <ForgetPass />
          },
          {
-            path: "job_post",
-            element: <AdminRoute><JobPost></JobPost></AdminRoute>
-         },
-         {
-            path: "upload_notice",
-            element: <AdminRoute><UplodNotice></UplodNotice></AdminRoute>
-         },
-         {
-            path: "project_list",
-            element: <AdminRoute><ProjectList></ProjectList></AdminRoute>
-         },
-         {
-            path: "meeting_management",
-            element: <AdminRoute><Add_Meting></Add_Meting></AdminRoute>
+            path: 'reset-password',
+            element: <ResetPassword />
          }
 
+         // {
+         //    path: "employee_issue",
+         //    element: <PrivetRoute><Issue></Issue></PrivetRoute>
+         // },
+         // {
+         //    path: "job_post",
+         //    element: <AdminRoute><JobPost></JobPost></AdminRoute>
+         // },
+         // {
+         //    path: "upload_notice",
+         //    element: <AdminRoute><UplodNotice></UplodNotice></AdminRoute>
+         // },
+         // {
+         //    path: "project_list",
+         //    element: <AdminRoute><ProjectList></ProjectList></AdminRoute>
+         // },
+         // {
+         //    path: "meeting_management",
+         //    element: <AdminRoute><Add_Meting></Add_Meting></AdminRoute>
+         // }
+
       ]
+   },
+   {
+      path: '/dashboard',
+      element: <Dashboard />,
+      children: dashboardRouter
    },
    {
       path: '*',

@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import logo from '../../../Assctes/logo.png';
 import { AuthContext } from '../../../context/UseContext/UseContext';
 import { HiBars3BottomLeft, HiBars3BottomRight, HiMinus } from 'react-icons/hi2';
@@ -13,10 +13,14 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { user, setUser } = useContext(AuthContext)
   const [optOpen, setOptOpen] = useState(false);
+  const navigate = useNavigate()
+
 
   const logOut = () => {
     setUser(null)
     localStorage.removeItem('data')
+    navigate('/sign_in')
+
   }
 
 
@@ -135,7 +139,7 @@ const Header = () => {
 
                       <li>
                         <Link
-                          to={'/admin-blog-from'}
+                          to={'/dashboard/home'}
                           className="flex items-center gap-2 border-s-[3px] border-transparent px-4 py-3 text-gray-500 hover:border-gray-100 hover:bg-gray-50 hover:text-gray-700"
                         >
                           <svg
@@ -152,10 +156,10 @@ const Header = () => {
                               d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
                             />
                           </svg>
-                          <span className="text-sm font-medium"> Blog Publish </span>
+                          <span className="text-sm font-medium"> Dashboard </span>
                         </Link>
                       </li>
-                      <li>
+                      {/* <li>
                         <Link
 
                           to={'employee_issue'}
@@ -178,7 +182,7 @@ const Header = () => {
                           <span className="text-sm font-medium"> Issue Submit </span>
                         </Link>
                       </li>
-                      {user.designation !== 'Chief Executive Officer' && <li>
+                      {user?.designation !== 'Chief Executive Officer' && <li>
                         <a
                           href=""
                           className="flex items-center gap-2 border-s-[3px] border-transparent px-4 py-3 text-gray-500 hover:border-gray-100 hover:bg-gray-50 hover:text-gray-700"
@@ -200,7 +204,7 @@ const Header = () => {
                           <span className="text-sm font-medium"> Notice </span>
                         </a>
                       </li>}
-                      {user.designation === 'Chief Executive Officer' && <li>
+                      {user?.designation === 'Chief Executive Officer' && <li>
                         <a
                           href=""
                           className="flex items-center gap-2 border-s-[3px] border-transparent px-4 py-3 text-gray-500 hover:border-gray-100 hover:bg-gray-50 hover:text-gray-700"
@@ -222,7 +226,7 @@ const Header = () => {
                           <span className="text-sm font-medium">Upload Notice </span>
                         </a>
                       </li>}
-                      {user.designation === 'Chief Executive Officer' || user.designation === 'Manager' && <li>
+                      {user?.designation === 'Chief Executive Officer' || user?.designation === 'Manager' && <li>
                         <Link to={'job_post'}
                           className="flex items-center gap-2 border-s-[3px] border-transparent px-4 py-3 text-gray-500 hover:border-gray-100 hover:bg-gray-50 hover:text-gray-700"
                         >
@@ -243,7 +247,7 @@ const Header = () => {
                           <span className="text-sm font-medium">Upload Job Post </span>
                         </Link>
                       </li>}
-                      {user.designation !== 'Chief Executive Officer' && <li>
+                      {user?.designation !== 'Chief Executive Officer' && <li>
                         <a
                           href=""
                           className="flex items-center gap-2 border-s-[3px] border-transparent px-4 py-3 text-gray-500 hover:border-gray-100 hover:bg-gray-50 hover:text-gray-700"
@@ -287,7 +291,7 @@ const Header = () => {
                           <span className="text-sm font-medium"> Account </span>
                         </a>
                       </li>
-                      {user.designation === 'Chief Executive Officer' && <li>
+                      {user?.designation === 'Chief Executive Officer' && <li>
                         <a
                           href=""
                           className="flex items-center gap-2 border-s-[3px] border-transparent px-4 py-3 text-gray-500 hover:border-gray-100 hover:bg-gray-50 hover:text-gray-700"
@@ -309,7 +313,7 @@ const Header = () => {
                           <span className="text-sm font-medium"> Task Submission </span>
                         </a>
                       </li>}
-                      {user.designation === 'Chief Executive Officer' && <li>
+                      {user?.designation === 'Chief Executive Officer' && <li>
                         <Link
                           to={"/job_post"}
                           className="flex items-center gap-2 border-s-[3px] border-transparent px-4 py-3 text-gray-500 hover:border-gray-100 hover:bg-gray-50 hover:text-gray-700"
@@ -331,7 +335,7 @@ const Header = () => {
                           <span className="text-sm font-medium"> Job Post </span>
                         </Link>
                       </li>}
-                      {user.designation === 'Chief Executive Officer' && <li>
+                      {user?.designation === 'Chief Executive Officer' && <li>
                         <Link
                           to={"/meeting_management"}
                           className="flex items-center gap-2 border-s-[3px] border-transparent px-4 py-3 text-gray-500 hover:border-gray-100 hover:bg-gray-50 hover:text-gray-700"
@@ -352,7 +356,7 @@ const Header = () => {
                           </svg>
                           <span className="text-sm font-medium"> Meeting  </span>
                         </Link>
-                      </li>}
+                      </li>} */}
                       <li>
                         <button
                           onClick={logOut}
@@ -432,7 +436,7 @@ const Header = () => {
                           <span className="text-sm font-medium"> Issue Submit </span>
                         </a>
                       </li>
-                      {user.designation !== 'Chief Executive Officer' && <li>
+                      {user?.designation !== 'Chief Executive Officer' && <li>
                         <a
                           href=""
                           className="flex items-center gap-2 border-s-[3px] border-transparent px-4 py-3 text-gray-500 hover:border-gray-100 hover:bg-gray-50 hover:text-gray-700"
@@ -454,7 +458,7 @@ const Header = () => {
                           <span className="text-sm font-medium"> Notice </span>
                         </a>
                       </li>}
-                      {user.designation === 'Chief Executive Officer' && <li>
+                      {user?.designation === 'Chief Executive Officer' && <li>
                         <a
                           href=""
                           className="flex items-center gap-2 border-s-[3px] border-transparent px-4 py-3 text-gray-500 hover:border-gray-100 hover:bg-gray-50 hover:text-gray-700"
@@ -476,7 +480,7 @@ const Header = () => {
                           <span className="text-sm font-medium">Upload Notice </span>
                         </a>
                       </li>}
-                      {user.designation !== 'Chief Executive Officer' && <li>
+                      {user?.designation !== 'Chief Executive Officer' && <li>
                         <a
                           href=""
                           className="flex items-center gap-2 border-s-[3px] border-transparent px-4 py-3 text-gray-500 hover:border-gray-100 hover:bg-gray-50 hover:text-gray-700"
@@ -520,7 +524,7 @@ const Header = () => {
                           <span className="text-sm font-medium"> Account </span>
                         </a>
                       </li>
-                      {user.designation === 'Chief Executive Officer' && <li>
+                      {user?.designation === 'Chief Executive Officer' && <li>
                         <a
                           href=""
                           className="flex items-center gap-2 border-s-[3px] border-transparent px-4 py-3 text-gray-500 hover:border-gray-100 hover:bg-gray-50 hover:text-gray-700"

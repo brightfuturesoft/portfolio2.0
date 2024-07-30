@@ -17,7 +17,7 @@ const SignUp = () => {
         const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
-        const designation = form.designation.value;
+        const designation = form?.designation.value;
 
         try {
             const image = await uploadImage(form.img_url.files[0]);

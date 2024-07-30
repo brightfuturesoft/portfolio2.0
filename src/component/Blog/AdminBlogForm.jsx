@@ -1,8 +1,13 @@
-import React, { useState } from 'react';
+import JoditEditor from 'jodit-react';
+import React, { useContext, useState } from 'react';
 import Swal from 'sweetalert2';
+import uploadImage from '../../Hook/ImageUpload';
+import { AuthContext } from '../../context/UseContext/UseContext';
+import { base_url } from '../../layout/Title';
+import { useNavigate } from 'react-router-dom';
 
 const AdminBlogForm = () => {
-
+    const { user } = useContext(AuthContext);
     const [selectedFile, setSelectedFile] = useState(null);
     const [previewUrl, setPreviewUrl] = useState(null);
     const [fileName, setFileName] = useState('');
@@ -22,52 +27,60 @@ const AdminBlogForm = () => {
         }
     };
 
+    const navigate = useNavigate()
 
-    const dataSubmit = (event) => {
+    const dataSubmit = async (event) => {
         setLoading(true)
         event.preventDefault()
         const form = event.target
         const title = form.title.value
         const image = form.photo.files[0]
-        const meta_tag = form.meta.value
+        const meta_tag = title
         const message = form.message.value
-        const formData = new FormData()
-        formData.append('image', image)
-        const url = `https://api.imgbb.com/1/upload?key=67d84a709df3d1fecb8a6529b709dac5`
-        fetch(url, {
-            method: 'POST',
-            body: formData,
-        })
-            .then((res) => res.json())
-            .then((imageData) => {
-                const image = imageData.data.url
-                const blog = {
-                    title,
-                    meta_tag,
-                    message,
-                    img: image,
-                }
-                postBlog(blog, form)
-            })
-    }
+        const photo = await uploadImage(image);
+        const formatTitleToURL = (title) => {
+            return title
+                .toLowerCase()
+                .replace(/\s+/g, '_')
+        };
 
-    const postBlog = (blog, form) => {
-        fetch(`http://localhost:5000/uplod-blog`, {
+        const stripHtmlTags = (html) => {
+            const doc = new DOMParser().parseFromString(html, 'text/html');
+            return doc.body.textContent || '';
+        };
+
+        const plainTextMessage = stripHtmlTags(message);
+
+        const blog = {
+            title,
+            message,
+            meta_tag,
+            meta_description: plainTextMessage,
+            img: photo,
+            url: formatTitleToURL(title),
+            publisher: user,
+            date: new Date().toDateString()
+        }
+
+        fetch(`${base_url}/blog/add-blog`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
+                'author': 'bright_future_soft'
             },
-            body: JSON.stringify(blog),
+            body: JSON.stringify(blog)
         })
-            .then((res) => res.json())
-            .then((data) => {
+            .then(res => res.json())
+            .then(data => {
                 setLoading(false)
-                Swal.fire('Your Blog Publish Successfully', ' ', 'success')
-
-                form.reset()
-                setPreviewUrl('')
-                setFileName('')
+                if (data.success) {
+                    Swal.fire('Meeting Schedule Publish Successfully', ' ', 'success')
+                    form.reset()
+                    navigate('/dashboard/blog-management')
+                }
             })
+
+
     }
 
 
@@ -130,7 +143,7 @@ const AdminBlogForm = () => {
                             {/* Display the file preview */}
 
                         </div>
-                        <div>
+                        {/* <div>
                             <label className="sr-only" htmlFor="title">
                                 Meta tag
                             </label>
@@ -141,9 +154,9 @@ const AdminBlogForm = () => {
                                 type="text"
                                 id="meta"
                             />
-                        </div>
+                        </div> */}
                         <div>
-                            <label className="sr-only" htmlFor="message">
+                            {/* <label className="sr-only" htmlFor="message">
                                 Message
                             </label>
                             <textarea
@@ -153,7 +166,9 @@ const AdminBlogForm = () => {
                                 name='message'
                                 id="message"
 
-                            />
+                            /> */}
+                            <JoditEditor name='message'
+                                id="message" rows={20} className='rounded  h-[510px] t jodit-editor' />
                         </div>
                         <div className="mt-4">
                             <button

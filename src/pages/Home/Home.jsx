@@ -13,6 +13,7 @@ import Contact from '../../component/Contact/Contact/Contact';
 
 import { useEffect } from 'react';
 import Title from '../../layout/Title';
+import News_Letter from '../../component/Testimonials/Testimonials/News_Letter';
 
 const Home = () => {
   useEffect(() => {
@@ -35,6 +36,8 @@ const Home = () => {
       <Team></Team>
       <Testimonial />
       <Contact />
+
+      <News_Letter />
 
     </div>
   );

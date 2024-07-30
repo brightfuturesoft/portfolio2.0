@@ -3,7 +3,7 @@ import { HiArrowLongRight } from "react-icons/hi2";
 import { Link } from "react-router-dom";
 
 const BlogCart = ({ bData }) => {
-    const { _id, title, img, message, meta_tag } = bData;
+    const { _id, title, img, message, meta_tag, meta_description, url } = bData;
     return (
         <div>
             <meta name={meta_tag} content={title} />
@@ -24,10 +24,10 @@ const BlogCart = ({ bData }) => {
                     </Link>
 
                     <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
-                        {message?.slice(0, 100)}
+                        {meta_description?.slice(0, 100)}
                     </p>
 
-                    <Link to={`/blog/${_id}`}
+                    <Link to={`/blog/${url}`}
                         className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-800"
                     >
                         Find out more
