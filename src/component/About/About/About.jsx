@@ -29,6 +29,8 @@ import Lottie from "lottie-react";
 import homeVc from '../../../Assctes/vectors/App Development.json';
 import { Faq } from './Faq';
 import { OurProjects } from '../Projects';
+import MetaTitle from '../../../layout/Title';
+import logo from '../../../Assctes/logo.png';
 
 const About = () => {
   const [swiperRef, setSwiperRef] = useState(null);
@@ -123,7 +125,16 @@ const About = () => {
 
   return (
     <div className='py-4 bg-[#020A1C] p-2 about-bg'>
-      <Title title="About us" />
+      <MetaTitle
+        title="About Us"
+        description="Learn about the team behind Bright Future Soft. Meet our CEO, directors, and other key team members who contribute to our success."
+        keywords="about us, team, CEO, founder, manager, software engineers, UI/UX designer, Bright Future Soft"
+        author="Bright Future Soft"
+        ogTitle="About Us - Bright Future Soft"
+        ogDescription="Discover the key members of the Bright Future Soft team. From our CEO and founder to our dedicated software engineers and designers."
+        ogImage={logo}
+        ogUrl="https://www.brightfuturesoft.com/about"
+      />
       <div className="head px-2 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 md:w-[85%] w-[98%] mx-auto rounded-lg ">
         <div className="md:grid grid-cols-2 md:pt-0 pt-16  mt-2">
           <div className="flex items-center">

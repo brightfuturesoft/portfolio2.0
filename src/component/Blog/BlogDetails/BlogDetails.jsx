@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { base_url } from '../../../layout/Title';
+import { Helmet } from 'react-helmet';
 
 const BlogDetails = () => {
     const [blogList, setBlogList] = useState([])
@@ -18,37 +19,26 @@ const BlogDetails = () => {
 
 
     return (
-        // <div className="bg-[#151520]">
-        //     <div className="px-1 md:py-20 py-20 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-20 lg:px-8 md:w-[80%] w-[95%] grid md:grid-cols-3 gap-3 ">
-        //         <div className="md:col-span-2">
-        //             <img loading="lazy" src={blogInfo?.img} alt="" className="w-full" />
 
-        //             <h1 className="text-white mt-4 md:text-4xl text-2xl">
-        //                 {blogInfo?.title}
-        //             </h1>
-        //             <p className="mt-5 ">
-        //                 {blogInfo?.message}
-        //             </p>
-        //         </div>
-        //         <div classN
-        //             ame="border-l px-2 border-[#8080805f]">
-        //             <h3 className="text-white pb-2 border-b border-[#d8d8d85e]">Another blogs</h3>
-        //             {
-        //                 blogList?.map(blg =>
-        //                     <Link to={`/blog/${blg._id}`} key={blg._id} className="flex items-center gap-2 mt-3 duration-200 hover:bg-[#3c3c4681] p-2 ">
-        //                         <img loading="lazy" src={blg.img} alt="" className="md:w-[110px] w-[110px]" />
-        //                         <div className="">
-        //                             <h4 className="text-white text-sm ">{blg.title}</h4>
-        //                             <small>{blg.message?.slice(0, 47)}</small>
-        //                         </div>
-        //                     </Link>
-        //                 )
-        //             }
-
-        //         </div>
-        //     </div>
-        // </div>
         <section class="py-12 bg-white sm:py-16 lg:py-28">
+            <Helmet>
+                <title>{blogInfo?.title} | Bright Future Soft</title>
+                <meta name="description" content={blogInfo?.meta_description} />
+
+                {/* Open Graph (OG) tags for Facebook and other platforms */}
+                <meta property="og:title" content={blogInfo?.title} />
+                <meta property="og:description" content={blogInfo?.meta_description} />
+                <meta property="og:image" content={blogInfo?.img} />
+                <meta property="og:url" content={window.location.href} />
+                <meta property="og:type" content="article" />
+
+                {/* Twitter Card tags */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content={blogInfo?.title} />
+                <meta name="twitter:description" content={blogInfo?.meta_description} />
+                <meta name="twitter:image" content={blogInfo?.img} />
+            </Helmet>
+
             <div class="px-4  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl  lg:px-8">
                 <div class=" mx-auto">
                     <div class="max-w-2xl">

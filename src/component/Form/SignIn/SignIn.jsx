@@ -3,6 +3,7 @@ import { AuthContext } from '../../../context/UseContext/UseContext';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import Logo from '../../../Assctes/Logo_white.png';
+import { base_url } from '../../../layout/Title';
 
 const SignIn = () => {
 
@@ -28,7 +29,7 @@ const SignIn = () => {
 
         if (terms) {
 
-            fetch('http://localhost:5010/api/v1/auth/sign-in', {
+            fetch(`${base_url}/auth/sign-in`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

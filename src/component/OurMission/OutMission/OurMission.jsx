@@ -55,9 +55,9 @@ const OurMission = () => {
                         </p>
                         <ul className="grid md:grid-cols-2 grid-cols-1 mt-5 gap-3 ">
                             {
-                                missionData.map(mData => <li onClick={() => setDes(mData.des)} className="flex items-center  gap-2 duration-200 cursor-pointer hover:bg-[#22283db1] p-2 rounded" key={mData.id}>
-                                    <span className="border border-blue-600 rounded-md">
-                                        <img loading="lazy" src={mData.img} alt="" className="w-[55px]" />
+                                missionData.map(mData => <li onClick={() => setDes(mData.des)} className="flex items-center w-full gap-2 duration-200 cursor-pointer hover:bg-[#22283db1] p-2 rounded" key={mData.id}>
+                                    <span className="border  border-blue-600 rounded-md">
+                                        <img loading="lazy" src={mData.img} alt="" className="w-[55px] h-[55px]" />
                                     </span>
                                     <p className='text-[#acacac]'>{mData.title}</p>
                                 </li>)
@@ -74,8 +74,8 @@ const OurMission = () => {
                             <ul className="grid md:grid-cols-2 grid-cols-1 mt-5 gap-3 ">
                                 {
                                     missionData.map(mData => <li className="flex items-center  gap-2" key={mData.id}>
-                                        <span className="border border-blue-600 rounded-md">
-                                            <img loading="lazy" src={mData.img} alt="" className="w-[35px]" />
+                                        <span className="border w-[55px] h-[55px] border-blue-600 rounded-md">
+                                            <img loading="lazy" src={mData.img} alt="" className="w-[55px] h-[55px] " />
                                         </span>
                                         <p>{mData.title}</p>
                                     </li>)

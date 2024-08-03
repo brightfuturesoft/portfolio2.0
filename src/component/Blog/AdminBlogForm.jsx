@@ -45,7 +45,19 @@ const AdminBlogForm = () => {
         };
 
         const stripHtmlTags = (html) => {
+            // Create a new DOM parser
             const doc = new DOMParser().parseFromString(html, 'text/html');
+
+            // Remove unwanted elements (style, title, etc.)
+            const unwantedTags = ['style', 'title'];
+            unwantedTags.forEach(tag => {
+                const elements = doc.getElementsByTagName(tag);
+                while (elements.length) {
+                    elements[0].parentNode.removeChild(elements[0]);
+                }
+            });
+
+            // Get plain text from the document body
             return doc.body.textContent || '';
         };
 
@@ -96,7 +108,7 @@ const AdminBlogForm = () => {
                                 Title
                             </label>
                             <input required
-                                className="w-full rounded-lg border-gray-200 p-3 text-sm"
+                                className="w-full rounded-lg  border-gray-200 p-3 text-sm"
                                 placeholder="Title"
                                 type="text"
                                 id="title"

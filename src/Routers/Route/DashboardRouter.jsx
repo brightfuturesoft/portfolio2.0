@@ -5,14 +5,18 @@ import TaskReport from "../../pages/Dashboard/Dashboard/Chart";
 import BlogManagement from "../../pages/Eployee/Blog_Management/BlogManagement";
 import Issue from "../../pages/Eployee/Issue/AddNewIssue";
 import IssueList from "../../pages/Eployee/Issue/IsueList";
+import Apply_List from "../../pages/Eployee/JobPost/ApplyList";
+import JobManagement from "../../pages/Eployee/JobPost/JobManagement";
 import JobPost from "../../pages/Eployee/JobPost/JobPost";
 import Add_Meting from "../../pages/Eployee/Meeting/Add_Metting";
 import MeetingManagement from "../../pages/Eployee/Meeting/MeetingManagement";
 import Notice from "../../pages/Eployee/Notice/Notice";
 import Notice_list from "../../pages/Eployee/Notice/Notice_list";
 import Notice_View from "../../pages/Eployee/Notice/Notice_View";
+import AddProject from "../../pages/Eployee/Project/AddProject";
+import ProjectManagement from "../../pages/Eployee/Project/ProjectManagement";
 import Task from "../../pages/Eployee/Task/Task";
-import UploadNotice from "../../pages/Eployee/UplodNotice/UploadNotice";
+// import UploadNotice from "../../pages/Eployee/UplodNotice/UploadNotice";
 
 
 export const dashboardRouter = [
@@ -66,12 +70,28 @@ export const dashboardRouter = [
         element: <AdminBlogForm />
     },
     {
+        path: "project-management",
+        element: <ProjectManagement />
+    },
+    {
+        path: "project-management/new",
+        element: <AddProject />
+    },
+    {
         path: "your-task",
         element: <Task />
     },
     {
-        path: "job_post",
+        path: "job-management",
+        element: <JobManagement />
+    },
+    {
+        path: "job-management/new",
         element: <JobPost />
+    },
+    {
+        path: "job-management/apply_list",
+        element: <Apply_List />
     },
 
 ]

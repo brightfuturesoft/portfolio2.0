@@ -1,39 +1,48 @@
 export const OurProjects = () => {
   return (
-    <div className="mb-16">
-      <div >
-        <h1 className="text-5xl text-center font-bold text-white mb-7">Our Workflow</h1>
-      </div>
-      <div className="relative px-4 sm:px-0">
-        <div className="absolute inset-0 h-1/2" />
-        <div className="relative grid mx-auto overflow-hidden  divide-y rounded shadow sm:divide-y-0 sm:divide-x sm:max-w-screen-sm sm:grid-cols-3 lg:max-w-screen-md">
-          <div className="inline-block p-8 text-center">
-            <div className="flex items-center justify-center text-purple-600 font-semibold w-12 h-12 mx-auto mb-4 rounded-full bg-indigo-50">
-              23
-            </div>
-            <p className="font-bold tracking-wide ">
-              Complete Projects
-            </p>
-          </div>
-          <div className="inline-block p-8 text-center">
-            <div className="flex items-center text-purple-600 font-semibold justify-center w-12 h-12 mx-auto mb-4 rounded-full bg-indigo-50">
+    <section class="py-12  sm:py-16 lg:py-16 xl:py-16">
+      <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="max-w-xl mx-auto text-center">
+          <h2 class="text-3xl font-semibold tracking-tight text-gray-100 sm:text-4xl lg:text-5xl">Our achievements</h2>
+          {/* <p class="mt-4 text-base font-normal leading-7 text-gray-300 lg:text-lg lg:mt-6 lg:leading-8">Clarity gives you the blocks & components you need to create a truly professional website for your SaaS and gives the blocks.</p>
+        </div> */}
+        </div>
 
-              2
-            </div>
-            <p className="font-bold tracking-wide ">
-              Doing Projects
-            </p>
+        <div class="relative max-w-2xl mx-auto mt-12 overflow-hidden bg-blue-600 sm:mt-16 lg:max-w-3xl xl:max-w-none rounded-2xl">
+          <div class="absolute top-0 left-0 -translate-x-2/3 -translate-y-[75%]">
+            <div class="border-[8px] border-white rounded-full w-80 h-80 opacity-20 lg:opacity-100"></div>
           </div>
-          <div className="inline-block p-8 text-center">
-            <div className="flex items-center justify-center  text-purple-600 font-semibold w-12 h-12 mx-auto mb-4 rounded-full bg-indigo-50">
-              2
+
+          <div class="absolute bottom-0 right-0 translate-x-1/3 translate-y-[85%]">
+            <div class="border-[8px] border-white rounded-full w-80 h-80 opacity-20 lg:opacity-100"></div>
+          </div>
+
+          <div class="relative px-8 py-12 lg:px-12 lg:py-16 xl:py-20">
+            <div class="grid grid-cols-1 gap-8 md:first-letter:gap-12 xl:gap-8 sm:grid-cols-2 xl:grid-cols-4">
+              <div class="flex items-center">
+                <p class="w-24 text-5xl font-semibold tracking-tight text-white xl:w-auto shrink-0">48</p>
+                <h3 class="ml-5 text-base font-normal leading-tight w-28 text-blue-200">Satisfied Global Clients</h3>
+              </div>
+
+              <div class="flex items-center">
+                <p class="w-24 text-5xl font-semibold tracking-tight text-white xl:w-auto shrink-0">78</p>
+                <h3 class="ml-5 text-base font-normal leading-tight w-20 text-blue-200">Doing Projects</h3>
+              </div>
+
+              <div class="flex items-center">
+                <p class="w-24 text-5xl font-semibold tracking-tight text-white xl:w-auto shrink-0">2</p>
+                <h3 class="ml-5 text-base font-normal leading-tight w-28 text-blue-200">Testing Projects</h3>
+              </div>
+
+              <div class="flex items-center">
+                <p class="w-24 text-5xl font-semibold tracking-tight text-white xl:w-auto shrink-0">15</p>
+                <h3 class="ml-5 text-base font-normal leading-tight w-28 text-blue-200"> Complete Projects</h3>
+              </div>
             </div>
-            <p className="font-bold tracking-wide ">
-              Testing Projects
-            </p>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
   );
 };

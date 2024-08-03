@@ -207,13 +207,13 @@ const IssueList = () => {
                                         <tbody>
                                             {
                                                 issue_data.map((issue) => (
-                                                    <tr key={issue.issue_number} className="border border-gray-400 border-opacity-40">
+                                                    <tr key={issue?.issue_number} className="border border-gray-400 border-opacity-40">
 
 
                                                         <td className=" px-4 py-4 text-sm font-medium text-gray-50 table-cell whitespace-nowrap">
                                                             <div className="flex items-center">
 
-                                                                # {issue.issue_number}
+                                                                # {issue?.issue_number}
                                                             </div>
                                                         </td>
 
@@ -226,7 +226,7 @@ const IssueList = () => {
                                                         </td>
                                                         <td className="px-4 py-4 text-sm font-medium text-right text-gray-50 align-top lg:align-middle lg:text-left whitespace-nowrap"> <div title={issue.subject} className="flex items-center ">
 
-                                                            {issue.subject.split(' ').slice(0, 5).join(" ")}
+                                                            {issue?.subject?.split(' ')?.slice(0, 5)?.join(" ")}
                                                         </div></td>
 
                                                         <td className=" px-4 py-4 text-sm font-medium text-gray-50 table-cell whitespace-nowrap">
@@ -235,7 +235,7 @@ const IssueList = () => {
                                                                     <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                                                 </svg>
 
-                                                                {new Date(issue.issue_date).toLocaleDateString(undefined, { day: 'numeric', month: 'long' })}
+                                                                {new Date(issue?.issue_date).toLocaleDateString(undefined, { day: 'numeric', month: 'long' })}
                                                             </div>
                                                         </td>
 
@@ -245,7 +245,7 @@ const IssueList = () => {
                                                                 <circle cx="4" cy="4" r="3" />
                                                             </svg>
                                                             Pending
-                                                        </span> || issue.status === 'approved' && <span span class="text-xs font-medium text-green-900 bg-green-100 rounded-full inline-flex items-center px-2.5 py-1" >
+                                                        </span> || issue?.status === 'approved' && <span span class="text-xs font-medium text-green-900 bg-green-100 rounded-full inline-flex items-center px-2.5 py-1" >
                                                             <svg class="-ml-1 mr-1.5 h-2.5 w-2.5 text-green-400" fill="currentColor" viewBox="0 0 8 8">
                                                                 <circle cx="4" cy="4" r="3" />
                                                             </svg>

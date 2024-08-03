@@ -37,6 +37,7 @@ import { dashboardRouter } from './DashboardRouter';
 import ForgetPass from '../../component/Form/Password/ForgetPass';
 import ResetPassword from '../../component/Form/Password/ResetPassword';
 import { base_url } from '../../layout/Title';
+import ViewDetails from '../../component/Jobs/ViewDitals';
 
 export const route = createBrowserRouter([
    {
@@ -80,6 +81,10 @@ export const route = createBrowserRouter([
             element: <Job />
          },
          {
+            path: "/careers/:id",
+            element: <ViewDetails />
+         },
+         {
             path: "/contract",
             element: <MainContract />
          },
@@ -110,14 +115,14 @@ export const route = createBrowserRouter([
             path: "/all_project",
             element: <AllProject />,
             loader: async () => {
-               return fetch('https://portfolio-backed.vercel.app/projects')
+               return fetch(`${base_url}/project/get-project`)
             }
          },
          {
             path: "/all_project/:id",
             element: <AllProject />,
             loader: async (params) => {
-               return fetch(`https://portfolio-backend-one-kappa.vercel.app/allProject/${params.id}`)
+               return fetch(`${base_url}/project//get-project-by-id?project_id=${params}`)
             }
          },
          {
@@ -139,8 +144,7 @@ export const route = createBrowserRouter([
          },
          {
             path: "/sign_up",
-            // element: <AdminRoute><SignUp /></AdminRoute>
-            element: <SignUp />
+            element: <AdminRoute><SignUp /></AdminRoute>
          },
          {
             path: 'forget-password',
@@ -151,26 +155,7 @@ export const route = createBrowserRouter([
             element: <ResetPassword />
          }
 
-         // {
-         //    path: "employee_issue",
-         //    element: <PrivetRoute><Issue></Issue></PrivetRoute>
-         // },
-         // {
-         //    path: "job_post",
-         //    element: <AdminRoute><JobPost></JobPost></AdminRoute>
-         // },
-         // {
-         //    path: "upload_notice",
-         //    element: <AdminRoute><UplodNotice></UplodNotice></AdminRoute>
-         // },
-         // {
-         //    path: "project_list",
-         //    element: <AdminRoute><ProjectList></ProjectList></AdminRoute>
-         // },
-         // {
-         //    path: "meeting_management",
-         //    element: <AdminRoute><Add_Meting></Add_Meting></AdminRoute>
-         // }
+
 
       ]
    },

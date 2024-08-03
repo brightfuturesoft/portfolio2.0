@@ -1,6 +1,7 @@
 import JoditEditor from 'jodit-react';
 import React from 'react';
 import Swal from 'sweetalert2';
+import { base_url } from '../../../layout/Title';
 
 const JobPost = () => {
 
@@ -10,17 +11,20 @@ const JobPost = () => {
         const job_position = form.job_position.value
         const job_type = form.job_type.value
         const workplace = form.workplace.value
-        const link = form.link.value
+        const vacancy = form.vacancy.value
         const description = form.description.value
+        const last_date = form.last_date.value
         const jobData = {
             job_position,
             job_type,
             workplace,
-            link,
-            description
+            vacancy,
+            description,
+            dateline: last_date
+
         }
 
-        fetch(`http://localhost:5010/api/v1/job-post/add-job`, {
+        fetch(`${base_url}/job-post/add-job`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -44,7 +48,8 @@ const JobPost = () => {
                 <input className='w-full my-2 rounded' name='job_position' placeholder='Job Position' type="text" />
                 <input className='w-full my-2 rounded' name='job_type' placeholder='Job type' type="text" />
                 <input className='w-full my-2 rounded' name='workplace' placeholder='Workplace type' type="text" />
-                <input className='w-full my-2 rounded' name='link' placeholder='Link' type="text" />
+                <input className='w-full my-2 rounded' name='vacancy' placeholder='Vacancy' type="text" />
+                <input className='w-full my-2 rounded' name='last_date' placeholder='last_date' type="date" />
                 <JoditEditor name='description' className='rounded  jodit-editor' />
                 <br />
                 <br />

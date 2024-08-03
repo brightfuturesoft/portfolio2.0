@@ -14,6 +14,8 @@ import crm from '../../../Assctes/vectors/CRM.gif';
 
 import ServiceCart from '../../ServiceCart/ServiceCart';
 import Contact from '../../Contact/Contact/Contact';
+import MetaTitle from '../../../layout/Title';
+import moduleName from '../../../Assctes/logo.png';
 const ServicePage = () => {
 
     const serviceInfo = [
@@ -106,7 +108,16 @@ const ServicePage = () => {
     return (
         <div className='service-bg py-16'>
             <div className="px-4 py-20 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-5 md:w-[80%] w-[95%]">
-                {/* <Title title="service" /> */}
+                <MetaTitle
+                    title="Service"
+                    description="Explore our range of services designed to help you achieve your goals. From UI/UX design to custom software development, find the solutions you need."
+                    keywords="services, UI/UX design, web development, app development, IT consulting, data analytics, DevOps, e-commerce, ERP systems, CRM solutions"
+                    author="Bright Future Soft"
+                    ogTitle="Our Services"
+                    ogDescription="Discover the services we offer at Bright Future Soft. We provide comprehensive solutions including web development, app development, and more."
+                    ogImage={moduleName}
+                    ogUrl="https://www.brightfuturesoft.com/service"
+                />
                 <h1 className="text-xl  font-bold relative after:absolute after:left-0 after:right-0 after:bottom-[-18px] after:w-[60px] after:rounded-full after:h-[6px] after:bg-[#0095ff] after:mx-auto text-center text-white">Services We  <span className="shadow-tx">Provide</span></h1>
                 <div className="grid md:grid-cols-3 gap-8 mt-16 p-3 mx-auto">
                     {

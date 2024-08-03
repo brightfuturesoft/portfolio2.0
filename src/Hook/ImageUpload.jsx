@@ -1,13 +1,14 @@
 // useImageUpload.js
 
 import Swal from "sweetalert2";
+import { base_url } from "../layout/Title";
 
 const uploadImage = async (file) => {
     try {
 
         const formData = new FormData();
         formData.append('image', file);
-        const url = `http://localhost:5010/api/v1/image/upload-image`;
+        const url = `${base_url}/image/upload-image`;
         const response = await fetch(url, {
             method: "POST",
             body: formData,

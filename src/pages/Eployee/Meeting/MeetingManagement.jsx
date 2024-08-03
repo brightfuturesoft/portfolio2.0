@@ -193,7 +193,7 @@ const MeetingManagement = () => {
                             <div class="divide-y divide-gray-200overflow-x-scroll  scrollbar-auto">
                                 {
                                     meting_data?.map((meting) => {
-                                        const dateTime = new Date(meting.date);
+                                        const dateTime = new Date(meting?.date);
                                         const formattedDate = dateTime.toLocaleDateString('en-US', {
                                             weekday: 'long',
                                             year: 'numeric',
@@ -212,23 +212,23 @@ const MeetingManagement = () => {
                                             <div key={meting._id} class="grid grid-cols-3 py-4 gap-y-4 lg:gap-0 lg:grid-cols-6">
 
                                                 <div class="px-4 lg:py-4 sm:px-6 lg:col-span-2">
-                                                    <p class="text-sm font-bold text-gray-100">{meting.title}</p>
-                                                    <p class="mt-1 text-sm font-medium text-gray-500">{meting.agenda}</p>
+                                                    <p class="text-sm font-bold text-gray-100">{meting?.title}</p>
+                                                    <p class="mt-1 text-sm font-medium text-gray-500">{meting?.agenda}</p>
                                                 </div>
 
                                                 <div class="col-span-2 capitalize px-4 lg:py-4 sm:px-6 lg:col-span-1">
-                                                    <span class={`text-xs font-medium text-green-900  rounded-full inline-flex items-center px-2.5 py-1  ${meting.status === 'pending' && 'bg-yellow-100' || meting.status === 'process' && 'bg-green-100' || meting.status === 'end' && 'bg-red-100'}`}>
-                                                        <svg class={`-ml-1 mr-1.5 h-2.5 w-2.5 ${meting.status === 'pending' && 'text-yellow-300' || meting.status === 'end' && 'text-red-500' || meting.status === 'process' && 'text-green-500'} `} fill="currentColor" viewBox="0 0 8 8">
+                                                    <span class={`text-xs font-medium text-green-900  rounded-full inline-flex items-center px-2.5 py-1  ${meting?.status === 'pending' && 'bg-yellow-100' || meting?.status === 'process' && 'bg-green-100' || meting?.status === 'end' && 'bg-red-100'}`}>
+                                                        <svg class={`-ml-1 mr-1.5 h-2.5 w-2.5 ${meting?.status === 'pending' && 'text-yellow-300' || meting?.status === 'end' && 'text-red-500' || meting?.status === 'process' && 'text-green-500'} `} fill="currentColor" viewBox="0 0 8 8">
                                                             <circle cx="4" cy="4" r="3" />
                                                         </svg>
-                                                        {meting.status}
+                                                        {meting?.status}
                                                     </span>
                                                 </div>
 
                                                 <div class="px-4 lg:py-4 sm:px-6">
                                                     <p class="text-sm font-bold text-gray-100 flex items-center gap-1">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class=''><line x1="10" x2="14" y1="2" y2="2" /><line x1="12" x2="15" y1="14" y2="11" /><circle cx="12" cy="14" r="8" /></svg>
-                                                        {meting.duration}
+                                                        {meting?.duration}
                                                     </p>
                                                     <p class="mt-1 text-sm font-medium text-gray-300 flex items-start gap-1">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar"><path d="M8 2v4" /><path d="M16 2v4" /><rect width="18" height="18" x="3" y="4" rx="2" /><path d="M3 10h18" /></svg>
@@ -254,8 +254,8 @@ const MeetingManagement = () => {
 
                                                 {(user?.designation === 'Chief Executive Officer' || user?.designation === 'manager') ? <div className=''>
                                                     <div className="flex gap-3 items-center  ">
-                                                        {meting.selectedUsers.filter((meting_user) => meting_user.email == user.email) && <a
-                                                            href={meting.link}
+                                                        { <a
+                                                            href={meting?.link}
                                                             target='_blank'
                                                             type="button"
                                                             className="inline-flex whitespace-nowrap items-center justify-center px-6 py-3 text-sm font-semibold leading-5 text-white transition-all duration-200 bg-indigo-600 border border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 hover:bg-indigo-500"
@@ -289,9 +289,9 @@ const MeetingManagement = () => {
 
                                                 </div> :
                                                     <div className=''>
-                                                        {meting.selectedUsers.filter((meting_user) => meting_user.email == user.email).length ? <div className="flex gap-3  ">
+                                                        {meting?.selectedUsers?.filter((meting_user) => meting_user?.email == user?.email).length ? <div className="flex gap-3  ">
                                                             <a
-                                                                href={meting.link}
+                                                                href={meting?.link}
                                                                 target='_blank'
                                                                 type="button"
                                                                 className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold leading-5 text-white transition-all duration-200 bg-indigo-600 border border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 hover:bg-indigo-500"
