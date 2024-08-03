@@ -1,12 +1,14 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { HiArrowLongRight } from "react-icons/hi2";
 import { Link } from "react-router-dom";
 
 const BlogCart = ({ bData }) => {
-    const { _id, title, img, message, meta_tag, meta_description, url } = bData;
+    const { _id, title, img, blur_photo, message, meta_tag, meta_description, url } = bData;
     return (
         <div>
-            <meta name={meta_tag} content={title} />
+
+
             <article
                 className="overflow-hidden rounded-lg border border-transparent bg-white shadow-sm"
             >

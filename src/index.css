@@ -110,3 +110,13 @@ code {
 .scrollbar-auto:hover::-webkit-scrollbar {
   display: block;
 }
+
+.custom-article {
+  color: white !important;
+  /* Ensures text color is white */
+}
+
+.custom-article * {
+  color: white !important;
+  /* Ensures all inner elements' text color is white */
+}

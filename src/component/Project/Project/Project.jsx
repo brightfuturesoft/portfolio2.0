@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Card from '../Cards/Card';
-import Title from '../../../layout/Title';
+import Title, { base_url } from '../../../layout/Title';
 
 const Project = () => {
     const [project, setProject] = useState([]);
     useEffect(() => {
-        fetch('https://portfolio-backed.vercel.app/projects')
+        fetch(`${base_url}/project/get-project`)
             .then(res => res.json())
-            .then(data => setProject(data))
+            .then(data => setProject(data.data))
     }, [])
     const stickyTopSpace = 50;
 

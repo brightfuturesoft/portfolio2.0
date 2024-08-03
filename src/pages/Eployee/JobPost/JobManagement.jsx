@@ -6,13 +6,13 @@ import { useQuery } from '@tanstack/react-query';
 import { base_url } from '../../../layout/Title';
 import { Link } from 'react-router-dom';
 
-const BlogManagement = () => {
+const JobManagement = () => {
 
-    const { data: blog_data = [], refetch, isLoading } = useQuery({
-        queryKey: ["blog_data"],
+    const { data: job_data = [], refetch, isLoading } = useQuery({
+        queryKey: ["job_data"],
         queryFn: async () => {
             const res = await fetch(
-                `${base_url}/blog/get-blog`,
+                `${base_url}/job-post/all-job`,
                 {
                     headers: {
                         'content-type': 'application/json',
@@ -26,6 +26,10 @@ const BlogManagement = () => {
         },
     });
 
+    console.log(job_data);
+
+
+
     const [deleteId, setDeletId] = useState("");
     const [deletePopUp, setDeletePopUp] = useState(false);
     const [isDelete, setIsDelete] = useState(false);
@@ -36,7 +40,7 @@ const BlogManagement = () => {
     };
 
     if (isDelete) {
-        fetch(`${base_url}/blog/delete-blog?blog_id=${deleteId}`, {
+        fetch(`${base_url}/job-post/delete-job?job_post_id=${deleteId}`, {
             headers: {
                 'content-type': 'application/json',
                 'author': 'bright_future_soft'
@@ -57,18 +61,38 @@ const BlogManagement = () => {
 
     }
 
-    const [imageLoaded, setImageLoaded] = useState(false);
+
+    const stripHtmlTags = (html) => {
+        // Create a new DOM parser
+        const doc = new DOMParser().parseFromString(html, 'text/html');
+        const unwantedTags = ['style', 'title'];
+        unwantedTags.forEach(tag => {
+            const elements = doc.getElementsByTagName(tag);
+            while (elements.length) {
+                elements[0].parentNode.removeChild(elements[0]);
+            }
+        });
+
+        // Get plain text from the document body
+        return doc.body.textContent || '';
+    };
+
+    // Example usage in JSX
+    // const descriptionText = ;
+    // const truncatedText = descriptionText.split(' ').slice(0, 10).join(' ');
+
+
     return (
         <div>
             <div class="py-12  sm:py-16 lg:py-20">
                 <div class="px-4  sm:px-6 lg:px-8">
-                    <Link_Button name={'Add New Blog'} url={'/dashboard/blog-management/new'} />
+                    <Link_Button name={'Add New Job Post'} url={'/dashboard/job-management/new'} />
                     <div class=" ">
                         <div class="overflow-hidden rounded-xl">
                             <div class="py-6">
                                 <div class="sm:flex sm:items-start sm:justify-between">
                                     <div>
-                                        <p class="text-lg font-bold text-gray-100">Meeting Management</p>
+                                        <p class="text-lg font-bold text-gray-100">Job Post Management</p>
                                         <p class="mt-1 text-sm font-medium text-gray-500">Here is all meeting information</p>
                                     </div>
 
@@ -84,24 +108,34 @@ const BlogManagement = () => {
                                     setIsDelete={setIsDelete}
                                 />
                             </div>
-
+                            {/* job_position,
+                            job_type,
+                            workplace,
+                            vacancy,
+                            description */}
 
 
                             <div class="flow-root mt-8">
                                 <div class="-my-5 divide-y divide-gray-200">
-                                    {blog_data?.map((blog) => (
-                                        <div class="py-5">
+                                    {job_data?.map((job) => (
+                                        <div key={job._id} class="py-5">
                                             <div class="sm:flex sm:items-center sm:justify-between sm:space-x-5">
                                                 <div class="flex items-center flex-1 min-w-0">
-                                                    <img class="flex-shrink-0 object-cover w-10 h-10 rounded" src={blog.img} alt="" />
-                                                    <div class="flex-1 min-w-0 ml-4">
-                                                        <p class="text-sm font-bold text-gray-100 truncate ">{blog.title}</p>
-                                                        <p class="mt-1 text-sm font-medium text-gray-500 truncate">{blog.meta_description.split(' ').slice(0, 10).join(' ')}</p>
-                                                    </div>
+                                                    <p class="text-sm font-bold text-gray-100 truncate ">{job?.job_position}</p>
+
+
+                                                </div>
+                                                <div class="flex-1 min-w-0 ml-4 ">
+                                                    <p className="text-sm font-bold text-gray-100 truncate">{job?.workplace}</p>
+                                                    <p class="mt-1 text-sm font-medium text-gray-500 truncate">{job?.vacancy}</p>
+                                                </div>
+                                                <div class="flex-1 min-w-0 ml-4 ">
+                                                    <p class="text-sm font-bold text-gray-100 truncate ">{job?.job_type}</p>
+                                                    <p className="mt-1 text-sm font-medium text-gray-500 truncate">Apply: {job.application_count ?? 0}</p>
                                                 </div>
 
                                                 <div class="flex items-center justify-between mt-4 sm:space-x-6 pl-14 sm:pl-0 sm:justify-end sm:mt-0">
-                                                    <Link to={`/blog/${blog.url}`} target='_blank' title="" class="text-sm font-medium text-gray-400 transition-all duration-200 hover:text-gray-500"> Learn More </Link>
+                                                    <Link to={`/dashboard/job-management/apply_list?job_post_id=${job._id}`} title="" class="text-sm font-medium text-gray-400 transition-all duration-200 hover:text-gray-500"> Learn More </Link>
 
                                                     <div className=''>
                                                         <div className="flex gap-3 items-center  ">
@@ -116,7 +150,7 @@ const BlogManagement = () => {
                                                             </a>
 
                                                             <button
-                                                                onClick={() => delete_meeting(blog._id)}
+                                                                onClick={() => delete_meeting(job._id)}
                                                                 type="button"
                                                                 className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold leading-5 text-white transition-all duration-200 bg-red-500 border border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 hover:bg-red-700"
                                                             >
@@ -142,8 +176,9 @@ const BlogManagement = () => {
 
                 </div>
             </div>
-        </div >
+        </div>
     );
 };
 
-export default BlogManagement;
+
+export default JobManagement;

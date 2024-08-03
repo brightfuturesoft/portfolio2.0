@@ -7,13 +7,14 @@ import { AuthContext } from '../../../context/UseContext/UseContext';
 import JoditEditor from 'jodit-react';
 import Swal from 'sweetalert2';
 import Link_Button from '../../shared/Link_Button';
+import { base_url } from '../../../layout/Title';
 
 const AddNewIssue = () => {
     const [loading, setLoading] = useState(false);
     const [activeMdl, setActiveMdl] = useState(false);
 
 
-    
+
 
 
     const { user } = useContext(AuthContext)
@@ -34,7 +35,7 @@ const AddNewIssue = () => {
 
 
 
-        fetch('http://localhost:5010/api/v1/issue/add-issue', {
+        fetch(`${base_url}/issue/add-issue`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

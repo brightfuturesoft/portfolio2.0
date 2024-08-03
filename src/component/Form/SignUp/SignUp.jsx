@@ -4,6 +4,7 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { FiAlertCircle } from "react-icons/fi";
 import Swal from 'sweetalert2';
 import uploadImage from '../../../Hook/ImageUpload';
+import { base_url } from '../../../layout/Title';
 const SignUp = () => {
     const navigate = useNavigate();
     const location = useLocation();
@@ -32,7 +33,7 @@ const SignUp = () => {
 
 
 
-            const response = await fetch('http://localhost:5010/api/v1/auth/sign-up', {
+            const response = await fetch(`${base_url}/auth/sign-up`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
