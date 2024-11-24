@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 import Footer from '../shared/Footer/Footer';
 import Header from '../shared/Header/Header';
 import CopyrightBar from '../shared/CopyrightBar/CopyrightBar';
-import MessengerCustomerChat from 'react-messenger-customer-chat';
+// import MessengerCustomerChat from 'react-messenger-customer-chat';
 import whatsapp from '../../Assctes/whatsapp-svgrepo-com.svg';
 
 const Main = () => {
