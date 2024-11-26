@@ -93,15 +93,7 @@ const Header = () => {
                                           </NavLink>
                                     </li>
 
-                                    {/* <li>
-              <Link to="/joinUs"
-                className="inline-flex bg-[#418CD2] items-center justify-center py-2 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                aria-label="Sign up"
-                title="Sign up"
-              >
-                Join us
-              </Link>
-            </li> */}
+
                                     {!user && <li>
                                           <a
                                                 className="inline-flex items-center justify-center group relative  overflow-hidden border border-[#418CD2] px-8 py-2 focus:outline-none focus:ring"
@@ -374,7 +366,7 @@ const Header = () => {
                                           </li>
                                     }
                               </ul>
-                              <div className="lg:hidden flex items-center gap-3">
+                              <div className="lg:hidden md:flex items-center gap-3">
                                     {
                                           user && <div className="cursor-pointer">
                                                 <div className="dropdown dropdown-end cursor-pointer">
@@ -561,7 +553,7 @@ const Header = () => {
                               </div>
                         </div>
                   </div>
-                  <div className={`${isMenuOpen ? 's-open' : 's-close'} bg-[#14143f] text-start md:hidden block`}>
+                  <div className={`${isMenuOpen ? 's-open' : 's-close'} bg-[#14143f] text-start lg:hidden block`}>
                         <ul className="p-2 text-center">
 
                               <li onClick={() => setIsMenuOpen(!isMenuOpen)} className="font-medium justify-center  mt-300 h-[40px] flex items-center rounded overflow-hidden px-2 racking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 relative ">

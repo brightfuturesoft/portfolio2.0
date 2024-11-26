@@ -1,14 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [
-    require("daisyui"),
-    require('flowbite/plugin')
-  
-  ],
+      content: [
+            "./src/**/*.{js,jsx,ts,tsx}",
+      ],
+      theme: {
+            extend: {},
+      },
+      plugins: [
+            require("daisyui"),
+            require('flowbite/plugin')
+
+      ],
+      safelist: [
+            'message-of-doc', // Safelist the class to prevent purging
+      ],
 }

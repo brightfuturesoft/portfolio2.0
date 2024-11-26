@@ -78,21 +78,3 @@ const ProjectDetails = () => {
 
 export default ProjectDetails;
 
-
-{/* <article
-                                className='mt-12 prose lg:mt-0  custom-article lg:prose-lg lg:col-span-8'
-                                dangerouslySetInnerHTML={{
-                                    __html: project?.description || '',
-                                }}
-                            ></article>
-
-                            <aside class="lg:col-span-4 lg:order-last lg:self-start lg:sticky lg:top-8">
-                                <div class="overflow-hidden bg-white border border-gray-200">
-                                    <div class="px-4 py-5 sm:p-6">
-                                        <h4 class="text-xs font-bold tracking-widest text-gray-400 uppercase">On this page</h4>
-
-
-                                       
-                                    </div>
-                                </div>
-                            </aside> */}

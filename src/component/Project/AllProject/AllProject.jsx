@@ -92,7 +92,7 @@ const AllProject = () => {
                                           <button onClick={() => setSearchValue("website")} className={`duration-200 capitalize hover:text-blue-500 ${searchValue == 'website' && 'text-blue-500'}`}>website</button>
                                     </li>
                                     <li>
-                                          <button onClick={() => setSearchValue("app")} className={`duration-200 capitalize hover:text-blue-500 ${searchValue == 'app' && 'text-blue-500'}`}>app</button>
+                                          <button onClick={() => setSearchValue("app")} className={`duration-200 capitalize hover:text-blue-500 ${searchValue == 'app' && 'text-blue-500'}`}>Software</button>
                                     </li>
                                     <li>
                                           <button onClick={() => setSearchValue("uiDesign")} className={`duration-200 capitalize hover:text-blue-500 ${searchValue == 'uiDesign' && 'text-blue-500'}`}>UI/UX design</button>
