@@ -7,7 +7,7 @@ import bootstrap from '../../../Assctes/icon/Bootstrap.png'
 import metarial from '../../../Assctes/icon/Material UI.png'
 import typescript from '../../../Assctes/icon/TypeScript.png'
 import react from '../../../Assctes/icon/React.png'
-import redux from '../../../Assctes/icon/Redux.png'
+import redux from '../../../Assctes/icon/redux.png'
 import js from '../../../Assctes/icon/JavaScript.png'
 import nextJs from '../../../Assctes/icon/nextjs-boilerplate-logo.png';
 import ashtro from '../../../Assctes/icon/Astro.png';
