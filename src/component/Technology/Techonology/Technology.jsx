@@ -2,28 +2,28 @@ import React from 'react';
 import { HiOutlineCodeBracket, HiOutlineCurrencyBangladeshi, HiOutlineWrenchScrewdriver, HiPhone } from 'react-icons/hi2';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import tailwind from '../../../Assctes/icon/Tailwind.png'
-import bootstrap from '../../../Assctes/icon/Bootstrap.png'
-import metarial from '../../../Assctes/icon/Material UI.png'
-import typescript from '../../../Assctes/icon/TypeScript.png'
-import react from '../../../Assctes/icon/React.png'
+import tailwind from '../../../Assctes/icon/tailwind.png'
+import bootstrap from '../../../Assctes/icon/bootstrap.png'
+import metarial from '../../../Assctes/icon/material UI.png'
+import typescript from '../../../Assctes/icon/typeScript.png'
+import react from '../../../Assctes/icon/react.png'
 import redux from '../../../Assctes/icon/redux.png'
-import js from '../../../Assctes/icon/JavaScript.png'
+import js from '../../../Assctes/icon/javaScript.png'
 import nextJs from '../../../Assctes/icon/nextjs-boilerplate-logo.png';
-import ashtro from '../../../Assctes/icon/Astro.png';
-import nest from '../../../Assctes/icon/Nest.js.png';
-import vue from '../../../Assctes/icon/Vue.js.png';
-import angular from '../../../Assctes/icon/Angular.png';
+import ashtro from '../../../Assctes/icon/astro.png';
+import nest from '../../../Assctes/icon/nest.js.png';
+import vue from '../../../Assctes/icon/vue.js.png';
+import angular from '../../../Assctes/icon/angular.png';
 
 //backend
-import nodejs from '../../../Assctes/icon/Node.js.png'
+import nodejs from '../../../Assctes/icon/node.js.png'
 import python from '../../../Assctes/icon/python.png'
 import php from '../../../Assctes/icon/php.png'
 import go from '../../../Assctes/icon/go.png'
-import express from '../../../Assctes/icon/Express.png'
+import express from '../../../Assctes/icon/express.png'
 import dj from '../../../Assctes/icon/dj.png'
-import Laravel from '../../../Assctes/icon/Laravel.png'
-import Fastify from '../../../Assctes/icon/Fastify.png'
+import Laravel from '../../../Assctes/icon/laravel.png'
+import Fastify from '../../../Assctes/icon/fastify.png'
 
 
 //database
@@ -31,36 +31,36 @@ import mongo from '../../../Assctes/icon/mongodb.png'
 import mysql from '../../../Assctes/icon/mySQL.png'
 import postgres from '../../../Assctes/icon/postgress.png'
 import firebase from '../../../Assctes/icon/firebase.png'
-import Microsoft from '../../../Assctes/icon/Microsoft SQL.png';
-import Redis from '../../../Assctes/icon/Redis.png';
+import Microsoft from '../../../Assctes/icon/microsoft SQL.png';
+import Redis from '../../../Assctes/icon/redis.png';
 
 //tools
 import git from '../../../Assctes/icon/git.png';
 import figma from '../../../Assctes/icon/figma.png'
 import azure from '../../../Assctes/icon/azure.png'
 import aws from '../../../Assctes/icon/aws.png'
-import Jest from '../../../Assctes/icon/Jest.png'
-import Docker from '../../../Assctes/icon/Docker.png'
-import SonarQube from '../../../Assctes/icon/SonarQube.png'
+import Jest from '../../../Assctes/icon/jest.png'
+import Docker from '../../../Assctes/icon/docker.png'
+import SonarQube from '../../../Assctes/icon/sonarQube.png'
 import Postman from '../../../Assctes/icon/postman.png'
 import slack from '../../../Assctes/icon/slack.png'
 import graphql from '../../../Assctes/icon/graphql.png'
 
 //mobile apps
 
-import Swift from '../../../Assctes/icon/Swift.png'
-import Flutter from '../../../Assctes/icon/Flatter.png'
-import Kotlin from '../../../Assctes/icon/Kotlin.png'
-import Ionic from '../../../Assctes/icon/Ionic.png'
+import Swift from '../../../Assctes/icon/swift.png'
+import Flutter from '../../../Assctes/icon/flatter.png'
+import Kotlin from '../../../Assctes/icon/kotlin.png'
+import Ionic from '../../../Assctes/icon/ionic.png'
 
 
 // payment getaway
 
 import ssl from '../../../Assctes/icon/ssl.png'
-import strip from '../../../Assctes/icon/Stripe.png'
-import bkash from '../../../Assctes/icon/Bkash.png'
+import strip from '../../../Assctes/icon/stripe.png'
+import bkash from '../../../Assctes/icon/bkash.png'
 import nogod from '../../../Assctes/icon/nogod.png'
-import paypal from '../../../Assctes/icon/Paypal.png';
+import paypal from '../../../Assctes/icon/paypal.png';
 import AmarPay from '../../../Assctes/icon/amarpay.png';
 
 
