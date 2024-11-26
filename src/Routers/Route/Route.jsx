@@ -38,134 +38,183 @@ import ForgetPass from '../../component/Form/Password/ForgetPass';
 import ResetPassword from '../../component/Form/Password/ResetPassword';
 import { base_url } from '../../layout/Title';
 import ViewDetails from '../../component/Jobs/ViewDitals';
+import ScrollToTop from './Scroll_to_top';
 
 export const route = createBrowserRouter([
-   {
-      path: '/',
-      element: <Main></Main>,
-      children: [
-         {
-            path: "/",
-            element: <Home />
-         },
-         {
-            path: "/about",
-            element: <About />
-         },
-         {
-            path: "/service",
-            element: <ServicePage />
-         },
-         {
-            path: "/technology",
-            element: <Technology />
-         },
-         {
-            path: "/review",
-            element: <Testimonials />
-         },
-         {
-            path: "/join-with-us",
-            element: <JoinUs />
-         },
-         {
-            path: "/project",
-            element: <Project />
-         },
-         {
-            path: "/project/:id",
-            element: <ProjectDetails />
-         },
-         {
-            path: "/careers",
-            element: <Job />
-         },
-         {
-            path: "/careers/:id",
-            element: <ViewDetails />
-         },
-         {
-            path: "/contract",
-            element: <MainContract />
-         },
-         {
-            path: "/blog",
-            element: <Blog />,
-            loader: async () => {
-               return fetch(`${base_url}/blog/get-blog`)
-            }
-         },
-         {
-            path: "/admin/blog",
-            element: <PrivetRoute><AdminBlog /></PrivetRoute>,
-            loader: async () => {
-               return fetch('https://portfolio-backend-one-kappa.vercel.app/blog')
-            }
-         },
+      {
+            path: '/',
+            element: <Main></Main>,
+            children: [
+                  {
+                        path: "/",
+                        element: <>
+                              <ScrollToTop />
+                              <Home />
+                        </>
+                  },
+                  {
+                        path: "/about",
+                        element: <>
+                              <ScrollToTop />
+                              <About />
+                        </>
+                  },
+                  {
+                        path: "/service",
+                        element: <>
+                              <ScrollToTop />
+                              <ServicePage />
+                        </>
+                  },
+                  {
+                        path: "/technology",
+                        element: <>
+                              <ScrollToTop />
+                              <Technology />
+                        </>
+                  },
+                  {
+                        path: "/review",
+                        element: <>
+                              <ScrollToTop />
+                              <Testimonials />
+                        </>
+                  },
+                  {
+                        path: "/join-with-us",
+                        element: <>
+                              <ScrollToTop />
+                              <JoinUs />
+                        </>
+                  },
+                  {
+                        path: "/project",
+                        element: <>
+                              <ScrollToTop />
+                              <Project />
+                        </>
+                  },
+                  {
+                        path: "/project/:id",
+                        element: <>
+                              <ScrollToTop />
+                              <ProjectDetails />
+                        </>
+                  },
+                  {
+                        path: "/careers",
+                        element: <>
+                              <ScrollToTop />
+                              <Job />
+                        </>
+                  },
+                  {
+                        path: "/careers/:id",
+                        element: <>
+                              <ScrollToTop />
+                              <ViewDetails />
+                        </>
+                  },
+                  {
+                        path: "/contract",
+                        element: <>
+                              <ScrollToTop />
+                              <MainContract />
+                        </>
+                  },
+                  {
+                        path: "/blog",
+                        element: <>
+                              <ScrollToTop />
+                              <Blog />
+                        </>,
+                        loader: async () => {
+                              return fetch(`${base_url}/blog/get-blog`)
+                        }
+                  },
+                  {
+                        path: "/admin/blog",
+                        element: <PrivetRoute>
+                              <ScrollToTop />
+                              <AdminBlog />
+                        </PrivetRoute>,
+                        loader: async () => {
+                              return fetch('https://portfolio-backend-one-kappa.vercel.app/blog')
+                        }
+                  },
 
-         {
-            path: "/blog/:id",
-            element: <BlogDetails />,
-            loader: async ({ params }) => {
-               const id = params.id
-               return fetch(`${base_url}/blog/get-blog-by-id?blog_id=${id}`)
-            }
-         },
-         {
-            path: "/all_project",
-            element: <AllProject />,
-            loader: async () => {
-               return fetch(`${base_url}/project/get-project`)
-            }
-         },
-         {
-            path: "/all_project/:id",
-            element: <AllProject />,
-            loader: async (params) => {
-               return fetch(`${base_url}/project//get-project-by-id?project_id=${params}`)
-            }
-         },
-         {
-            path: "https://portfolio-backed.vercel.app/projects:id",
-            element: <ProjectDetails />
-         },
+                  {
+                        path: "/blog/:id",
+                        element: <>
+                              <ScrollToTop />
+                              <BlogDetails />
+                        </>,
+                        loader: async ({ params }) => {
+                              const id = params.id
+                              return fetch(`${base_url}/blog/get-blog-by-id?blog_id=${id}`)
+                        }
+                  },
+                  {
+                        path: "/all_project",
+                        element: <>
+                              <ScrollToTop />
+                              <AllProject />
+                        </>,
+                        loader: async () => {
+                              return fetch(`${base_url}/project/get-project`)
+                        }
+                  },
+                  {
+                        path: "/all_project/:id",
+                        element: <>
+                              <ScrollToTop />
+                              <AllProject />
+                        </>,
+                        loader: async (params) => {
+                              return fetch(`${base_url}/project//get-project-by-id?project_id=${params}`)
+                        }
+                  },
+                  // {
+                  //       path: "https://portfolio-backed.vercel.app/projects:id",
+                  //       element: <ProjectDetails />
+                  // },
 
-         {
-            path: "/Cart",
-            element: <Card />
-         },
-         {
-            path: "/contact",
-            element: <Contact />
-         },
-         {
-            path: "/sign_in",
-            element: <SignIn />
-         },
-         {
-            path: "/sign_up",
-            element: <AdminRoute><SignUp /></AdminRoute>
-         },
-         {
-            path: 'forget-password',
-            element: <ForgetPass />
-         },
-         {
-            path: 'reset-password',
-            element: <ResetPassword />
-         }
+                  {
+                        path: "/Cart",
+                        element: <Card />
+                  },
+                  {
+                        path: "/contact",
+                        element: <Contact />
+                  },
+                  {
+                        path: "/sign_in",
+                        element: <SignIn />
+                  },
+                  {
+                        path: "/sign_up",
+                        element: <AdminRoute><SignUp /></AdminRoute>
+                  },
+                  {
+                        path: 'forget-password',
+                        element: <ForgetPass />
+                  },
+                  {
+                        path: 'reset-password',
+                        element: <ResetPassword />
+                  }
 
 
 
-      ]
-   },
-   {
-      path: '/dashboard',
-      element: <Dashboard />,
-      children: dashboardRouter
-   },
-   {
-      path: '*',
-      element: <NotFound />
-   }
+            ]
+      },
+      {
+            path: '/dashboard',
+            element: <Dashboard />,
+            children: dashboardRouter
+      },
+      {
+            path: '*',
+            element: <NotFound />
+      }
 ])

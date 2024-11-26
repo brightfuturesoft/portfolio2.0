@@ -1,199 +1,336 @@
 import React from 'react';
 import { HiOutlineCodeBracket, HiOutlineCurrencyBangladeshi, HiOutlineWrenchScrewdriver, HiPhone } from 'react-icons/hi2';
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import tailwind from '../../../Assctes/icon/Group 27.png'
-import bootstrap from '../../../Assctes/icon/Group 14.png'
-import metarial from '../../../Assctes/icon/Group 22.png'
-import typescript from '../../../Assctes/icon/Group 23.png'
-import react from '../../../Assctes/icon/Group 24.png'
-import redux from '../../../Assctes/icon/Group 25.png'
-import js from '../../../Assctes/icon/Group 26.png'
-import nodejs from '../../../Assctes/icon/Group 113.png'
-import ex from '../../../Assctes/icon/Group 114.png'
-import db from '../../../Assctes/icon/db.png'
-import mmm from '../../../Assctes/icon/mmm.png'
-import sql from '../../../Assctes/icon/sql.png'
-// import native from '../../../Assctes/icon/native.png'
-import flutter from '../../../Assctes/icon/flutter.png'
-import ssl from '../../../Assctes/icon/ssl.png'
-import strip from '../../../Assctes/icon/stripe.png'
+import tailwind from '../../../Assctes/icon/Tailwind.png'
+import bootstrap from '../../../Assctes/icon/Bootstrap.png'
+import metarial from '../../../Assctes/icon/Material UI.png'
+import typescript from '../../../Assctes/icon/TypeScript.png'
+import react from '../../../Assctes/icon/React.png'
+import redux from '../../../Assctes/icon/Redux.png'
+import js from '../../../Assctes/icon/JavaScript.png'
+import nextJs from '../../../Assctes/icon/nextjs-boilerplate-logo.png';
+import ashtro from '../../../Assctes/icon/Astro.png';
+import nest from '../../../Assctes/icon/Nest.js.png';
+import vue from '../../../Assctes/icon/Vue.js.png';
+import angular from '../../../Assctes/icon/Angular.png';
+
+//backend
+import nodejs from '../../../Assctes/icon/Node.js.png'
+import python from '../../../Assctes/icon/python.png'
+import php from '../../../Assctes/icon/php.png'
+import go from '../../../Assctes/icon/go.png'
+import express from '../../../Assctes/icon/Express.png'
+import dj from '../../../Assctes/icon/dj.png'
+import Laravel from '../../../Assctes/icon/Laravel.png'
+import Fastify from '../../../Assctes/icon/Fastify.png'
+
+
+//database
+import mongo from '../../../Assctes/icon/mongodb.png'
+import mysql from '../../../Assctes/icon/mySQL.png'
+import postgres from '../../../Assctes/icon/postgress.png'
 import firebase from '../../../Assctes/icon/firebase.png'
+import Microsoft from '../../../Assctes/icon/Microsoft SQL.png';
+import Redis from '../../../Assctes/icon/Redis.png';
+
+//tools
+import git from '../../../Assctes/icon/git.png';
 import figma from '../../../Assctes/icon/figma.png'
-import xd from '../../../Assctes/icon/xd.png'
-import ps from '../../../Assctes/icon/ps.png'
-import illstator from '../../../Assctes/icon/illastator.png'
-import id from '../../../Assctes/icon/id.png'
-import aftereffect from '../../../Assctes/icon/aftereffect.png'
-import flut from '../../../Assctes/icon/flutter.png'
-import native from '../../../Assctes/icon/reactNative.png';
-import nextJs from '../../../Assctes/icon/nextjs.png';
+import azure from '../../../Assctes/icon/azure.png'
+import aws from '../../../Assctes/icon/aws.png'
+import Jest from '../../../Assctes/icon/Jest.png'
+import Docker from '../../../Assctes/icon/Docker.png'
+import SonarQube from '../../../Assctes/icon/SonarQube.png'
+import Postman from '../../../Assctes/icon/postman.png'
+import slack from '../../../Assctes/icon/slack.png'
+import graphql from '../../../Assctes/icon/graphql.png'
+
+//mobile apps
+
+import Swift from '../../../Assctes/icon/Swift.png'
+import Flutter from '../../../Assctes/icon/Flatter.png'
+import Kotlin from '../../../Assctes/icon/Kotlin.png'
+import Ionic from '../../../Assctes/icon/Ionic.png'
+
+
+// payment getaway
+
+import ssl from '../../../Assctes/icon/ssl.png'
+import strip from '../../../Assctes/icon/Stripe.png'
+import bkash from '../../../Assctes/icon/Bkash.png'
+import nogod from '../../../Assctes/icon/nogod.png'
+import paypal from '../../../Assctes/icon/Paypal.png';
+import AmarPay from '../../../Assctes/icon/amarpay.png';
+
+
+// import firebase from '../../../Assctes/icon/firebase.png'
+
+
+
+
 
 const Technology = () => {
- 
-   const tData= [
-    {
-        id : 0,
-        title : "front end development",
-        options : [
-            { 
-               id : 0,
-               name : "tailwind", img : tailwind
-            },
-            { 
-               id : 1,
-               name : "bootstrap", img : bootstrap
-            },
-            { 
-               id : 2,
-               name : "metarial", img : metarial
-            },
-            { 
-               id : 3,
-               name : "typescript", img : typescript
-            },
-            { 
-               id : 4,
-               name : "react", img : react
-            },
-            { 
-               id : 5,
-               name : "redux", img : redux
-            },
-            { 
-               id : 6,
-               name : "java script", img : js
-            },
-            { 
-               id : 7,
-               name : "next js", img : nextJs
-            },
-        ]
-    },
-    {
-        id : 1,
-        title : "backend development",
-        options : [
-            {
-                id : 0,
-                name : "node js", img : nodejs
-            },
-            {
-                id : 1,
-                name : "express js", img : ex
-            },
-            {
-                id : 2,
-                name : "mongo DB", img : db
-            },
-            {
-                id : 3,
-                name : "mongos", img : mmm
-            },
-            {
-                id : 4,
-                name : "mysqli", img : sql
-            },
-           
-            {
-                id :5,
-                name : "javascript", img : js
-            },
-        ]
-    },
-    {
-        id : 2,
-        title : "tools",
-        options : [
-            { 
-               id : 0,
-               name : "firebase", img : firebase
-            },
-            { 
-               id : 1,
-               name : "figma", img : figma
-            },
-            { 
-               id : 2,
-               name : "adobe XD", img : xd
-            },
-            { 
-               id : 3,
-               name : "Photoshop", img : ps
-            },
-            { 
-               id : 4,
-               name : "illastator", img : illstator
-            },
-            { 
-               id : 5,
-               name : "adobe in design", img : id
-            },
-            { 
-               id : 6,
-               name : "after effect", img : aftereffect
-            },
-        ]
-    },
-     {
-        id : 3,
-        title : "app",
-        options : [
-              { 
-               id : 0,
-               name : "React Native", img : native
-            },
-            { 
-               id : 1,
-               name : "Flutter", img : flut
-            },
-        ]
-    },
-     {
-        id : 4,
-        title : "payment",
-        options : [
-              { 
-               id : 0,
-               name : "SSLCOMMERZ ", img : ssl
-            },
-            { 
-               id : 1,
-               name : "Stripe", img : strip
-            },
-        ]
-    },
-   ]
-    return (
-        <div>
-           <div className="tech-bg px-2 py-4 text-capitalize" id='tech'>
-             <h1 className="text-xl  font-bold relative after:absolute after:left-0 after:right-0 after:bottom-[-18px] after:w-[60px] after:rounded-full after:h-[6px] after:bg-[#0095ff] after:mx-auto text-center text-white">Our Technology <span className="shadow-tx">and Tools</span></h1>
-             <br /><br />
-            <VerticalTimeline className='text-white'>
-                    {
-                        tData.map(tData =>  <VerticalTimelineElement key={tData.id}
-                            className="vertical-timeline-element--work"
-                            contentArrowStyle={{ borderRight: '7px solid  #ff000000', }}
 
-                            iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                            icon={<HiOutlineCodeBracket />}
-                        >
-                        <div className="sp-box border border-[#2a4892]  relative p-3">
-                            <div className="absolute top-[-28px] bg-[#2a4892] sp pl-2 pr-14  py-1 left-[-2px]">
-                                <h1 className='md:text-md text-sm'>{tData.title}</h1>
-                            </div>
-                             <figure className='grid mt-4 grid-cols-6 gap-4'>
-                                  {
-                                    tData?.options?.map(td => <img  loading="lazy"title={td.name} src={td.img} />)
-                                  }
-                             </figure>
-                        </div>
-                        </VerticalTimelineElement>)
-                    }
-                </VerticalTimeline>
-           </div>
-        </div>
-    );
+      const tData = [
+            {
+                  id: 0,
+                  title: "Frontend Technology",
+                  options: [
+                        {
+                              id: 0,
+                              name: "tailwind", img: tailwind
+                        },
+                        {
+                              id: 1,
+                              name: "bootstrap", img: bootstrap
+                        },
+                        {
+                              id: 2,
+                              name: "metarial", img: metarial
+                        },
+                        {
+                              id: 3,
+                              name: "typescript", img: typescript
+                        },
+                        {
+                              id: 4,
+                              name: "react", img: react
+                        },
+                        {
+                              id: 5,
+                              name: "redux", img: redux
+                        },
+                        {
+                              id: 6,
+                              name: "java script", img: js
+                        },
+                        {
+                              id: 7,
+                              name: "next js", img: nextJs
+                        },
+                        {
+                              id: 8,
+                              name: "Astro", img: ashtro
+                        },
+                        {
+                              id: 9,
+                              name: "Nest.js", img: nest
+                        },
+                        {
+                              id: 10,
+                              name: "Angular", img: angular
+                        },
+                        {
+                              id: 11,
+                              name: "Vue", img: vue
+                        }
+                  ]
+            },
+            {
+                  id: 1,
+                  title: "Backend Technology",
+                  options: [
+                        {
+                              id: 0,
+                              name: "node js", img: nodejs
+                        },
+                        {
+                              id: 1,
+                              name: "Python", img: python
+                        },
+                        {
+                              id: 2,
+                              name: "PHP", img: php
+                        },
+                        {
+                              id: 3,
+                              name: "GO", img: go
+                        },
+                        {
+                              id: 4,
+                              name: "Express JS", img: express
+                        },
+
+                        {
+                              id: 5,
+                              name: "Django", img: dj
+                        },
+                        {
+                              id: 6,
+                              name: "Laravel", img: Laravel
+                        },
+                        {
+                              id: 7,
+                              name: "Fastify", img: Fastify
+                        },
+                  ]
+            },
+            {
+                  id: 3,
+                  title: "Database",
+                  options: [
+                        {
+                              id: 0,
+                              name: "MongoDB", img: mongo
+                        },
+                        {
+                              id: 1,
+                              name: "Firebase", img: firebase
+                        },
+                        {
+                              id: 2,
+                              name: "MySql", img: mysql
+                        },
+                        {
+                              id: 3,
+                              name: "Postgres", img: postgres
+                        },
+                        {
+                              id: 4,
+                              name: "Microsoft SQL", img: Microsoft
+                        },
+                        {
+                              id: 5,
+                              name: "Redis", img: Redis
+                        }
+                  ]
+            },
+            {
+                  id: 2,
+                  title: "Tools",
+                  options: [
+                        {
+                              id: 0,
+                              name: "Git", img: git
+                        },
+                        {
+                              id: 1,
+                              name: "figma", img: figma
+                        },
+                        {
+                              id: 2,
+                              name: "Azure", img: azure
+                        },
+                        {
+                              id: 3,
+                              name: "AWS", img: aws
+                        },
+                        {
+                              id: 4,
+                              name: "Jest", img: Jest
+                        },
+                        {
+                              id: 5,
+                              name: "Docker", img: Docker
+                        },
+                        {
+                              id: 6,
+                              name: "SonarQube", img: SonarQube
+                        },
+                        {
+                              id: 7,
+                              name: "Postman", img: Postman
+                        },
+                        {
+                              id: 8,
+                              name: "Slack", img: slack
+                        },
+                        {
+                              id: 9,
+                              name: "Graphql", img: graphql
+                        }
+
+                  ]
+            },
+            {
+                  id: 3,
+                  title: "Mobile App Development",
+                  options: [
+                        {
+                              id: 0,
+                              name: "React Native", img: react
+                        },
+                        {
+                              id: 1,
+                              name: "Swift", img: Swift
+                        },
+                        {
+                              id: 2,
+                              name: "Flutter", img: Flutter
+                        },
+                        {
+                              id: 3,
+                              name: "Kotlin", img: Kotlin
+                        },
+                        {
+                              id: 4,
+                              name: "Ionic", img: Ionic
+                        }
+                  ]
+            },
+            {
+                  id: 4,
+                  title: "Payment Gateways",
+                  options: [
+                        {
+                              id: 0,
+                              name: "SSLCOMMERZ ", img: ssl
+                        },
+                        {
+                              id: 1,
+                              name: "Stripe", img: strip
+                        },
+                        {
+                              id: 2,
+                              name: "Paypal", img: paypal
+                        },
+                        {
+                              id: 3,
+                              name: "Bkash", img: bkash,
+                        },
+                        {
+                              id: 4,
+                              name: "Nagad", img: nogod,
+                        },
+                        {
+                              id: 5,
+                              name: "AmarPay", img: AmarPay,
+                        },
+
+                  ]
+            },
+      ]
+      return (
+            <div>
+                  <div className="tech-bg px-2 py-4 text-capitalize" id='tech'>
+                        <h1 className="text-xl  font-bold relative after:absolute after:left-0 after:right-0 after:bottom-[-18px] after:w-[60px] after:rounded-full after:h-[6px] after:bg-[#0095ff] after:mx-auto text-center text-white">Our Technology <span className="shadow-tx">and Tools</span></h1>
+                        <br /><br />
+                        <VerticalTimeline className='text-white'>
+                              {
+                                    tData.map(tData => <VerticalTimelineElement key={tData.id}
+                                          className="vertical-timeline-element--work"
+                                          contentArrowStyle={{ borderRight: '7px solid  #ff000000', }}
+
+                                          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                                          icon={<HiOutlineCodeBracket />}
+                                    >
+                                          <div className="sp-box border rounded-r-lg rounded-bl-lg border-[#2a4892]  relative p-3">
+                                                <div className="absolute top-[-28px] bg-[#2a4892] sp pl-2 pr-14  py-1 left-[-1px]">
+                                                      <h1 className='md:text-md text-sm'>{tData.title}</h1>
+                                                </div>
+                                                <figure className='grid mt-4 grid-cols-6 gap-4'>
+                                                      {
+                                                            tData?.options?.map(td => <img className='border border-[#2096F3] rounded p-2 bg-[#474C5A] w-14 h-14 object-contain' loading="lazy" title={td.name} src={td.img} />)
+                                                      }
+                                                </figure>
+                                          </div>
+                                    </VerticalTimelineElement>)
+                              }
+                        </VerticalTimeline>
+                  </div>
+            </div>
+      );
 };
 
 export default Technology;
