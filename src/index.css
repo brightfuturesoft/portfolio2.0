@@ -4,21 +4,20 @@
 
 body {
   margin: 0;
-  background-color: #020A1C!important;
- /* font-family: 'Aref Ruqaa Ink', serif; */
-/* font-family: 'Noto Nastaliq Urdu', serif; */
-/* font-family: 'Nunito', sans-serif; */
-/* font-family: 'Poppins', sans-serif; */
-font-family: 'Ubuntu', sans-serif;
+  background-color: #020a1c !important;
+  /* font-family: 'Aref Ruqaa Ink', serif; */
+  /* font-family: 'Noto Nastaliq Urdu', serif; */
+  /* font-family: 'Nunito', sans-serif; */
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: "Ubuntu", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
 
 .jodit-editor ul,
 .jodit-editor ol {
@@ -119,4 +118,8 @@ code {
 .custom-article * {
   color: white !important;
   /* Ensures all inner elements' text color is white */
+}
+
+.prose-invert * {
+  color: rgba(255, 255, 255, 0.762) !important;
 }

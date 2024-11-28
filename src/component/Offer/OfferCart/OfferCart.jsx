@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const OfferCart = ({ offerData }) => {
       const { name, id, pic, description } = offerData;
-      const [readMore, setReadMore] = useState(false)
+
       return (
-            <div className="cart bg-[#020a1c89] border m-shadow border-blue-600 rounded-2xl rounded-tl-xl p-3 ">
+            <div className="cart bg-[#020a1c89] border m-shadow border-blue-600 border-opacity-25 rounded-2xl rounded-tl-xl p-3 ">
                   <div className="cart-header">
                         <img loading="lazy" src={pic} alt="" className="rounded-xl m-auto bg-[#151b2989] h-[150px] w-full" />
                   </div>
@@ -12,10 +13,12 @@ const OfferCart = ({ offerData }) => {
                         <h2 className="font-semibold text-lg text-[white]">{name}</h2>
                         <small className="mt-3 text-[#8b8b8b]">
                               {
-                                    !readMore ? description?.slice(0, 120) : description
+                                    description
                               }
-                              {' '}
-                              <button onClick={() => setReadMore(!readMore)} className="text-blue-500">{readMore ? <>{'  '} Show less </> : <>{' ... '} Read more </>}</button>
+
+                              <br />
+
+                              <Link to={`/why-us/${id}`} className="text-blue-300"> Learn more </Link>
                         </small>
                   </div>
             </div>

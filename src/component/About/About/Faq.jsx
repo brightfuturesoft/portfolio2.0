@@ -124,10 +124,10 @@ export const Faq = () => {
                         </div>
                   </div>
 
-                  <div className="max-w-5xl mx-auto mt-8 overflow-hidden text-center bg-gray-100 sm:mt-12 rounded-xl">
+                  <div className="max-w-5xl mx-auto mt-8 overflow-hidden text-center bg-gray-300 sm:mt-12 rounded-xl">
                         <div className="px-6 py-12 sm:p-12">
                               <div className="max-w-sm mx-auto">
-                                    <div className="relative z-0 flex items-center justify-center -space-x-2 overflow-hidden">
+                                    <div className="relative z-0 flex items-center justify-center -space-x-2 ">
                                           <img
                                                 className="relative z-10 inline-block rounded-full w-14 h-14 ring-4 ring-gray-100"
                                                 src={hadi}

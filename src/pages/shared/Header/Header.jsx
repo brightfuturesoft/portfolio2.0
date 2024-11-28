@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
-import logo from '../../../Assctes/logo.png';
+import logo from '../../../Assctes/logo.webp';
 import { AuthContext } from '../../../context/UseContext/UseContext';
 import { HiBars3BottomLeft, HiBars3BottomRight, HiMinus } from 'react-icons/hi2';
 import { RiMenu3Fill } from 'react-icons/ri';
