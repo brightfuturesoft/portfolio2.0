@@ -2,9 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { base_url } from '../../../layout/Title';
 import { Helmet } from 'react-helmet';
+import mahadi from '../../../Assctes/teamMember/mahadi.jpg';
+import hadi from '../../../Assctes/teamMember/mohotasimhadi.jpeg';
+import maruf from '../../../Assctes/teamMember/shishir.jpeg'
 
 const BlogDetails = () => {
       const [blogList, setBlogList] = useState([])
+      const [schedule, setSchedule] = useState(false)
       useEffect(() => {
             fetch(`${base_url}/blog/get-blog`)
                   .then(res => res.json())
@@ -83,15 +87,15 @@ const BlogDetails = () => {
 
                               <div class="mt-12 sm:mt-16 flex flex-col-reverse lg:grid lg:grid-cols-12 lg:gap-x-16 xl:gap-x-24">
                                     <aside class="lg:col-span-4 mt-20 md:mt-0 lg:order-last lg:self-start lg:sticky lg:top-28">
-                                          <div class="overflow-hidden bg-white border border-gray-200">
+                                          <div class="overflow-hidden border-opacity-30 rounded-md border border-gray-200">
                                                 <div class="px-4 py-5 sm:p-6">
-                                                      <h4 class="text-xs font-bold tracking-widest text-gray-600 uppercase">More Blogs</h4>
+                                                      <h4 class="text-xs font-bold tracking-widest text-gray-300 uppercase">More Blogs</h4>
 
                                                       <ul class="mt-8 space-y-5">
                                                             {
                                                                   blogList.filter((blog) => blog._id !== blogInfo._id)?.map((blog) => (
                                                                         <li>
-                                                                              <Link to={`/blog/${blog.url}`} title="" class="flex text-base font-bold text-gray-500 hover:underline"> {blog?.title} </Link>
+                                                                              <Link to={`/blog/${blog.url}`} title="" class="flex text-base font-bold text-gray-400 hover:underline"> {blog?.title} </Link>
                                                                         </li>
                                                                   ))
                                                             }
@@ -118,9 +122,78 @@ const BlogDetails = () => {
                               </div>
                         </div>
                   </div>
+                  <div className='px-4  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
+                        <div className=" px-4 mx-auto  mt-10  text-center bg-gray-300 rounded-md">
+                              <div className=" py-12 ">
+                                    <div className=" mx-auto">
+                                          <div className="relative z-0 flex items-center justify-center -space-x-2 ">
+                                                <img
+                                                      className="relative z-10 inline-block rounded-full w-14 h-14 ring-4 ring-gray-100"
+                                                      src={hadi}
+                                                      alt=""
+                                                />
+                                                <img
+                                                      className="relative z-30 inline-block w-16 h-16 rounded-full ring-4 ring-gray-100"
+                                                      src={mahadi}
+                                                      alt=""
+                                                />
+                                                <img
+                                                      className="relative z-10 inline-block rounded-full w-14 h-14 ring-4 ring-gray-100"
+                                                      src={maruf}
+                                                      alt=""
+                                                />
+                                          </div>
+
+                                          <h3 className="mt-6 text-2xl font-semibold text-gray-900">Still have questions?</h3>
+                                          <p className="mt-2 text-base font-normal text-gray-600">
+                                                Can't find the answer you're looking for? Please chat with our friendly team.
+                                          </p>
+                                          <div className="mt-6">
+                                                <button
+                                                      onClick={() => setSchedule(true)}
+                                                      className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700"
+                                                      role="button"
+                                                >
+                                                      Start free for consultancy
+                                                </button>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+
+                  {schedule && <CallSchedule setModalOpen={setSchedule} isModalOpen={schedule} />}
             </section>
 
       );
 };
 
 export default BlogDetails;
+
+
+const CallSchedule = ({ isModalOpen, setModalOpen }) => {
+      if (!isModalOpen) return null; // Modal won't render if it's closed
+
+      return (
+            <div className="fixed inset-0 z-50 flex items-center h-screen pt-20 justify-center bg-black bg-opacity-70">
+                  <div className="relative mx-6 w-full max-w-4xl  p-4 bg-white rounded-lg shadow-lg">
+
+                        {/* Calendly iframe with modifications */}
+                        <iframe
+                              src="https://calendly.com/brightfuturesoft-bd"
+                              title="Calendly Schedule"
+                              className="w-full h-[80vh]  rounded-lg    "
+                        // allow="camera; microphone"
+                        />
+
+                        {/* Close button */}
+                        <button
+                              onClick={() => setModalOpen(false)}
+                              className="absolute top-3 bg-[#2463eb] hover:bg-[#315bb6]  size-10 rounded-full right-3 flex justify-center items-center text-gray-100 hover:text-gray-300"
+                        >
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-x"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
+                        </button>
+                  </div>
+            </div>
+      );
+};

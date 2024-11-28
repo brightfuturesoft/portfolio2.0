@@ -7,28 +7,28 @@ import dv4 from '../../../Assctes/vectors/dv4.svg'
 const Offer = () => {
       const offerData = [
             {
-                  id: 0,
+                  id: 'latest-product-design',
                   name: "Latest Product Design",
                   pic: dv1,
-                  description: "We are always inventing new designs for our clients. Our team of designers is constantly coming up with innovative and creative work that we know will attract potential customers."
+                  description: "We craft innovative designs to captivate clients and attract customers."
             },
             {
-                  id: 1,
+                  id: 'smart-tech-team',
                   name: "Smart Tech Team",
                   pic: dv2,
-                  description: "We are far more than just a website developer – we’re a conglomerate of creative minds working together to make sure you don’t fall behind in today’s demanding market."
+                  description: "We’re more than website developers – a creative team ensuring you stay ahead in today’s market."
             },
             {
-                  id: 2,
+                  id: 'quality-tested',
                   name: "Quality Tested",
                   pic: dv3,
-                  description: "Here , each of the services is tested and reviewed for quality assurance. We ensure that each project is delivered on time without compromising on quality."
+                  description: "Each service is tested and reviewed to ensure quality, delivering every project on time without compromise."
             },
             {
-                  id: 3,
+                  id: 'device-friendly-coding',
                   name: "Device Friendly Coding",
                   pic: dv4,
-                  description: "Our web developers are updated with the latest trends in coding and can give you the most ideal solutions for your website by providing top-notch work."
+                  description: "Our web developers stay updated with the latest coding trends, delivering top-notch solutions for your website."
             },
       ]
       return (
@@ -41,7 +41,7 @@ const Offer = () => {
                                     <br />From crafting distinctive branding identities to delivering top-notch UI/UX design, our services are tailored to meet your needs at every step of the process.
                               </p>
 
-                              <div className="grid lg:grid-cols-4 grid-cols-2 gap-14 mt-16">
+                              <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-14 mt-16">
                                     {
                                           offerData.map(offerData => <OfferCart key={offerData.id} offerData={offerData} />)
                                     }

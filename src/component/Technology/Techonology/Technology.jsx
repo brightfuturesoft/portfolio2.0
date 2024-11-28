@@ -319,11 +319,24 @@ const Technology = () => {
                                                 <div className="absolute top-[-28px] bg-[#2a4892] sp pl-2 pr-14  py-1 left-[-1px]">
                                                       <h1 className='md:text-md text-sm'>{tData.title}</h1>
                                                 </div>
-                                                <figure className='grid mt-4 grid-cols-6 gap-4'>
-                                                      {
-                                                            tData?.options?.map(td => <img className='border border-[#2096F3] rounded p-2 bg-[#474C5A] w-14 h-14 object-contain' loading="lazy" title={td.name} src={td.img} />)
-                                                      }
-                                                </figure>
+                                                <div className="container mx-auto p-4">
+                                                      <figure className="grid mt-4 grid-cols-3 sm:grid-cols-6 gap-4">
+                                                            {tData.options.map((td, index) => (
+                                                                  <div key={index} className="group relative cursor-pointer">
+                                                                        <img
+                                                                              className="border border-blue-500 rounded p-2 bg-gray-700 hover:bg-white w-14 h-14 object-contain transition-colors duration-300"
+                                                                              loading="lazy"
+                                                                              src={td.img}
+                                                                              alt={td.name}
+                                                                        />
+                                                                        <span className="absolute w-full left-1/2 -translate-x-1/2 bottom-[calc(100%+8px)] flex items-center justify-center capitalize px-2 py-1 text-xs bg-black text-white rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                                                                              {td.name}
+                                                                        </span>
+                                                                  </div>
+                                                            ))}
+                                                      </figure>
+                                                </div>
+
                                           </div>
                                     </VerticalTimelineElement>)
                               }

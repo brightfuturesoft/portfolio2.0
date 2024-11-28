@@ -39,6 +39,8 @@ import ResetPassword from '../../component/Form/Password/ResetPassword';
 import { base_url } from '../../layout/Title';
 import ViewDetails from '../../component/Jobs/ViewDitals';
 import ScrollToTop from './Scroll_to_top';
+import Read_more from '../../component/Offer/OfferCart/Readmore';
+import Read_more_service from '../../component/Service/Service/Readmore';
 
 export const route = createBrowserRouter([
       {
@@ -67,6 +69,13 @@ export const route = createBrowserRouter([
                         </>
                   },
                   {
+                        path: "/service/:id",
+                        element: <>
+                              <ScrollToTop />
+                              <Read_more_service />
+                        </>
+                  },
+                  {
                         path: "/technology",
                         element: <>
                               <ScrollToTop />
@@ -92,6 +101,13 @@ export const route = createBrowserRouter([
                         element: <>
                               <ScrollToTop />
                               <Project />
+                        </>
+                  },
+                  {
+                        path: "/why-us/:id",
+                        element: <>
+                              <ScrollToTop />
+                              <Read_more />
                         </>
                   },
                   {
@@ -203,6 +219,7 @@ export const route = createBrowserRouter([
                         path: 'reset-password',
                         element: <ResetPassword />
                   }
+                  ,
 
 
 

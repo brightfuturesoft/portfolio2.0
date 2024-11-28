@@ -56,9 +56,7 @@ const OurMission = () => {
                                     <ul className="grid lg:grid-cols-2 grid-cols-1 mt-5 gap-3 ">
                                           {
                                                 missionData.map(mData => <li onClick={() => setDes(mData.des)} className="flex items-center w-full gap-2 duration-200 cursor-pointer hover:bg-[#22283db1] p-2 rounded" key={mData.id}>
-                                                      <span className="border  border-blue-600 rounded-md">
-                                                            <img loading="lazy" src={mData.img} alt="" className="w-[55px] h-[55px]" />
-                                                      </span>
+                                                      <img loading="lazy" src={power} alt="" />
                                                       <p className='text-[#acacac]'>{mData.title}</p>
                                                 </li>)
                                           }
